@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biography of Hazrat Ali (RA) — Ali Mushkil Kusha</title>
+  <meta name="description" content="The complete biography of Hazrat Ali ibn Abi Talib (RA) — from his miraculous birth inside the Kaaba to his martyrdom at Kufa. Interactive timeline of his blessed life." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    /* Page-specific styles */
+    .page-hero {
+      position: relative;
+      padding: calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);
+      background: linear-gradient(160deg, var(--color-charcoal) 0%, var(--color-emerald-dark) 40%, var(--color-emerald) 100%);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");
+      background-size: 100px 100px;
+      pointer-events: none;
+    }
+
+    .page-hero * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      font-size: var(--fs-sm);
+      color: rgba(255,255,255,0.5);
+      margin-bottom: var(--space-xl);
+    }
+
+    .breadcrumb a {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--color-gold);
+    }
+
+    .breadcrumb .separator {
+      color: rgba(255,255,255,0.3);
+    }
+
+    .bio-section {
+      padding: var(--space-3xl) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .bio-section:last-child {
+      border-bottom: none;
+    }
+
+    .bio-section h3 {
+      color: var(--color-emerald);
+      margin-bottom: var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .bio-section h3 .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      color: var(--color-charcoal);
+      font-family: var(--font-heading);
+      font-size: var(--fs-sm);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .bio-aside {
+      background: var(--color-gold-subtle);
+      border-left: 3px solid var(--color-gold);
+      padding: var(--space-lg) var(--space-xl);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      margin: var(--space-xl) 0;
+      font-style: italic;
+    }
+
+    .bio-aside .source {
+      font-style: normal;
+      font-size: var(--fs-xs);
+      color: var(--color-text-light);
+      margin-top: var(--space-sm);
+    }
+
+    @media (max-width: 768px) {
+      .bio-section { padding: var(--space-xl); }
+      .bio-aside { padding: var(--space-md) var(--space-lg); }
+    }
+    @media (max-width: 480px) {
+      .bio-section { padding: var(--space-lg); }
+      .bio-section h3 { font-size: var(--fs-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon">
+          <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/>
+            <polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Ali Mushkil Kusha</span>
+          <span class="brand-tagline">The Solver of Difficulties</span>
+        </div>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="biography.html" class="active">Biography</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Teachings ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="sayings.html">Aqwal-e-Zareen</a>
+            <a href="nahj-al-balagha.html">Nahj al-Balagha</a>
+            <a href="quran.html">Ali in the Quran</a>
+            <a href="hadith.html">Ali in Hadith</a>
+            <a href="duas.html">Duas & Supplications</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Legacy ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="titles.html">Titles & Attributes</a>
+            <a href="battles.html">Battles & Military</a>
+            <a href="governance.html">Governance & Justice</a>
+            <a href="family.html">Family & Lineage</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Explore ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="books.html">Books & Literature</a>
+            <a href="poetry.html">Poetry & Shayari</a>
+            <a href="sacred-places.html">Sacred Places</a>
+            <a href="gallery.html">Gallery & Media</a>
+            <a href="calendar.html">Islamic Calendar</a>
+            <a href="kids.html">Kids Section</a>
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="separator">/</span>
+        <span style="color: var(--color-gold);">Biography</span>
+      </div>
+      <p style="font-family: var(--font-arabic); font-size: var(--fs-xl); color: var(--color-gold); direction: rtl; margin-bottom: var(--space-md);">زندگی نامہ</p>
+      <h1 style="color: var(--color-white); margin-bottom: var(--space-md);">The Life of Hazrat Ali (RA)</h1>
+      <div class="divider-gold"></div>
+      <p style="color: rgba(255,255,255,0.75); font-size: var(--fs-md); max-width: 650px; margin: var(--space-md) auto 0;">
+        From his miraculous birth inside the Holy Kaaba to his martyrdom at the Mosque of Kufa —
+        the extraordinary life of the Commander of the Faithful
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══ BIOGRAPHY CONTENT ═══ -->
+  <main class="bg-ivory">
+    <div class="container container-sm">
+
+      <!-- ── Early Life ── -->
+      <div class="bio-section fade-in" id="early-life">
+        <h3><span class="section-number">1</span> Birth & Early Life</h3>
+        <p style="font-family: var(--font-arabic); color: var(--color-gold); font-size: var(--fs-lg); direction: rtl; margin-bottom: var(--space-md);">
+          وِلَادَتِ مُبَارَک
+        </p>
+        <p>
+          <strong>Hazrat Ali ibn Abi Talib (RA)</strong> was born on <strong>13 Rajab</strong>,
+          approximately <strong>600 CE</strong> (some sources say 601 CE), in the city of <strong>Mecca</strong>.
+          What makes his birth extraordinary is the widely narrated tradition that he was born
+          <strong>inside the Holy Kaaba</strong> — the most sacred site in Islam — making him the only person
+          in history to have been born in the House of God.
+        </p>
+        <p>
+          His father was <strong>Abu Talib ibn Abd al-Muttalib</strong>, the chief of the Banu Hashim clan
+          and the uncle and protector of Prophet Muhammad (PBUH). His mother was <strong>Fatima bint Asad</strong>,
+          one of the earliest converts to Islam and a woman whom the Prophet (PBUH) regarded as his own mother.
+        </p>
+        <p>
+          From a very young age, Ali was raised in the household of Prophet Muhammad (PBUH) himself.
+          When a severe famine struck Mecca, the young Muhammad (PBUH) took Ali into his care to ease
+          the financial burden on Abu Talib's large family. This upbringing under the direct guidance
+          of the future Prophet would shape Ali into the extraordinary figure he would become.
+        </p>
+
+        <div class="bio-aside">
+          <p>"I was brought up in the lap of the Prophet (PBUH). He would feed me with his own hands and chew my food for me. He never found me telling a lie or acting in a deceitful way."</p>
+          <p class="source">— Hazrat Ali (RA), Nahj al-Balagha, Sermon 192</p>
+        </div>
+      </div>
+
+      <!-- ── Acceptance of Islam ── -->
+      <div class="bio-section fade-in" id="acceptance">
+        <h3><span class="section-number">2</span> Acceptance of Islam</h3>
+        <p style="font-family: var(--font-arabic); color: var(--color-gold); font-size: var(--fs-lg); direction: rtl; margin-bottom: var(--space-md);">
+          قبولِ اسلام
+        </p>
+        <p>
+          When Prophet Muhammad (PBUH) received the first revelation and began privately inviting
+          people to Islam, Ali was among the <strong>very first to accept</strong>. While accounts
+          vary about his exact age — ranging from about 10 to 13 years — there is unanimous agreement
+          that he was the <strong>first male</strong> and the <strong>first youth</strong> to embrace Islam.
+        </p>
+        <p>
+          Ali never worshipped any idol in his life. Having been raised in the Prophet's household,
+          his acceptance was immediate and absolute. He stood by the Prophet (PBUH) through every
+          trial and persecution that the early Muslims faced in Mecca.
+        </p>
+        <p>
+          The Prophet (PBUH) would later call Ali the <strong>"Aaron to his Moses"</strong> —
+          signifying not just closeness, but an unparalleled spiritual and leadership bond.
+        </p>
+      </div>
+
+      <!-- ── Laylat al-Mabit ── -->
+      <div class="bio-section fade-in" id="mabit">
+        <h3><span class="section-number">3</span> Laylat al-Mabit — The Night of Sacrifice</h3>
+        <p style="font-family: var(--font-arabic); color: var(--color-gold); font-size: var(--fs-lg); direction: rtl; margin-bottom: var(--space-md);">
+          لیلۃ المبیت
+        </p>
+        <p>
+          When the Quraysh conspired to assassinate Prophet Muhammad (PBUH) in his bed, the Prophet
+          was commanded by God to migrate to Medina (the Hijra). To ensure his safe departure,
+          someone needed to sleep in his bed as a decoy.
+        </p>
+        <p>
+          <strong>Ali volunteered without hesitation.</strong> Knowing that assassins surrounded the house
+          with drawn swords, the young Ali lay in the Prophet's bed, wrapping himself in the Prophet's
+          green cloak. He slept calmly through the night while the killers waited outside, expecting
+          to murder Muhammad (PBUH) at dawn.
+        </p>
+        <p>
+          When the assassins rushed in at dawn, they found Ali instead. His willingness to sacrifice
+          his life so completely is commemorated in Islamic tradition. Many scholars believe the Quran
+          refers to this event in verse <strong>2:207</strong>:
+        </p>
+
+        <div class="bio-aside">
+          <p>"And among the people is he who sells himself, seeking the pleasure of Allah. And Allah is Kind to His servants."</p>
+          <p class="source">— Quran 2:207</p>
+        </div>
+      </div>
+
+      <!-- ── Marriage to Fatima ── -->
+      <div class="bio-section fade-in" id="marriage">
+        <h3><span class="section-number">4</span> Marriage to Fatima al-Zahra (RA)</h3>
+        <p style="font-family: var(--font-arabic); color: var(--color-gold); font-size: var(--fs-lg); direction: rtl; margin-bottom: var(--space-md);">
+          شادی حضرت فاطمہ الزہراء سے
+        </p>
+        <p>
+          In approximately <strong>623 CE</strong> (2 AH), Ali married <strong>Fatima al-Zahra (RA)</strong>,
+          the most beloved daughter of Prophet Muhammad (PBUH). Several prominent companions had sought
+          her hand, but the Prophet refused them all — waiting for Ali, the one whom God had chosen for her.
+        </p>
+        <p>
+          Their marriage, though modest in worldly terms, became one of the most celebrated unions in
+          Islamic history. Together they had children who would become central figures in Islamic heritage:
+          <strong>Imam Hasan</strong>, <strong>Imam Husayn</strong>, <strong>Zaynab</strong>, and
+          <strong>Umm Kulthum</strong>.
+        </p>
+        <p>
+          The Prophet (PBUH) said: <em>"Fatima is the leader of the women of Paradise, and Hasan
+          and Husayn are the leaders of the youth of Paradise."</em> The household of Ali and Fatima
+          is revered as the heart of <strong>Ahl al-Bayt</strong> (the Prophet's Family).
+        </p>
+      </div>
+
+      <!-- ── Military Valor ── -->
+      <div class="bio-section fade-in" id="military">
+        <h3><span class="section-number">5</span> Military Valor — The Undefeated Warrior</h3>
+        <p style="font-family: var(--font-arabic); color: var(--color-gold); font-size: var(--fs-lg); direction: rtl; margin-bottom: var(--space-md);">
+          جنگی بہادری — ناقابلِ شکست مجاہد
+        </p>
+        <p>
+          Ali's military prowess is legendary. He fought in nearly every major battle during the
+          Prophet's lifetime and was <strong>never defeated in single combat</strong>. He carried
+          the famous double-edged sword <strong>Zulfiqar</strong>, given to him by the Prophet (PBUH).
+        </p>
+
+        <h4 style="color: var(--color-navy); margin-top: var(--space-xl);">Key Battles:</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border-light);">
+            <strong style="color: var(--color-emerald);">Battle of Badr (624 CE)</strong> —
+            Ali killed several prominent Quraysh warriors, including Walid ibn Utba, contributing decisively to Islam's first major military victory.
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border-light);">
+            <strong style="color: var(--color-emerald);">Battle of Uhud (625 CE)</strong> —
+            When many fled the battlefield, Ali stood firm defending the Prophet (PBUH), sustaining multiple wounds but never retreating.
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border-light);">
+            <strong style="color: var(--color-emerald);">Battle of Khandaq / Trench (627 CE)</strong> —
+            Ali defeated the fearsome Amr ibn Abd al-Wud in single combat, a moment the Prophet (PBUH) said was "greater than the worship of all mankind."
+          </li>
+          <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border-light);">
+            <strong style="color: var(--color-emerald);">Battle of Khaybar (628 CE)</strong> —
+            After others had failed for days, the Prophet said: "Tomorrow I shall give the flag to a man who loves God and His messenger, whom God and His messenger love." He gave it to Ali, who conquered the fortress and allegedly lifted the gate of Khaybar with one hand.
+          </li>
+          <li style="padding: var(--space-sm) 0;">
+            <strong style="color: var(--color-emerald);">Conquest of Mecca (630 CE)</strong> —
+            Ali helped destroy 360 idols in the Kaaba, restoring it to the worship of One God.
+          </li>
+        </ul>
+
+        <div class="bio-aside" style="margin-top: var(--space-xl);">
+          <p>"There is no brave youth except Ali, and no sword except Zulfiqar."</p>
+          <p class="source">— لَا فَتَىٰ إِلَّا عَلِيٌّ لَا سَيْفَ إِلَّا ذُو الْفِقَار</p>
+        </div>
+      </div>
+
+      <!-- ── The Caliphate ── -->
+      <div class="bio-section fade-in" id="caliphate">
+        <h3><span class="section-number">6</span> The Caliphate (656–661 CE)</h3>
+        <p style="font-family: var(--font-arabic); color: var(--color-gold); font-size: var(--fs-lg); direction: rtl; margin-bottom: var(--space-md);">
+          خلافت
+        </p>
+        <p>
+          After the assassination of the third Caliph Uthman in 656 CE, Ali was chosen as the
+          <strong>fourth Rashidun (Rightly-Guided) Caliph</strong>. His caliphate, though marked by
+          political turmoil as he sought to bring justice and reform, stands as a model of
+          principled governance.
+        </p>
+        <p>
+          He moved the capital from Medina to <strong>Kufa</strong> (in modern-day Iraq) and
+          implemented sweeping reforms:
+        </p>
+        <ul style="list-style: disc; padding-left: var(--space-xl); margin-bottom: var(--space-md);">
+          <li>Equal distribution of the treasury among all citizens, regardless of status</li>
+          <li>Removal of corrupt officials and restoration of accountability</li>
+          <li>Protection of minority rights and non-Muslim citizens</li>
+          <li>Personal austerity — he lived like the poorest of his subjects</li>
+        </ul>
+        <p>
+          His caliphate faced three major internal conflicts: the <strong>Battle of the Camel</strong> (656 CE),
+          the <strong>Battle of Siffin</strong> (657 CE), and the <strong>Battle of Nahrawan</strong> (658 CE).
+          Despite these challenges, he never compromised on justice.
+        </p>
+
+        <div class="bio-aside">
+          <p>His famous letter to <strong>Malik al-Ashtar</strong>, the governor he appointed over Egypt, is considered one of the finest documents on governance in human history. The United Nations has cited it as an example of just rulership.</p>
+        </div>
+      </div>
+
+      <!-- ── Martyrdom ── -->
+      <div class="bio-section fade-in" id="martyrdom">
+        <h3><span class="section-number">7</span> Martyrdom & Legacy</h3>
+        <p style="font-family: var(--font-arabic); color: var(--color-gold); font-size: var(--fs-lg); direction: rtl; margin-bottom: var(--space-md);">
+          شہادت و وراثت
+        </p>
+        <p>
+          On <strong>19 Ramadan, 40 AH (661 CE)</strong>, while leading the dawn prayer (Fajr)
+          at the <strong>Great Mosque of Kufa</strong>, Ali was struck on the head with a poison-laced
+          sword by <strong>Ibn Muljam</strong>, a member of the Kharijites.
+        </p>
+        <p>
+          Despite the fatal wound, Ali's first words were <em>"By the Lord of the Kaaba, I have succeeded!"</em>
+          (فُزْتُ وَرَبِّ الْكَعْبَة). He survived for two days, during which he gave final instructions
+          to his sons and the Muslim community — even commanding that his assassin be treated fairly
+          and given food and water.
+        </p>
+        <p>
+          He passed away on <strong>21 Ramadan, 40 AH (28 January 661 CE)</strong>, at the age of
+          approximately 63 years. He was buried secretly in <strong>Najaf</strong> (in modern-day Iraq),
+          where the magnificent <strong>Imam Ali Shrine</strong> stands today — one of the most
+          visited pilgrimage sites in the world.
+        </p>
+
+        <div class="bio-aside" style="border-left-color: var(--color-emerald);">
+          <p>"By the Lord of the Kaaba, I have succeeded!" — His final words upon being struck, expressing that a martyr's death in God's service was his ultimate triumph.</p>
+          <p class="source">— فُزْتُ وَرَبِّ الْكَعْبَة</p>
+        </div>
+
+        <p style="margin-top: var(--space-xl);">
+          His legacy endures across all Islamic traditions. He is the <strong>4th Caliph</strong>
+          for Sunni Muslims, the <strong>1st Imam</strong> for Shia Muslims, a pivotal spiritual
+          figure for <strong>Sufis</strong>, and a symbol of justice, knowledge, and bravery for
+          all of humanity. Scholars, jurists, warriors, poets, and seekers of truth have looked
+          to Ali for guidance for over 1,400 years.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ═══ INTERACTIVE TIMELINE ═══ -->
+    <section class="section bg-cream" id="timeline-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-subtitle">سالِ واقعات</p>
+          <h2>Timeline of His Blessed Life</h2>
+          <div class="divider-gold"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">~600 CE</p>
+              <h4 class="timeline-title">Birth in the Kaaba</h4>
+              <p class="timeline-text">Born inside the Holy Kaaba in Mecca on 13 Rajab — the only person to receive this honor.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">~610 CE</p>
+              <h4 class="timeline-title">First Male to Accept Islam</h4>
+              <p class="timeline-text">At approximately age 10, Ali becomes the first male and first youth to embrace Islam.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">622 CE</p>
+              <h4 class="timeline-title">Laylat al-Mabit</h4>
+              <p class="timeline-text">Risks his life by sleeping in the Prophet's bed during the Hijra to Medina.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">623 CE</p>
+              <h4 class="timeline-title">Marriage to Fatima (RA)</h4>
+              <p class="timeline-text">Marries Fatima al-Zahra, the beloved daughter of Prophet Muhammad (PBUH).</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">624 CE</p>
+              <h4 class="timeline-title">Battle of Badr</h4>
+              <p class="timeline-text">Fights valiantly in Islam's first major battle, defeating prominent Quraysh warriors.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">625 CE</p>
+              <h4 class="timeline-title">Battle of Uhud</h4>
+              <p class="timeline-text">Stands firm defending the Prophet when many retreat from the battlefield.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">627 CE</p>
+              <h4 class="timeline-title">Battle of Khandaq</h4>
+              <p class="timeline-text">Defeats Amr ibn Abd al-Wud in legendary single combat at the Battle of the Trench.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">628 CE</p>
+              <h4 class="timeline-title">Battle of Khaybar</h4>
+              <p class="timeline-text">Conquers the fortress of Khaybar and lifts its massive gate — a feat of legendary strength.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">630 CE</p>
+              <h4 class="timeline-title">Conquest of Mecca</h4>
+              <p class="timeline-text">Enters Mecca with the Prophet and helps destroy the 360 idols in the Kaaba.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">632 CE</p>
+              <h4 class="timeline-title">Event of Ghadir Khumm</h4>
+              <p class="timeline-text">The Prophet declares: "He whose mawla I am, Ali is his mawla" — a pivotal moment in Islamic history.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">632 CE</p>
+              <h4 class="timeline-title">Death of the Prophet ﷺ</h4>
+              <p class="timeline-text">Ali performs the ritual washing (ghusl) and burial of the Prophet — a sacred duty.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">656 CE</p>
+              <h4 class="timeline-title">Becomes 4th Caliph</h4>
+              <p class="timeline-text">Chosen as the fourth Rashidun Caliph after the assassination of Caliph Uthman.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">656 CE</p>
+              <h4 class="timeline-title">Battle of the Camel</h4>
+              <p class="timeline-text">First major conflict of his caliphate, fought near Basra.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">657 CE</p>
+              <h4 class="timeline-title">Battle of Siffin</h4>
+              <p class="timeline-text">Confrontation with Muawiya at Siffin, leading to arbitration.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <p class="timeline-year">661 CE</p>
+              <h4 class="timeline-title" style="color: var(--color-gold-dark);">Martyrdom at Kufa</h4>
+              <p class="timeline-text">Struck while praying Fajr on 19 Ramadan. Passes away on 21 Ramadan. Buried in Najaf, Iraq.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTINUE EXPLORING ═══ -->
+    <section class="section bg-ivory">
+      <div class="container">
+        <div class="section-header">
+          <h2>Continue Exploring</h2>
+          <div class="divider-gold"></div>
+        </div>
+
+        <div class="grid-3">
+          <a href="sayings.html" class="card fade-in delay-1" style="text-decoration: none;">
+            <div class="card-icon">📿</div>
+            <h4 class="card-title">Aqwal-e-Zareen</h4>
+            <p class="card-text">Explore the golden sayings of Hazrat Ali (RA) — timeless wisdom for every aspect of life.</p>
+            <span class="card-link">Read Sayings →</span>
+          </a>
+
+          <a href="battles.html" class="card fade-in delay-2" style="text-decoration: none;">
+            <div class="card-icon">⚔️</div>
+            <h4 class="card-title">Battles & Military</h4>
+            <p class="card-text">Detailed accounts of every major battle and his legendary undefeated military career.</p>
+            <span class="card-link">Explore Battles →</span>
+          </a>
+
+          <a href="family.html" class="card fade-in delay-3" style="text-decoration: none;">
+            <div class="card-icon">🌳</div>
+            <h4 class="card-title">Family & Lineage</h4>
+            <p class="card-text">The noble family tree from Banu Hashim and the blessed Ahl al-Bayt.</p>
+            <span class="card-link">View Family Tree →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name">Ali Mushkil Kusha</div>
+          <p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="biography.html">Biography</a>
+            <a href="sayings.html">Aqwal-e-Zareen</a>
+            <a href="nahj-al-balagha.html">Nahj al-Balagha</a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="titles.html">Titles & Attributes</a>
+            <a href="battles.html">Battles</a>
+            <a href="governance.html">Governance</a>
+            <a href="family.html">Family & Lineage</a>
+          </div>
+        </div>
+        <div>
+          <h4>More</h4>
+          <div class="footer-links">
+            <a href="books.html">Books</a>
+            <a href="poetry.html">Poetry</a>
+            <a href="sacred-places.html">Sacred Places</a>
+            <a href="gallery.html">Gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="divider-islamic" style="opacity: 0.3;"></div>
+      <div class="footer-bottom">
+        <p>© 2025 Ali Mushkil Kusha. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

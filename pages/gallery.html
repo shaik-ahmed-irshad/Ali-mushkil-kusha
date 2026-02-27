@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Islamic Calligraphy & Art — Ali Mushkil Kusha</title>
+  <meta name="description" content="A gallery of Islamic calligraphy, sacred art, and visual tributes celebrating Hazrat Ali ibn Abi Talib (RA)." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,#2a1a3a 50%,var(--color-emerald-dark) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 5 Q65 25, 95 50 Q65 75, 50 95 Q35 75, 5 50 Q35 25, 50 5Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-xl);
+      margin-top: var(--space-xl);
+    }
+
+    .gallery-item {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      transition: all var(--transition-base);
+    }
+    .gallery-item:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+
+    .gallery-visual {
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .calligraphy-art {
+      font-family: var(--font-arabic);
+      color: var(--color-gold);
+      text-align: center;
+      direction: rtl;
+      padding: var(--space-xl);
+    }
+    .calligraphy-art .main-text {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.8;
+      text-shadow: 0 2px 20px rgba(200,169,81,0.3);
+    }
+
+    .gallery-info {
+      padding: var(--space-lg) var(--space-xl);
+      border-top: 1px solid var(--color-border-light);
+    }
+    .gallery-info h4 { color: var(--color-charcoal); margin-bottom: var(--space-xs); }
+    .gallery-info p { color: var(--color-text-light); font-size: var(--fs-sm); line-height: 1.6; }
+    .gallery-tag {
+      display: inline-block;
+      background: var(--color-gold-subtle);
+      color: var(--color-charcoal);
+      padding: 2px 10px;
+      border-radius: var(--border-radius-full);
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    .bg-1 { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .bg-2 { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .bg-3 { background: linear-gradient(135deg, var(--color-charcoal), #1a1a2e); }
+    .bg-4 { background: linear-gradient(135deg, #3a1a4e, #5a3a6e); }
+    .bg-5 { background: linear-gradient(135deg, #6a5a20, #8a7a30); }
+    .bg-6 { background: linear-gradient(135deg, #064040, #0a6060); }
+    .bg-7 { background: linear-gradient(135deg, #4a1020, #6a2040); }
+    .bg-8 { background: linear-gradient(135deg, #2a1a3a, var(--color-charcoal)); }
+    .bg-9 { background: linear-gradient(135deg, #1a3a2a, #2a5a3a); }
+
+    .geometric-overlay {
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3Ccircle cx='40' cy='40' r='25' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3C/svg%3E");
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--space-2xl);
+      color: var(--color-text);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-visual { height: 220px; }
+      .gallery-info { padding: var(--space-md) var(--space-lg); }
+    }
+    @media (max-width: 480px) {
+      .gallery-visual { height: 180px; }
+      .calligraphy-art { padding: var(--space-md); }
+      .gallery-info { padding: var(--space-sm) var(--space-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">The Solver of Difficulties</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a><div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html">Family & Lineage</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry & Shayari</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html" class="active">Gallery</a><a href="calendar.html">Islamic Calendar</a><a href="kids.html">Kids Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Gallery</span></div>
+      <p style="font-family:var(--font-arabic);font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">مَعْرَضُ الفُنُون</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Gallery & Islamic Art</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        Islamic calligraphy, geometric art, and visual tributes honoring Hazrat Ali (RA)
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <main class="section bg-ivory">
+    <div class="container">
+
+      <p class="section-intro fade-in">In Islamic tradition, the beauty of the divine is expressed not through figurative representation but through the sacred art of calligraphy, geometric patterns, and architectural ornamentation. Below is a curated collection of calligraphic compositions celebrating the names, titles, and wisdom of Hazrat Ali (RA).</p>
+
+      <div class="gallery-grid">
+
+        <!-- 1 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-1">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">عَلِیٌّ<br/>مُشْکِلْ کُشَا</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Thuluth Script</span>
+            <h4>Ali Mushkil Kusha</h4>
+            <p>"Ali, the Solver of Difficulties" — the primordial invocation of those seeking the intercession and spiritual aid of Hazrat Ali.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-3">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">بِسْمِ ٱللَّهِ<br/>ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Naskh Script</span>
+            <h4>Bismillah ir-Rahman ir-Rahim</h4>
+            <p>"In the name of God, the Most Gracious, the Most Merciful" — every recitation, action, and endeavor begins with these words.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-2">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">أَسَدُ ٱللَّهِ<br/>ٱلْغَالِب</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Diwani Script</span>
+            <h4>Asadullahil Ghalib</h4>
+            <p>"The Ever-Victorious Lion of God" — the title bestowed upon Ali for his unmatched bravery in battle.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-4">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">نَادِ عَلِيًّا<br/>مَظْهَرَ الْعَجَائِبِ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Thuluth Script</span>
+            <h4>Nad-e-Ali</h4>
+            <p>"Call upon Ali, the manifestation of wonders" — the opening line of one of the most recited supplications in the Muslim world.</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-5">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">لَا فَتَىٰ<br/>إِلَّا عَلِيّ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Kufic Script</span>
+            <h4>La Fata illa Ali</h4>
+            <p>"There is no youth (brave one) except Ali" — the angelic proclamation heard at the Battle of Uhud celebrating Ali's valor.</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-6">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">أَمِيرُ<br/>ٱلْمُؤْمِنِينَ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Nastaliq Script</span>
+            <h4>Amir al-Mu'minin</h4>
+            <p>"Commander of the Faithful" — the title of Ali as the fourth Rightly Guided Caliph of Islam.</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-7">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text" style="font-size:clamp(1.2rem,3vw,1.8rem)">اَنَا مَدِينَةُ الْعِلْمِ<br/>وَعَلِيٌّ بَابُهَا</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Thuluth Script</span>
+            <h4>City of Knowledge</h4>
+            <p>"I am the city of knowledge and Ali is its gate" — Hadith of the Prophet (PBUH) affirming Ali's unrivaled mastery of Islamic knowledge.</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-8">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text" style="font-size:clamp(1.2rem,3vw,1.8rem)">مَنْ كُنْتُ مَوْلَاهُ<br/>فَهَذَا عَلِيٌّ مَوْلَاهُ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Naskh Script</span>
+            <h4>Declaration of Ghadir</h4>
+            <p>"Whoever I am his master, Ali is his master" — the historic proclamation at Ghadir Khumm.</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-9">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text" style="font-size:clamp(1.5rem,4vw,2.5rem)">ذُو ٱلْفِقَار</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Kufic Script</span>
+            <h4>Zulfiqar — The Legendary Sword</h4>
+            <p>The double-bladed sword gifted to Ali by the Prophet (PBUH), Zulfiqar became a symbol of divine justice and the defense of truth.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:linear-gradient(135deg,var(--color-emerald-dark),var(--color-navy));border-radius:var(--border-radius-xl);padding:var(--space-2xl);color:var(--color-white);margin-top:var(--space-3xl);text-align:center" class="fade-in">
+        <p style="color:var(--color-gold);font-family:var(--font-arabic);font-size:var(--fs-xl);margin-bottom:var(--space-md);direction:rtl">إِنَّ ٱللَّهَ جَمِيلٌ يُحِبُّ ٱلْجَمَالَ</p>
+        <p style="color:rgba(255,255,255,0.85);font-style:italic">"Indeed, God is beautiful and loves beauty." — Hadith</p>
+        <p style="color:rgba(255,255,255,0.6);font-size:var(--fs-sm);margin-top:var(--space-md)">Islamic calligraphy is considered one of the highest forms of art, transforming the written word into visual prayer.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Continue Exploring</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="poetry.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📜</div><h4 class="card-title">Poetry & Shayari</h4><p class="card-text">Urdu, Persian, and Arabic poetry about Ali.</p><span class="card-link">Read →</span></a>
+        <a href="sacred-places.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">🕌</div><h4 class="card-title">Sacred Places</h4><p class="card-text">Holy sites connected to Hazrat Ali.</p><span class="card-link">Visit →</span></a>
+        <a href="titles.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">⭐</div><h4 class="card-title">Titles & Attributes</h4><p class="card-text">The noble titles bestowed upon Ali.</p><span class="card-link">Explore →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

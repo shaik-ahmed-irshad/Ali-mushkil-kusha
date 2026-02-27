@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battles & Military Legacy of Hazrat Ali (RA) — Ali Mushkil Kusha</title>
+  <meta name="description" content="Explore the legendary military career of Hazrat Ali (RA) — Badr, Uhud, Khandaq, Khaybar, and more. The undefeated warrior and wielder of Zulfiqar." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,#3a1020 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .battle-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      margin-bottom: var(--space-2xl);
+      transition: all var(--transition-base);
+    }
+    .battle-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .battle-header {
+      padding: var(--space-xl) var(--space-2xl);
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+    }
+    .battle-year {
+      background: var(--color-gold);
+      color: var(--color-charcoal);
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: var(--border-radius-full);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: var(--fs-sm);
+      flex-shrink: 0;
+    }
+    .battle-header h3 { color: var(--color-white); flex:1; }
+    .battle-header .emoji { font-size: 2rem; }
+    .battle-body {
+      padding: 0 var(--space-2xl) var(--space-2xl);
+    }
+    .battle-body p { color: var(--color-text); line-height: 1.85; }
+    .battle-highlight {
+      background: var(--color-gold-subtle);
+      border-left: 3px solid var(--color-gold);
+      padding: var(--space-lg);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      margin-top: var(--space-lg);
+    }
+    .battle-highlight p { font-style: italic; color: var(--color-charcoal); }
+    .battle-highlight .source { font-style: normal; font-size: var(--fs-xs); color: var(--color-text-light); }
+    .battle-stats {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-top: var(--space-lg);
+    }
+    .battle-stat {
+      background: var(--color-ivory);
+      padding: var(--space-md);
+      border-radius: var(--border-radius);
+      text-align: center;
+      min-width: 120px;
+    }
+    .battle-stat strong { display: block; color: var(--color-emerald); font-size: var(--fs-lg); }
+    .battle-stat span { font-size: var(--fs-xs); color: var(--color-text-light); }
+
+    /* Zulfiqar section */
+    .zulfiqar-section {
+      background: linear-gradient(135deg, var(--color-charcoal), var(--color-navy));
+      color: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-3xl);
+      text-align: center;
+      margin: var(--space-3xl) 0;
+    }
+    .zulfiqar-section h3 { color: var(--color-gold); font-size: var(--fs-2xl); }
+    .zulfiqar-section p { color: rgba(255,255,255,0.85); line-height: 1.85; max-width: 700px; margin: 0 auto; }
+    .zulfiqar-arabic {
+      font-family: var(--font-arabic);
+      font-size: var(--fs-2xl);
+      color: var(--color-gold);
+      direction: rtl;
+      margin: var(--space-lg) 0;
+    }
+
+    .battle-header.badr { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .battle-header.uhud { background: linear-gradient(135deg, #4a2020, #8a3030); }
+    .battle-header.khandaq { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .battle-header.khaybar { background: linear-gradient(135deg, #3a2a10, #6a4a20); }
+    .battle-header.hunayn { background: linear-gradient(135deg, #2a3a2a, #4a6a4a); }
+
+    @media (max-width: 768px) {
+      .battle-header { padding: var(--space-lg); }
+      .battle-body { padding: 0 var(--space-lg) var(--space-lg); }
+      .zulfiqar-section { padding: var(--space-xl); }
+      .zulfiqar-arabic { font-size: var(--fs-xl); }
+      .battle-stat { min-width: 100px; }
+    }
+    @media (max-width: 480px) {
+      .battle-header { flex-direction: column; text-align: center; padding: var(--space-md); }
+      .battle-body { padding: 0 var(--space-md) var(--space-md); }
+      .zulfiqar-section { padding: var(--space-lg); border-radius: var(--border-radius-lg); }
+      .battle-stats { gap: var(--space-sm); }
+      .battle-stat { min-width: 0; flex: 1 1 45%; padding: var(--space-sm); }
+      .battle-highlight { padding: var(--space-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">The Solver of Difficulties</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a><div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html" class="active">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html">Family & Lineage</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a><a href="calendar.html">Islamic Calendar</a><a href="kids.html">Kids Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Battles & Military</span></div>
+      <p style="font-size:4rem;margin-bottom:var(--space-sm)">⚔️</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Battles & Military Legacy</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        The undefeated warrior of Islam — from the first battle at Badr to the fortress of Khaybar, Hazrat Ali (RA) never tasted defeat
+      </p>
+    </div>
+  </section>
+
+  <!-- BATTLES -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <!-- Zulfiqar -->
+      <div class="zulfiqar-section fade-in">
+        <h3>⚔️ Zulfiqar — The Legendary Sword</h3>
+        <p class="zulfiqar-arabic">لَا فَتَىٰ إِلَّا عَلِيٌّ لَا سَيْفَ إِلَّا ذُو الْفِقَار</p>
+        <p>"There is no brave youth except Ali, and no sword except Zulfiqar."</p>
+        <p style="margin-top:var(--space-lg);color:rgba(255,255,255,0.85);">Zulfiqar (ذوالفقار) was the legendary double-pointed sword given to Hazrat Ali (RA) by the Prophet Muhammad (PBUH) during the Battle of Uhud. It became the most famous sword in Islamic history and a symbol of divine justice and power. The name means "Possessing Spine" or "The Cleaver of Vertebrae."</p>
+      </div>
+
+      <!-- Badr -->
+      <div class="battle-card fade-in">
+        <div class="battle-header badr">
+          <span class="battle-year">624 CE</span>
+          <h3>Battle of Badr</h3>
+          <span class="emoji">🏴</span>
+        </div>
+        <div class="battle-body">
+          <p>The first major military engagement in Islamic history. The 313 Muslims faced approximately 1,000 well-armed Quraysh warriors. Ali, only around 23 years old, was the standard-bearer and one of the three champions chosen for single combat at the start of the battle.</p>
+          <p>Ali defeated <strong>Walid ibn Utba</strong> in the opening duel, then assisted Hamza and Ubayda against their opponents. During the main battle, Ali fought with extraordinary valor, personally accounting for a significant portion of the enemy casualties.</p>
+          <div class="battle-stats">
+            <div class="battle-stat"><strong>313</strong><span>Muslim Forces</span></div>
+            <div class="battle-stat"><strong>~1,000</strong><span>Quraysh Army</span></div>
+            <div class="battle-stat"><strong>Victory</strong><span>Decisive Win</span></div>
+          </div>
+          <div class="battle-highlight">
+            <p>"Ali was responsible for nearly half of the enemy casualties at Badr."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Uhud -->
+      <div class="battle-card fade-in">
+        <div class="battle-header uhud">
+          <span class="battle-year">625 CE</span>
+          <h3>Battle of Uhud</h3>
+          <span class="emoji">⛰️</span>
+        </div>
+        <div class="battle-body">
+          <p>At Uhud, when many companions fled due to the surprise attack by Khalid ibn al-Walid's cavalry from the rear, <strong>Ali stood firm</strong> beside the Prophet (PBUH). He received over <strong>16 wounds</strong> while shielding the Prophet with his own body.</p>
+          <p>When the rumor spread that the Prophet had been killed, Ali was among the very few who remained, fighting off wave after wave of attackers. It was during this battle that the voice from the heavens was heard declaring: <em>"There is no brave youth except Ali, and no sword except Zulfiqar."</em></p>
+          <div class="battle-highlight">
+            <p>Ali received 16 wounds while defending the Prophet (PBUH) and never retreated a single step.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Khandaq -->
+      <div class="battle-card fade-in">
+        <div class="battle-header khandaq">
+          <span class="battle-year">627 CE</span>
+          <h3>Battle of the Trench (Khandaq)</h3>
+          <span class="emoji">🏰</span>
+        </div>
+        <div class="battle-body">
+          <p>When 10,000 enemy soldiers besieged Medina, the Muslims dug a trench on the advice of Salman al-Farsi. The most critical moment came when the legendary Arab warrior <strong>Amr ibn Abd Wudd</strong> — considered equal to a thousand fighters — crossed the trench and challenged the Muslims to single combat.</p>
+          <p>No one dared to face him except Ali. The Prophet said: <em>"The entirety of faith has gone out against the entirety of disbelief."</em> Ali engaged Amr in a fierce duel and slew him, breaking the morale of the enemy and leading to their eventual retreat.</p>
+          <div class="battle-highlight">
+            <p>"Ali's strike on the day of Khandaq is better than the worship of all humans and jinn."</p>
+            <p class="source">— Attributed to the Prophet (PBUH)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Khaybar -->
+      <div class="battle-card fade-in">
+        <div class="battle-header khaybar">
+          <span class="battle-year">628 CE</span>
+          <h3>Battle of Khaybar</h3>
+          <span class="emoji">🏯</span>
+        </div>
+        <div class="battle-body">
+          <p>The siege of the fortified Jewish stronghold at Khaybar was one of the most dramatic episodes of Ali's military career. After other commanders failed to breach the fortress, the Prophet declared:</p>
+          <div class="battle-highlight">
+            <p>"Tomorrow I shall give the banner to a man who loves Allah and His Messenger, and whom Allah and His Messenger love. He will not return until Allah grants him victory."</p>
+            <p class="source">— Prophet Muhammad ﷺ (Sahih al-Bukhari & Sahih Muslim)</p>
+          </div>
+          <p style="margin-top:var(--space-lg)">The next morning, the Prophet gave the banner to Ali, who was suffering from an eye infection. The Prophet applied his blessed saliva to Ali's eyes, and they were instantly healed. Ali then marched to the fortress, engaged the champion <strong>Marhab</strong> in single combat and killed him, then <strong>tore the great iron gate of Khaybar</strong> from its hinges and used it as a shield.</p>
+          <p>Afterward, a group of men tried to turn the gate over — it took <strong>eight or more men</strong> and they still could not lift it properly. This event became legendary proof of the divine strength granted to Ali.</p>
+        </div>
+      </div>
+
+      <!-- Hunayn -->
+      <div class="battle-card fade-in">
+        <div class="battle-header hunayn">
+          <span class="battle-year">630 CE</span>
+          <h3>Battle of Hunayn</h3>
+          <span class="emoji">🏹</span>
+        </div>
+        <div class="battle-body">
+          <p>After the conquest of Mecca, 12,000 Muslim soldiers marched against the Hawazin tribe at Hunayn. When the enemy ambushed them in a narrow valley, the massive Muslim army panicked and many fled. Ali was among the handful who stood their ground around the Prophet, fighting until the Muslims regrouped and won the day.</p>
+          <p>His steadfastness at Hunayn, as at Uhud, demonstrated that his courage was not mere aggression but principled bravery — he stood firm where it mattered most, never running regardless of the odds.</p>
+        </div>
+      </div>
+
+      <!-- Military Legacy -->
+      <div style="background:var(--color-white);border-radius:var(--border-radius-xl);padding:var(--space-2xl);margin-top:var(--space-2xl);box-shadow:var(--shadow-sm)" class="fade-in">
+        <h3 style="color:var(--color-emerald);margin-bottom:var(--space-md)">Military Ethics & Legacy</h3>
+        <p style="color:var(--color-text);line-height:1.85">What set Ali apart from other warriors was not just his unmatched fighting ability, but his extraordinary <strong>code of ethics</strong> in warfare:</p>
+        <ul style="margin:var(--space-md) 0;padding-left:var(--space-xl);color:var(--color-text);line-height:2.2">
+          <li><strong>Never struck first</strong> — he always waited for the opponent to attack</li>
+          <li><strong>Never killed a fleeing enemy</strong> — he considered it dishonorable</li>
+          <li><strong>Never mutilated the dead</strong> — he treated fallen opponents with dignity</li>
+          <li><strong>Spared Amr ibn Abd Wudd</strong> momentarily when Amr spat at him — chose not to kill in anger, only for Allah</li>
+          <li><strong>Protected women, children, and civilians</strong> in every conflict</li>
+          <li><strong>Never fought for personal gain</strong> — his motivation was only the defense of faith and justice</li>
+        </ul>
+        <p style="color:var(--color-text);line-height:1.85;margin-top:var(--space-md)">These principles made him not just the greatest warrior of his era, but a model of righteous warfare that is studied by military ethicists to this day.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Continue Exploring</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="titles.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">✨</div><h4 class="card-title">Titles & Attributes</h4><p class="card-text">The divine titles that honor his character.</p><span class="card-link">Explore →</span></a>
+        <a href="governance.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">⚖️</div><h4 class="card-title">Governance & Justice</h4><p class="card-text">How the warrior became the most just ruler.</p><span class="card-link">Discover →</span></a>
+        <a href="biography.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📜</div><h4 class="card-title">Biography</h4><p class="card-text">The complete life story with timeline.</p><span class="card-link">Read →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

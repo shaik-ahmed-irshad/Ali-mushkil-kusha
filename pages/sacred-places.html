@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sacred Places of Hazrat Ali (RA) — Ali Mushkil Kusha</title>
+  <meta name="description" content="Explore the sacred places connected to Hazrat Ali ibn Abi Talib (RA) — Imam Ali Mosque in Najaf, Masjid al-Kufa, birthplace in the Kaaba, and more." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,var(--color-emerald-dark) 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 10 L110 60 L60 110 L10 60 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='60' cy='60' r='40' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:120px 120px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .place-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border-light);
+      margin-bottom: var(--space-2xl);
+      transition: all var(--transition-base);
+    }
+    .place-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-3px); }
+    .place-banner {
+      padding: var(--space-2xl);
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+    .place-icon {
+      font-size: 3rem;
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.15);
+      border-radius: var(--border-radius-full);
+    }
+    .place-banner h3 { color: var(--color-white); margin: 0 0 var(--space-xs); }
+    .place-banner .location { color: var(--color-gold); font-size: var(--fs-sm); }
+    .place-body { padding: var(--space-xl) var(--space-2xl) var(--space-2xl); }
+    .place-body p { color: var(--color-text); line-height: 1.85; margin-bottom: var(--space-md); }
+    .place-body p:last-child { margin-bottom: 0; }
+    .place-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg); margin-top: var(--space-lg); }
+    .place-detail-item { background: var(--color-ivory); padding: var(--space-md); border-radius: var(--border-radius); }
+    .place-detail-item strong { display: block; color: var(--color-emerald-dark); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-xs); }
+    .place-detail-item span { color: var(--color-charcoal); font-size: var(--fs-sm); }
+
+    .b-emerald { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .b-navy { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .b-gold { background: linear-gradient(135deg, #6a5a20, #8a7a30); }
+    .b-brown { background: linear-gradient(135deg, #3a2a10, #5a4a30); }
+    .b-teal { background: linear-gradient(135deg, #064040, #0a6060); }
+    .b-dark { background: linear-gradient(135deg, var(--color-charcoal), #2a2a3e); }
+
+    .map-note {
+      background: linear-gradient(135deg, var(--color-gold-subtle), #f5e6c0);
+      border: 1px solid var(--color-gold);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+      color: var(--color-charcoal);
+      margin-top: var(--space-xl);
+    }
+    .map-note strong { color: var(--color-emerald-dark); }
+
+    @media (max-width: 768px) {
+      .place-banner { flex-wrap: wrap; justify-content: center; text-align: center; }
+      .place-icon { width: 60px; height: 60px; font-size: 2rem; }
+      .place-body { padding: var(--space-lg); }
+      .place-details { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .place-banner { padding: var(--space-md); gap: var(--space-sm); }
+      .place-icon { width: 50px; height: 50px; font-size: 1.5rem; }
+      .place-body { padding: var(--space-md); }
+      .place-card { border-radius: var(--border-radius-lg); }
+      .map-note { padding: var(--space-lg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">The Solver of Difficulties</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a><div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html">Family & Lineage</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry & Shayari</a><a href="sacred-places.html" class="active">Sacred Places</a><a href="gallery.html">Gallery</a><a href="calendar.html">Islamic Calendar</a><a href="kids.html">Kids Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Sacred Places</span></div>
+      <p style="font-family:var(--font-arabic);font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">الأَمَاكِنُ المُقَدَّسَة</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Sacred Places</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        Holy sites connected to the life, worship, and resting place of Hazrat Ali (RA)
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <!-- Imam Ali Mosque, Najaf -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-emerald">
+          <div class="place-icon">🕌</div>
+          <div>
+            <h3>Imam Ali Mosque (Masjid al-Imam Ali)</h3>
+            <p class="location">📍 Najaf, Iraq</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>The Imam Ali Mosque in Najaf, Iraq, is the most sacred site associated with Hazrat Ali (RA). It houses the tomb of the Fourth Caliph and is one of the most visited pilgrimage sites in the Islamic world. The mosque features a magnificent golden dome and twin minarets that can be seen from miles away.</p>
+          <p>The shrine has been rebuilt, renovated, and expanded many times over the centuries. The current structure dates primarily to the 17th century, with further additions in subsequent centuries. Millions of pilgrims visit annually to pay their respects.</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>Built</strong><span>Originally: 977 CE (current dome: 17th century)</span></div>
+            <div class="place-detail-item"><strong>Features</strong><span>Golden dome, twin minarets, expansive courtyard</span></div>
+            <div class="place-detail-item"><strong>Significance</strong><span>Tomb of Imam Ali (RA), one of holiest sites in Islam</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kaaba — birthplace -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-dark">
+          <div class="place-icon">🕋</div>
+          <div>
+            <h3>The Holy Kaaba — Birthplace</h3>
+            <p class="location">📍 Makkah, Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>According to historical reports transmitted by multiple scholars, Hazrat Ali (RA) was born inside the Holy Kaaba in Makkah — a distinction held by no other figure in Islamic history. His mother, Fatima bint Asad, is said to have entered the Kaaba when she felt labor pains, and the wall miraculously opened for her.</p>
+          <p>This event, recorded by historians such as al-Hakim in <em>al-Mustadrak</em> and al-Mas'udi in <em>Muruj al-Dhahab</em>, underscores the unique spiritual status granted to Ali even before his birth.</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>Event</strong><span>Birth of Ali ibn Abi Talib, 13 Rajab, ~600 CE</span></div>
+            <div class="place-detail-item"><strong>Sources</strong><span>al-Hakim, al-Mas'udi, Ibn Sabbagh, Shah Waliullah</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Masjid al-Kufa -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-navy">
+          <div class="place-icon">🏛️</div>
+          <div>
+            <h3>Masjid al-Kufa (Great Mosque of Kufa)</h3>
+            <p class="location">📍 Kufa, Iraq</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>The Great Mosque of Kufa is one of the oldest mosques in the world and served as the principal mosque of Hazrat Ali during his caliphate. Kufa was his capital city (656–661 CE), and it was in this mosque that he was struck by the poisoned sword of Ibn Muljam during the Fajr prayer on 19 Ramadan, 40 AH (661 CE).</p>
+          <p>The mosque holds immense historical significance. It was the center of Ali's government, his court of justice, and the place where he delivered many of his famous sermons compiled in Nahj al-Balagha. The exact spot where Ali was struck and the mihrab where he prayed are preserved within the mosque.</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>Founded</strong><span>639 CE (during the caliphate of Umar)</span></div>
+            <div class="place-detail-item"><strong>Key Event</strong><span>Martyrdom of Imam Ali, 21 Ramadan 40 AH</span></div>
+            <div class="place-detail-item"><strong>Features</strong><span>Multiple mihrabs, historic columns, preserved prayer spots</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Masjid an-Nabawi -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-teal">
+          <div class="place-icon">🌙</div>
+          <div>
+            <h3>Masjid an-Nabawi (Prophet's Mosque)</h3>
+            <p class="location">📍 Madinah, Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>The Prophet's Mosque in Madinah is deeply connected to Ali's life. After the Hijrah, Ali arrived in Madinah and helped build this mosque alongside the Prophet (PBUH). It was here that many of the pivotal events of early Islam took place, and Ali spent years learning directly from the Prophet.</p>
+          <p>Ali grew up in the Prophet's household and was a constant presence in the mosque — praying, learning, and serving. The nearby Baqi Cemetery is the resting place of many members of Ali's immediate family, including his sons Hasan (RA) and several other descendants.</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>Connection</strong><span>Ali helped build the mosque, prayed and learned here for decades</span></div>
+            <div class="place-detail-item"><strong>Nearby</strong><span>Jannat al-Baqi — burial place of Imam Hasan (RA) and Ahl al-Bayt</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wadi-us-Salaam -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-brown">
+          <div class="place-icon">🌿</div>
+          <div>
+            <h3>Wadi-us-Salaam (Valley of Peace)</h3>
+            <p class="location">📍 Najaf, Iraq</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>Wadi-us-Salaam in Najaf is the world's largest cemetery, covering over 1,485 acres. For over 1,400 years, Muslims have sought to be buried near the shrine of Imam Ali (RA), believing in the blessings of proximity to his resting place. The cemetery contains an estimated 5–6 million graves.</p>
+          <p>It is recognized as a UNESCO World Heritage Site and serves as a powerful testament to the enduring love and reverence for Hazrat Ali across centuries and continents.</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>Area</strong><span>1,485.5 acres (6 km²)</span></div>
+            <div class="place-detail-item"><strong>Estimated Burials</strong><span>Over 5 million</span></div>
+            <div class="place-detail-item"><strong>Status</strong><span>UNESCO World Heritage Site</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dhi Qar / Ghadir Khumm -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-gold">
+          <div class="place-icon">⭐</div>
+          <div>
+            <h3>Ghadir Khumm</h3>
+            <p class="location">📍 Between Makkah and Madinah, Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>Ghadir Khumm is the historic oasis where, on 18 Dhul Hijjah 10 AH (632 CE), the Prophet Muhammad (PBUH) delivered his famous sermon after the Farewell Pilgrimage. It was here that he declared: <em>"Whoever I am his master (Mawla), Ali is his master."</em></p>
+          <p>This event, known as the Event of Ghadir, is one of the most widely narrated events in Islamic history, recorded by scholars of all schools of thought. The site holds special significance as the place where Ali's spiritual authority was publicly proclaimed before tens of thousands of companions.</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>Date</strong><span>18 Dhul Hijjah, 10 AH (March 632 CE)</span></div>
+            <div class="place-detail-item"><strong>Key Declaration</strong><span>"Man kuntu mawlahu fa hadha Aliyyun mawlahu"</span></div>
+            <div class="place-detail-item"><strong>Witnesses</strong><span>Estimated 100,000+ companions present</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-note fade-in">
+        <strong>🗺️ Note:</strong> These sacred sites span across modern-day Iraq, Saudi Arabia, and the wider Muslim world. Each place carries the spiritual imprint of a man whose life was dedicated entirely to the worship of God and the service of humanity.
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Continue Exploring</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="gallery.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">🖼️</div><h4 class="card-title">Gallery</h4><p class="card-text">Calligraphy and Islamic art related to Hazrat Ali.</p><span class="card-link">View →</span></a>
+        <a href="biography.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📖</div><h4 class="card-title">Biography</h4><p class="card-text">The complete life story from birth to martyrdom.</p><span class="card-link">Read →</span></a>
+        <a href="calendar.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📅</div><h4 class="card-title">Islamic Calendar</h4><p class="card-text">Key dates and events in Ali's life.</p><span class="card-link">Explore →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

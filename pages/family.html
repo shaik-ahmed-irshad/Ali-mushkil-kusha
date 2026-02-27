@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family & Lineage of Hazrat Ali (RA) — Ali Mushkil Kusha</title>
+  <meta name="description" content="Explore the blessed family tree of Hazrat Ali ibn Abi Talib (RA) — his lineage, marriage to Fatima Zahra (SA), children including Hasan, Husayn, Zainab, and Umm Kulthum." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,var(--color-emerald-dark) 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .family-member {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-2xl);
+      margin-bottom: var(--space-xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      transition: all var(--transition-base);
+    }
+    .family-member:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .family-member .member-label {
+      display: inline-block;
+      background: var(--color-emerald);
+      color: var(--color-white);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--border-radius-full);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: var(--space-md);
+    }
+    .family-member h3 {
+      color: var(--color-charcoal);
+      margin-bottom: var(--space-xs);
+    }
+    .family-member .arabic-name {
+      font-family: var(--font-arabic);
+      color: var(--color-gold);
+      font-size: var(--fs-lg);
+      direction: rtl;
+      margin-bottom: var(--space-md);
+    }
+    .family-member p { color: var(--color-text); line-height: 1.85; }
+
+    /* Tree visual */
+    .tree-visual {
+      text-align: center;
+      padding: var(--space-3xl) 0;
+    }
+    .tree-node {
+      display: inline-block;
+      background: var(--color-emerald);
+      color: var(--color-white);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--border-radius-xl);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: var(--fs-md);
+      box-shadow: var(--shadow-md);
+    }
+    .tree-node.gold { background: linear-gradient(135deg,#B8941E,#D4AF37); }
+    .tree-node.navy { background: var(--color-navy); }
+    .tree-connector {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding: var(--space-md) 0;
+    }
+    .tree-connector::before {
+      content: '';
+      width: 2px;
+      height: 100%;
+      background: var(--color-gold);
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+    .tree-children {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      position: relative;
+      padding-top: var(--space-xl);
+    }
+    .tree-children::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: var(--color-gold);
+    }
+    .tree-child {
+      background: var(--color-white);
+      border: 2px solid var(--color-gold);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-md) var(--space-lg);
+      text-align: center;
+      position: relative;
+      min-width: 140px;
+    }
+    .tree-child::before {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--space-xl));
+      left: 50%;
+      width: 2px;
+      height: var(--space-xl);
+      background: var(--color-gold);
+    }
+    .tree-child h5 { color: var(--color-charcoal); margin-bottom: var(--space-xs); }
+    .tree-child p { font-size: var(--fs-xs); color: var(--color-text-light); }
+
+    .lineage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-xl);
+    }
+    .lineage-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-xl);
+      border-left: 4px solid var(--color-gold);
+      box-shadow: var(--shadow-sm);
+    }
+    .lineage-card h4 { color: var(--color-emerald); margin-bottom: var(--space-sm); }
+    .lineage-card p { color: var(--color-text); font-size: var(--fs-sm); line-height: 1.7; }
+    .ahl-bayt-banner {
+      background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-navy));
+      color: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-3xl);
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+    .ahl-bayt-banner .arabic {
+      font-family: var(--font-arabic);
+      font-size: var(--fs-3xl);
+      color: var(--color-gold);
+      direction: rtl;
+      margin-bottom: var(--space-md);
+    }
+    @media (max-width:768px) {
+      .tree-children { gap: var(--space-sm); }
+      .tree-child { min-width: 110px; padding: var(--space-sm) var(--space-md); }
+      .lineage-grid { grid-template-columns: 1fr; }
+      .ahl-bayt-banner { padding: var(--space-xl); }
+      .ahl-bayt-banner .arabic { font-size: var(--fs-xl); }
+    }
+    @media (max-width:480px) {
+      .tree-child { min-width: 90px; padding: var(--space-xs) var(--space-sm); font-size: var(--fs-xs); }
+      .tree-child::before { display: none; }
+      .lineage-card { padding: var(--space-lg); }
+      .ahl-bayt-banner { padding: var(--space-lg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon">
+          <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/>
+            <polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Ali Mushkil Kusha</span>
+          <span class="brand-tagline">The Solver of Difficulties</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a>
+          <div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div>
+        </div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a>
+          <div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html" class="active">Family & Lineage</a></div>
+        </div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a>
+          <div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a><a href="calendar.html">Islamic Calendar</a><a href="kids.html">Kids Section</a></div>
+        </div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span>
+        <span style="color:var(--color-gold)">Family & Lineage</span>
+      </div>
+      <p style="font-family:var(--font-arabic);font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">اَہلِ بَیت</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Family & Lineage</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        The noble family of Hazrat Ali (RA) — from the house of Abu Talib to the blessed Ahl al-Bayt
+      </p>
+    </div>
+  </section>
+
+  <!-- AHL AL-BAYT -->
+  <section class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <div class="ahl-bayt-banner fade-in">
+        <p class="arabic">إِنَّمَا يُرِيدُ اللَّهُ لِيُذْهِبَ عَنكُمُ الرِّجْسَ أَهْلَ الْبَيْتِ وَيُطَهِّرَكُمْ تَطْهِيرًا</p>
+        <p style="color:rgba(255,255,255,0.85);font-size:var(--fs-md);max-width:600px;margin:0 auto;line-height:1.8">"Allah only intends to remove impurity from you, O People of the Household, and to purify you with thorough purification."</p>
+        <p style="color:var(--color-gold);font-size:var(--fs-sm);margin-top:var(--space-sm)">— Quran 33:33 (Ayat al-Tathir)</p>
+      </div>
+
+      <!-- Parents -->
+      <h2 class="section-header fade-in" style="margin-top:var(--space-xl)">Paternal Lineage</h2>
+
+      <div class="family-member fade-in">
+        <span class="member-label">Father</span>
+        <h3>Abu Talib ibn Abd al-Muttalib</h3>
+        <p class="arabic-name">أَبُو طَالِب بن عَبْدِ الْمُطَّلِب</p>
+        <p>Abu Talib was the leader of the Banu Hashim clan and the uncle and guardian of Prophet Muhammad (PBUH). When the Prophet's grandfather Abd al-Muttalib passed away, Abu Talib took the young Muhammad into his care and raised him as his own son. He remained a steadfast protector of the Prophet even during the harshest years of persecution in Mecca. His home was one of faith, nobility, and generosity.</p>
+      </div>
+
+      <div class="family-member fade-in">
+        <span class="member-label">Mother</span>
+        <h3>Fatima bint Asad</h3>
+        <p class="arabic-name">فَاطِمَة بِنْت أَسَد</p>
+        <p>Fatima bint Asad was among the earliest Muslims and one of the most respected women of her time. She raised Prophet Muhammad (PBUH) as her own child when he was orphaned, caring for him with such love that the Prophet himself called her "my mother." When she passed away, the Prophet placed his own shirt in her grave as a mark of honor — an act of extraordinary love and respect.</p>
+      </div>
+
+      <!-- Marriage -->
+      <h2 class="section-header fade-in" style="margin-top:var(--space-3xl)">The Blessed Marriage</h2>
+
+      <div class="family-member fade-in" style="border-left:4px solid var(--color-gold)">
+        <span class="member-label" style="background:var(--color-gold)">Wife</span>
+        <h3>Fatima Zahra (SA)</h3>
+        <p class="arabic-name">فَاطِمَة الزَّهْرَاء</p>
+        <p>Fatima Zahra (SA), the beloved daughter of Prophet Muhammad (PBUH) and Khadija (RA), was given in marriage to Ali by divine command. The Prophet declared, <em>"Had Ali not existed, there would have been no match for Fatima."</em></p>
+        <p>Their marriage is revered as the most sacred union in Islamic history. Despite living in extreme simplicity — their home had nothing but a mat, a pillow stuffed with palm fibers, and a water skin — their household radiated faith, love, and spiritual light. Together they are the parents of Hasan, Husayn, Zainab, and Umm Kulthum — the blessed progeny through whom the lineage of the Prophet (PBUH) continues.</p>
+        <p>Fatima is honored with many titles: al-Zahra (The Radiant), al-Batul (The Pure), Sayyidat Nisa al-Alamin (Leader of the Women of the Worlds), and Umm Abiha (Mother of Her Father).</p>
+      </div>
+
+      <!-- Children -->
+      <h2 class="section-header fade-in" style="margin-top:var(--space-3xl)">Children of Ali & Fatima</h2>
+
+      <div class="lineage-grid">
+        <div class="lineage-card fade-in delay-1">
+          <h4>Imam Hasan (RA)</h4>
+          <p style="font-family:var(--font-arabic);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-sm)">الحَسَن</p>
+          <p>The eldest son, known for his generosity and wisdom. He became the fifth Caliph briefly and chose peace by signing a treaty with Muawiyah to prevent further bloodshed in the Muslim community. His name means "The Good" or "The Handsome." He was the most resembling of the Prophet in appearance and character.</p>
+        </div>
+        <div class="lineage-card fade-in delay-2">
+          <h4>Imam Husayn (RA)</h4>
+          <p style="font-family:var(--font-arabic);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-sm)">الحُسَيْن</p>
+          <p>The Prince of Martyrs. His courageous stand at Karbala in 680 CE — facing an army of thousands with only 72 companions — is one of the greatest sacrifices in human history. The Prophet said, "Husayn is from me, and I am from Husayn. Allah loves the one who loves Husayn."</p>
+        </div>
+        <div class="lineage-card fade-in delay-3">
+          <h4>Zainab bint Ali (RA)</h4>
+          <p style="font-family:var(--font-arabic);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-sm)">زَيْنَب</p>
+          <p>The embodiment of patience and courage. After the tragedy of Karbala, she carried Husayn's message to the world. Her fiery sermons in the courts of Ibn Ziyad and Yazid exposed tyranny and preserved the truth. She is known as "The Heroine of Karbala."</p>
+        </div>
+        <div class="lineage-card fade-in delay-4">
+          <h4>Umm Kulthum bint Ali (RA)</h4>
+          <p style="font-family:var(--font-arabic);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-sm)">أُمّ كُلْثُوم</p>
+          <p>Like her sister Zainab, she endured the tragedy of Karbala with immense courage. Known for her piety, eloquence, and patience, she stood alongside Zainab in bearing witness to the events at Karbala and its aftermath.</p>
+        </div>
+      </div>
+
+      <!-- Ancestry -->
+      <h2 class="section-header fade-in" style="margin-top:var(--space-3xl)">Noble Ancestry</h2>
+
+      <div class="family-member fade-in">
+        <span class="member-label" style="background:var(--color-navy)">Clan</span>
+        <h3>Banu Hashim of the Quraysh</h3>
+        <p>Ali ibn Abi Talib belonged to the <strong>Banu Hashim</strong>, the most noble and respected clan of the Quraysh tribe — the same family as Prophet Muhammad (PBUH). His lineage traces directly through:</p>
+        <ul style="margin:var(--space-md) 0;padding-left:var(--space-xl);color:var(--color-text);line-height:2">
+          <li><strong>Ali</strong> ibn <strong>Abu Talib</strong> ibn <strong>Abd al-Muttalib</strong></li>
+          <li>Abd al-Muttalib ibn <strong>Hashim</strong> (founder of Banu Hashim)</li>
+          <li>Hashim ibn <strong>Abd Manaf</strong></li>
+          <li>The line continues to <strong>Adnan</strong> and ultimately to Prophet <strong>Ibrahim (AS)</strong></li>
+        </ul>
+        <p>This makes Ali a first cousin of the Prophet — Abu Talib was the Prophet's uncle and guardian. Ali grew up in the Prophet's household from a young age, further deepening the bond between them.</p>
+      </div>
+
+      <!-- Ahl al-Bayt significance -->
+      <h2 class="section-header fade-in" style="margin-top:var(--space-3xl)">Ahl al-Bayt — The People of the House</h2>
+
+      <div class="family-member fade-in">
+        <h3>The Prophetic Household</h3>
+        <p>The term <strong>Ahl al-Bayt</strong> refers to the family of the Prophet Muhammad (PBUH). While its exact composition is discussed by scholars, the most widely accepted narration states that the Prophet gathered Ali, Fatima, Hasan, and Husayn under his cloak (the event of al-Kisa) and prayed:</p>
+        <div style="background:var(--color-gold-subtle);border-left:3px solid var(--color-gold);padding:var(--space-lg);border-radius:0 var(--border-radius) var(--border-radius) 0;margin:var(--space-lg) 0">
+          <p style="font-style:italic;color:var(--color-charcoal)">"O Allah, these are my Ahl al-Bayt. Remove from them all impurity and purify them completely."</p>
+          <p style="font-size:var(--fs-xs);color:var(--color-text-light);margin-top:var(--space-xs)">— Prophet Muhammad ﷺ (Hadith al-Kisa, Sahih Muslim)</p>
+        </div>
+        <p>The love of Ahl al-Bayt is considered obligatory upon every Muslim. The Quran states: <em>"Say: I ask of you no reward except the love of my kin"</em> (42:23). Through Ali and Fatima, the blessed lineage of the Prophet continues — the Sayyids and Sharifs who trace their ancestry to this noble family today number in the millions across the world.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Continue Exploring</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="titles.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">✨</div><h4 class="card-title">Titles & Attributes</h4><p class="card-text">Discover the divine titles bestowed upon Hazrat Ali (RA).</p><span class="card-link">Explore →</span></a>
+        <a href="biography.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📜</div><h4 class="card-title">Biography</h4><p class="card-text">The complete life story with an interactive timeline.</p><span class="card-link">Read →</span></a>
+        <a href="governance.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">⚖️</div><h4 class="card-title">Governance & Justice</h4><p class="card-text">His unmatched model of just governance and leadership.</p><span class="card-link">Discover →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

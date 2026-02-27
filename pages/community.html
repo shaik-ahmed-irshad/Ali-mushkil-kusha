@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — Join Our Growing Family — Ali Mushkil Kusha</title>
+  <meta name="description" content="Join the Ali Mushkil Kusha community — connect with fellow seekers, share reflections, and spread the wisdom of Hazrat Ali (RA)." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-emerald-dark) 0%,var(--color-navy) 50%,var(--color-charcoal) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .community-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-3xl) auto;
+      max-width: 700px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: var(--space-xl);
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--color-emerald-dark); font-family: var(--font-heading); }
+    .stat-label { color: var(--color-text-light); font-size: var(--fs-sm); margin-top: var(--space-xs); }
+
+    .ways-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-xl);
+      margin-top: var(--space-xl);
+    }
+    .way-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-2xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      text-align: center;
+      transition: all var(--transition-base);
+    }
+    .way-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); border-color: var(--color-gold); }
+    .way-icon { font-size: 3rem; margin-bottom: var(--space-md); }
+    .way-card h3 { color: var(--color-charcoal); margin-bottom: var(--space-sm); }
+    .way-card p { color: var(--color-text); font-size: var(--fs-sm); line-height: 1.7; margin-bottom: var(--space-lg); }
+    .way-btn {
+      display: inline-block;
+      padding: var(--space-sm) var(--space-xl);
+      border-radius: var(--border-radius-full);
+      font-weight: 600;
+      font-size: var(--fs-sm);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-emerald { background: var(--color-emerald-dark); color: var(--color-white); }
+    .btn-emerald:hover { background: var(--color-emerald); }
+    .btn-gold { background: var(--color-gold); color: var(--color-charcoal); }
+    .btn-gold:hover { background: #dab961; }
+    .btn-navy { background: var(--color-navy); color: var(--color-white); }
+    .btn-navy:hover { background: #2a3a6a; }
+
+    .values-section {
+      margin-top: var(--space-3xl);
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .value-item {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border-top: 3px solid var(--color-gold);
+    }
+    .value-item h4 { color: var(--color-emerald-dark); margin-bottom: var(--space-sm); }
+    .value-item p { color: var(--color-text); font-size: var(--fs-sm); line-height: 1.6; }
+
+    .contact-form-section {
+      background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-navy));
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-3xl);
+      margin-top: var(--space-3xl);
+      color: var(--color-white);
+    }
+    .contact-form-section h3 { color: var(--color-gold); text-align: center; margin-bottom: var(--space-md); }
+    .contact-form-section > p { text-align: center; color: rgba(255,255,255,0.7); margin-bottom: var(--space-xl); }
+    .contact-form { max-width: 600px; margin: 0 auto; display: grid; gap: var(--space-md); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+    .contact-form input, .contact-form textarea, .contact-form select {
+      width: 100%;
+      padding: var(--space-md) var(--space-lg);
+      border: 1px solid rgba(200,169,81,0.3);
+      border-radius: var(--border-radius);
+      background: rgba(255,255,255,0.08);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+    }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.4); }
+    .contact-form select option { color: var(--color-charcoal); background: var(--color-white); }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form button {
+      padding: var(--space-md) var(--space-xl);
+      background: var(--color-gold);
+      color: var(--color-charcoal);
+      border: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      font-size: var(--fs-md);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .contact-form button:hover { background: #dab961; }
+
+    @media (max-width: 768px) {
+      .ways-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .contact-form-section { padding: var(--space-xl); }
+      .way-card { padding: var(--space-xl); }
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .community-stats { grid-template-columns: 1fr 1fr; }
+      .way-card { padding: var(--space-lg); }
+      .contact-form-section { padding: var(--space-lg); border-radius: var(--border-radius-lg); }
+      .stat-number { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">The Solver of Difficulties</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a><div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html">Family & Lineage</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry & Shayari</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a><a href="calendar.html">Islamic Calendar</a><a href="kids.html">Kids Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Community</span></div>
+      <p style="font-family:var(--font-arabic);font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">المُجْتَمَع</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Join Our Community</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        Connect with fellow seekers of knowledge and share the timeless wisdom of Hazrat Ali (RA)
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:1000px">
+
+      <!-- Stats -->
+      <div class="community-stats fade-in">
+        <div class="stat-item">
+          <div class="stat-number" data-count="18">18</div>
+          <div class="stat-label">Pages of Content</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="25">25</div>
+          <div class="stat-label">Sayings Collection</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="7">7</div>
+          <div class="stat-label">Hadith References</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="6">6</div>
+          <div class="stat-label">Quranic Verses</div>
+        </div>
+      </div>
+
+      <!-- Ways to Connect -->
+      <div class="section-header fade-in"><h2>Ways to Get Involved</h2><div class="divider-gold"></div></div>
+      <div class="ways-grid">
+        <div class="way-card fade-in">
+          <div class="way-icon">📧</div>
+          <h3>Newsletter</h3>
+          <p>Receive weekly wisdom, new articles, and event reminders directly to your inbox. Stay connected with Ali's teachings.</p>
+          <a href="../index.html#newsletter" class="way-btn btn-emerald">Subscribe</a>
+        </div>
+        <div class="way-card fade-in">
+          <div class="way-icon">📤</div>
+          <h3>Share the Wisdom</h3>
+          <p>Spread Ali's golden sayings on social media. Every quote shared has the potential to inspire and transform a life.</p>
+          <a href="sayings.html" class="way-btn btn-gold">Share Quotes</a>
+        </div>
+        <div class="way-card fade-in">
+          <div class="way-icon">✍️</div>
+          <h3>Contribute Content</h3>
+          <p>Are you a writer, scholar, or researcher? We welcome contributions — articles, translations, and corrections.</p>
+          <a href="#contact" class="way-btn btn-navy">Get in Touch</a>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="values-section fade-in">
+        <div class="section-header"><h2>Our Community Values</h2><div class="divider-gold"></div></div>
+        <p style="text-align:center;color:var(--color-text);max-width:600px;margin:0 auto var(--space-xl);line-height:1.8">
+          Inspired by the character of Hazrat Ali (RA), our community is built on the following principles:
+        </p>
+        <div class="values-grid">
+          <div class="value-item fade-in">
+            <h4>🔬 Knowledge</h4>
+            <p>"The best wealth is the wealth of the mind" — we prioritize authentic, well-sourced Islamic knowledge.</p>
+          </div>
+          <div class="value-item fade-in">
+            <h4>🤝 Unity</h4>
+            <p>We welcome Muslims of all backgrounds and schools of thought, united in our love for Hazrat Ali (RA).</p>
+          </div>
+          <div class="value-item fade-in">
+            <h4>🕊️ Respect</h4>
+            <p>"Be like a flower that gives fragrance to even the hand that crushes it" — we treat everyone with dignity and respect.</p>
+          </div>
+          <div class="value-item fade-in">
+            <h4>📚 Authenticity</h4>
+            <p>All content is carefully sourced from recognized Islamic scholarship and authentic historical records.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-section fade-in" id="contact">
+        <h3>📬 Get in Touch</h3>
+        <p>Have a question, suggestion, or contribution? We'd love to hear from you.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Message Sent ✓'; setTimeout(()=>this.reset(),2000);">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <select>
+            <option value="" disabled selected>Select Topic</option>
+            <option>General Inquiry</option>
+            <option>Content Contribution</option>
+            <option>Correction or Suggestion</option>
+            <option>Technical Issue</option>
+            <option>Partnership Opportunity</option>
+            <option>Other</option>
+          </select>
+          <textarea placeholder="Your message..." required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Explore More</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="../index.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">🏠</div><h4 class="card-title">Home</h4><p class="card-text">Return to the main page.</p><span class="card-link">Go →</span></a>
+        <a href="blog.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📝</div><h4 class="card-title">Blog</h4><p class="card-text">Read our latest articles and reflections.</p><span class="card-link">Read →</span></a>
+        <a href="sayings.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">Aqwal-e-Zareen</h4><p class="card-text">Golden sayings of Hazrat Ali.</p><span class="card-link">Explore →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

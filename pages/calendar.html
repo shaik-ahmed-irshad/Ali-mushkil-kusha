@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Islamic Calendar — Key Dates of Hazrat Ali (RA) — Ali Mushkil Kusha</title>
+  <meta name="description" content="Important Islamic calendar dates related to Hazrat Ali ibn Abi Talib (RA) — birth, martyrdom, Ghadir Khumm, and other sacred events." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-navy) 0%,var(--color-charcoal) 50%,var(--color-emerald-dark) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='35' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Cpath d='M40 5 L45 35 L75 40 L45 45 L40 75 L35 45 L5 40 L35 35Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:80px 80px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .calendar-grid {
+      display: grid;
+      gap: var(--space-xl);
+    }
+
+    .event-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      transition: all var(--transition-base);
+    }
+    .event-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+
+    .event-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-xl);
+      color: var(--color-white);
+      text-align: center;
+    }
+    .event-date .day {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+      font-family: var(--font-heading);
+    }
+    .event-date .month {
+      font-size: var(--fs-sm);
+      margin-top: var(--space-xs);
+      opacity: 0.9;
+    }
+    .event-date .year {
+      font-size: var(--fs-xs);
+      margin-top: var(--space-xs);
+      opacity: 0.7;
+    }
+
+    .event-content {
+      padding: var(--space-xl) var(--space-xl) var(--space-xl) var(--space-lg);
+    }
+    .event-content h3 { color: var(--color-charcoal); margin-bottom: var(--space-xs); font-size: var(--fs-lg); }
+    .event-arabic { font-family: var(--font-arabic); color: var(--color-gold); direction: rtl; font-size: var(--fs-md); margin-bottom: var(--space-sm); }
+    .event-content p { color: var(--color-text); line-height: 1.8; font-size: var(--fs-sm); }
+    .event-type {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: var(--border-radius-full);
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-sm);
+    }
+    .type-celebration { background: #e6f7e9; color: #1a7a2e; }
+    .type-mourning { background: #f7e6e6; color: #7a1a1a; }
+    .type-historic { background: #e6eaf7; color: #1a2a7a; }
+
+    .d-emerald { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .d-navy { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .d-dark { background: linear-gradient(135deg, var(--color-charcoal), #2a2a3e); }
+    .d-red { background: linear-gradient(135deg, #5a1020, #7a2040); }
+    .d-gold { background: linear-gradient(135deg, #6a5a20, #8a7a30); }
+    .d-purple { background: linear-gradient(135deg, #3a1a4e, #5a3a6e); }
+    .d-teal { background: linear-gradient(135deg, #064040, #0a6060); }
+
+    .hijri-note {
+      background: var(--color-gold-subtle);
+      border: 1px solid var(--color-gold);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-lg);
+      font-size: var(--fs-sm);
+      color: var(--color-charcoal);
+      line-height: 1.7;
+      margin-bottom: var(--space-2xl);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .event-card { grid-template-columns: 1fr; }
+      .event-date { flex-direction: row; gap: var(--space-sm); padding: var(--space-md); }
+      .event-date .day { font-size: 1.8rem; }
+    }
+    @media (max-width: 480px) {
+      .event-content { padding: var(--space-md); }
+      .event-date .day { font-size: 1.5rem; }
+      .hijri-note { padding: var(--space-md); }
+      .calendar-grid { gap: var(--space-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">The Solver of Difficulties</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a><div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html">Family & Lineage</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry & Shayari</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a><a href="calendar.html" class="active">Islamic Calendar</a><a href="kids.html">Kids Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Islamic Calendar</span></div>
+      <p style="font-family:var(--font-arabic);font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">التَّقْوِيمُ الهِجْرِي</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Islamic Calendar Events</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        Sacred dates commemorating the life and legacy of Hazrat Ali (RA) in the Islamic (Hijri) calendar
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <div class="hijri-note fade-in">
+        🌙 <strong>Note:</strong> All dates follow the Islamic (Hijri) lunar calendar. Gregorian equivalents shift each year as the lunar calendar is approximately 11 days shorter than the solar calendar.
+      </div>
+
+      <div class="calendar-grid">
+
+        <!-- 13 Rajab — Birth -->
+        <div class="event-card fade-in">
+          <div class="event-date d-emerald">
+            <span class="day">13</span>
+            <span class="month">Rajab</span>
+            <span class="year">~600 CE</span>
+          </div>
+          <div class="event-content">
+            <span class="event-type type-celebration">Celebration</span>
+            <h3>Birth of Imam Ali (RA)</h3>
+            <p class="event-arabic">وِلَادَةُ الإِمَامِ عَلِيِّ بْنِ أَبِي طَالِب</p>
+            <p>Hazrat Ali was born on the 13th of Rajab inside the Holy Kaaba in Makkah — a distinction held by no other person in Islamic history. Muslims celebrate this day with gatherings of prayer, recitation, and remembrance (majalis). His mother Fatima bint Asad entered the Kaaba when she felt labor pains, and the wall miraculously opened for her.</p>
+          </div>
+        </div>
+
+        <!-- 15 Sha'ban — Birth of Imam Mahdi -->
+        <div class="event-card fade-in">
+          <div class="event-date d-gold">
+            <span class="day">15</span>
+            <span class="month">Sha'ban</span>
+          </div>
+          <div class="event-content">
+            <span class="event-type type-celebration">Celebration</span>
+            <h3>Shab-e-Barat / Mid-Sha'ban</h3>
+            <p class="event-arabic">لَيْلَةُ النِّصْفِ مِنْ شَعْبَان</p>
+            <p>The Night of Fortune and Forgiveness, widely observed across the Muslim world. This night is also associated with the descendants of Ali — many communities commemorate it as the birth anniversary of Imam Muhammad al-Mahdi, a descendant of Ali through his son Husayn.</p>
+          </div>
+        </div>
+
+        <!-- 17 Ramadan — Battle of Badr -->
+        <div class="event-card fade-in">
+          <div class="event-date d-navy">
+            <span class="day">17</span>
+            <span class="month">Ramadan</span>
+            <span class="year">2 AH / 624 CE</span>
+          </div>
+          <div class="event-content">
+            <span class="event-type type-historic">Historic Event</span>
+            <h3>Battle of Badr</h3>
+            <p class="event-arabic">غَزْوَةُ بَدْر</p>
+            <p>The first major battle of Islam at Badr, where Ali played a pivotal role. He was among the foremost warriors who defended the nascent Muslim community. Ali defeated many prominent Quraysh warriors in single combat and was instrumental in the Muslim victory that shaped the course of Islamic history.</p>
+          </div>
+        </div>
+
+        <!-- 19 Ramadan — Attack on Ali -->
+        <div class="event-card fade-in">
+          <div class="event-date d-red">
+            <span class="day">19</span>
+            <span class="month">Ramadan</span>
+            <span class="year">40 AH / 661 CE</span>
+          </div>
+          <div class="event-content">
+            <span class="event-type type-mourning">Mourning</span>
+            <h3>Attack on Imam Ali (RA)</h3>
+            <p class="event-arabic">ضَرْبُ الإِمَامِ عَلِيّ</p>
+            <p>While leading the Fajr (dawn) prayer in Masjid al-Kufa, Hazrat Ali was struck on the head with a poison-coated sword by Ibn Muljam, a Kharijite assassin. Despite the fatal wound, Ali's first concern was for his assailant's fair treatment, instructing his sons: "If I survive, I will decide his fate; if I die, strike him only once as he struck me once."</p>
+          </div>
+        </div>
+
+        <!-- 21 Ramadan — Martyrdom -->
+        <div class="event-card fade-in">
+          <div class="event-date d-dark">
+            <span class="day">21</span>
+            <span class="month">Ramadan</span>
+            <span class="year">40 AH / 661 CE</span>
+          </div>
+          <div class="event-content">
+            <span class="event-type type-mourning">Mourning</span>
+            <h3>Martyrdom (Shahadat) of Imam Ali (RA)</h3>
+            <p class="event-arabic">شَهَادَةُ الإِمَامِ عَلِيِّ بْنِ أَبِي طَالِب</p>
+            <p>Two days after the attack, on the 21st of Ramadan, Hazrat Ali (RA) departed this world. His last words included: <em>"By the Lord of the Kaaba, I have succeeded!"</em> He was buried in what is now Najaf, Iraq, where his magnificent shrine stands today. This day is observed with mourning, prayer, and reflection across the Muslim world.</p>
+          </div>
+        </div>
+
+        <!-- 18 Dhul Hijjah — Eid al-Ghadir -->
+        <div class="event-card fade-in">
+          <div class="event-date d-emerald">
+            <span class="day">18</span>
+            <span class="month">Dhul Hijjah</span>
+            <span class="year">10 AH / 632 CE</span>
+          </div>
+          <div class="event-content">
+            <span class="event-type type-celebration">Celebration</span>
+            <h3>Eid al-Ghadir (Event of Ghadir Khumm)</h3>
+            <p class="event-arabic">عِيدُ الغَدِير</p>
+            <p>On returning from the Farewell Pilgrimage, the Prophet Muhammad (PBUH) stopped at Ghadir Khumm and declared before tens of thousands of companions: <em>"Whoever I am his master (Mawla), Ali is his master."</em> This event is celebrated as one of the most significant days in Islamic history. It was followed by the revelation of the verse: "Today I have perfected your religion for you" (Quran 5:3).</p>
+          </div>
+        </div>
+
+        <!-- 25 Dhul Hijjah — Mubahala -->
+        <div class="event-card fade-in">
+          <div class="event-date d-purple">
+            <span class="day">24</span>
+            <span class="month">Dhul Hijjah</span>
+            <span class="year">10 AH / 632 CE</span>
+          </div>
+          <div class="event-content">
+            <span class="event-type type-historic">Historic Event</span>
+            <h3>Day of Mubahala</h3>
+            <p class="event-arabic">يَوْمُ المُبَاهَلَة</p>
+            <p>The Event of Mubahala (mutual imprecation) with the Christians of Najran. The Prophet (PBUH) brought Ali as his "self" (nafs), Fatima as his "women," and Hasan and Husayn as his "sons," as mentioned in Quran 3:61. The Christians of Najran, upon seeing the radiant faces, chose not to proceed with the mubahala and agreed to a treaty.</p>
+          </div>
+        </div>
+
+        <!-- 1 Muharram -->
+        <div class="event-card fade-in">
+          <div class="event-date d-teal">
+            <span class="day">1</span>
+            <span class="month">Muharram</span>
+          </div>
+          <div class="event-content">
+            <span class="event-type type-historic">Historic Event</span>
+            <h3>Islamic New Year</h3>
+            <p class="event-arabic">رَأْسُ السَّنَةِ الهِجْرِيَّة</p>
+            <p>The Islamic New Year marks the beginning of the Hijri calendar. The month of Muharram is sacred and is a time of reflection on the sacrifices of Ali and his family. The first ten days of Muharram are particularly solemn, culminating in Ashura (10 Muharram) — commemorating the martyrdom of Ali's son, Imam Husayn (RA), at Karbala in 61 AH.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Continue Exploring</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="biography.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📖</div><h4 class="card-title">Biography</h4><p class="card-text">The complete life story of Hazrat Ali.</p><span class="card-link">Read →</span></a>
+        <a href="sacred-places.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">🕌</div><h4 class="card-title">Sacred Places</h4><p class="card-text">Holy sites connected to Hazrat Ali.</p><span class="card-link">Visit →</span></a>
+        <a href="battles.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">⚔️</div><h4 class="card-title">Battles</h4><p class="card-text">Military campaigns and Ali's bravery.</p><span class="card-link">Explore →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

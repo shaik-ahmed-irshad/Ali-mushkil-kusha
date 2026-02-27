@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nahj al-Balagha — Peak of Eloquence — Ali Mushkil Kusha</title>
+  <meta name="description" content="Explore Nahj al-Balagha, the Peak of Eloquence — sermons, letters, and sayings of Hazrat Ali ibn Abi Talib (RA), compiled by Syed Razi." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,var(--color-emerald-dark) 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-3xl);
+      flex-wrap: wrap;
+      margin: var(--space-2xl) 0;
+    }
+    .stat-box {
+      text-align: center;
+    }
+    .stat-box .num {
+      font-family: var(--font-heading);
+      font-size: var(--fs-3xl);
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+    .stat-box .label {
+      font-size: var(--fs-sm);
+      color: rgba(255,255,255,0.7);
+    }
+
+    .nahj-section {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-2xl);
+      margin-bottom: var(--space-2xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+    }
+    .nahj-section h3 { color: var(--color-emerald); margin-bottom: var(--space-sm); }
+    .nahj-section p { color: var(--color-text); line-height: 1.85; }
+
+    .sermon-card, .letter-card {
+      background: var(--color-ivory);
+      border-left: 4px solid var(--color-gold);
+      border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
+      padding: var(--space-xl);
+      margin: var(--space-lg) 0;
+    }
+    .sermon-card h4, .letter-card h4 {
+      color: var(--color-charcoal);
+      font-size: var(--fs-md);
+      margin-bottom: var(--space-sm);
+    }
+    .sermon-card blockquote, .letter-card blockquote {
+      font-style: italic;
+      color: var(--color-text);
+      line-height: 1.9;
+      padding-left: var(--space-md);
+      border-left: 2px solid var(--color-gold-subtle);
+    }
+    .sermon-card .source {
+      font-size: var(--fs-xs);
+      color: var(--color-text-light);
+      margin-top: var(--space-sm);
+    }
+
+    .compiler-card {
+      background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-navy));
+      color: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-3xl);
+      margin: var(--space-2xl) 0;
+    }
+    .compiler-card h3 { color: var(--color-gold); }
+    .compiler-card p { color: rgba(255,255,255,0.85); line-height: 1.85; }
+
+    .topic-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+    .topic-tag {
+      display: inline-block;
+      background: var(--color-gold-subtle);
+      color: var(--color-charcoal);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--border-radius-full);
+      font-size: var(--fs-xs);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .nahj-section { padding: var(--space-xl); }
+      .compiler-card { padding: var(--space-xl); }
+      .stats-row { gap: var(--space-lg); }
+    }
+    @media (max-width: 480px) {
+      .nahj-section { padding: var(--space-lg); }
+      .compiler-card { padding: var(--space-lg); }
+      .stats-row { gap: var(--space-md); }
+      .stat-value { font-size: var(--fs-xl); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">The Solver of Difficulties</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html" class="active">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a><div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html">Family & Lineage</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a><a href="calendar.html">Islamic Calendar</a><a href="kids.html">Kids Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Nahj al-Balagha</span></div>
+      <p style="font-family:var(--font-arabic);font-size:var(--fs-3xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">نَہجُ الْبَلَاغَہ</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Nahj al-Balagha</h1>
+      <p style="font-family:var(--font-heading);font-size:var(--fs-lg);color:rgba(255,255,255,0.85);font-style:italic;margin-bottom:var(--space-lg)">Peak of Eloquence</p>
+      <div class="divider-gold"></div>
+      <div class="stats-row">
+        <div class="stat-box"><div class="num">241</div><div class="label">Sermons</div></div>
+        <div class="stat-box"><div class="num">79</div><div class="label">Letters</div></div>
+        <div class="stat-box"><div class="num">489</div><div class="label">Sayings</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <!-- Introduction -->
+      <div class="nahj-section fade-in">
+        <h3>What is Nahj al-Balagha?</h3>
+        <p><strong>Nahj al-Balagha</strong> (نَہجُ الْبَلَاغَہ), meaning "The Peak of Eloquence," is the most famous collection of sermons, letters, and sayings attributed to Hazrat Ali ibn Abi Talib (RA). It is considered the most important work of Arabic prose after the Quran and the Hadith of the Prophet (PBUH).</p>
+        <p>The work covers an extraordinary range of subjects — from the nature of God and the creation of the universe, to practical advice on governance, justice, morality, warfare, family life, and self-improvement. Its literary beauty, philosophical depth, and spiritual wisdom have captivated scholars and readers for over a thousand years.</p>
+        <div class="topic-tags">
+          <span class="topic-tag">Theology</span>
+          <span class="topic-tag">Governance</span>
+          <span class="topic-tag">Ethics</span>
+          <span class="topic-tag">Philosophy</span>
+          <span class="topic-tag">Warfare</span>
+          <span class="topic-tag">Spirituality</span>
+          <span class="topic-tag">Justice</span>
+          <span class="topic-tag">Self-Knowledge</span>
+          <span class="topic-tag">Human Nature</span>
+          <span class="topic-tag">World & Afterlife</span>
+        </div>
+      </div>
+
+      <!-- Compiler -->
+      <div class="compiler-card fade-in">
+        <h3>The Compiler: Syed Razi</h3>
+        <p><strong>Syed al-Sharif al-Razi</strong> (سید الشریف الرضی, 970–1016 CE) was a renowned Islamic scholar, poet, and literary figure from Baghdad. He compiled Nahj al-Balagha around <strong>1009–1010 CE</strong> (400 AH), gathering sermons, letters, and sayings of Ali from various earlier sources and oral traditions.</p>
+        <p style="margin-top:var(--space-md)">Syed Razi was himself considered one of the greatest Arab poets of his era. His literary genius enabled him to identify and select the most eloquent passages — hence the title "Peak of Eloquence." The compilation preserved for posterity words that might otherwise have been lost to time.</p>
+      </div>
+
+      <!-- Sermons Section -->
+      <div class="nahj-section fade-in">
+        <h3>📖 The Sermons (Khutbat)</h3>
+        <p>The 241 sermons form the heart of Nahj al-Balagha. They were delivered on various occasions — in mosques, on battlefields, at gatherings, and during his caliphate. Here are some of the most celebrated:</p>
+
+        <div class="sermon-card">
+          <h4>Sermon 1 — On the Creation of the Universe</h4>
+          <blockquote>"He created the creation without the help of anything, without the use of any tool, and without the adoption of any known method. He knows what is before and what is after, what is above and what is below."</blockquote>
+          <p class="source">Opening sermon on God's creative power and the nature of existence</p>
+        </div>
+
+        <div class="sermon-card">
+          <h4>Sermon 3 — The Shiqshiqiyyah</h4>
+          <blockquote>"By Allah, son of Abu Quhafah dressed himself with it [the caliphate], while he knew that my position in relation to it was the same as the position of the axis in relation to the hand-mill."</blockquote>
+          <p class="source">One of the most famous sermons, expressing his views on the succession after the Prophet. Known as "The Sermon of the Camel's Foam" because it was interrupted.</p>
+        </div>
+
+        <div class="sermon-card">
+          <h4>Sermon 193 — The Sermon of the Skeletons (Khutbat al-Ashbah)</h4>
+          <blockquote>"He who takes lessons from experience becomes wise; and he who is wise becomes safe."</blockquote>
+          <p class="source">A masterpiece describing the creation of angels, earth, skies, and humankind — considered the most eloquent sermon in Arabic literature</p>
+        </div>
+      </div>
+
+      <!-- Letters Section -->
+      <div class="nahj-section fade-in">
+        <h3>✉️ The Letters (Kutub)</h3>
+        <p>The 79 letters include correspondence with governors, generals, allies, and adversaries. The most famous is his letter to Malik al-Ashtar — considered the greatest treatise on governance in Islamic history.</p>
+
+        <div class="letter-card">
+          <h4>Letter 53 — To Malik al-Ashtar (Governor of Egypt)</h4>
+          <blockquote>"Infuse your heart with mercy, love, and kindness for your subjects. Be not in face of them a voracious animal, counting them as easy prey, for they are of two kinds: either they are your brothers in religion or your equals in creation."</blockquote>
+          <p class="source">This letter has been studied by the United Nations as a model for human rights and governance. It covers taxation, judiciary, military, civil services, commerce, and treatment of all citizens regardless of religion.</p>
+        </div>
+
+        <div class="letter-card">
+          <h4>Letter 31 — To His Son Imam Hasan (RA)</h4>
+          <blockquote>"My dear son, I advise you to be God-fearing and to obey His commands. Fill your heart with the thought of Him. Cling to His rope. For no other bond is stronger than the bond between you and God, if you choose to hold on to it."</blockquote>
+          <p class="source">A tender, intimate letter of fatherly advice covering life, death, faith, relationships, and practical wisdom — a spiritual will to the next generation</p>
+        </div>
+      </div>
+
+      <!-- Sayings Section -->
+      <div class="nahj-section fade-in">
+        <h3>💬 The Short Sayings (Hikam)</h3>
+        <p>The 489 short sayings (hikam) are concise pearls of wisdom covering every aspect of human life. Many have become famous proverbs across the Muslim world.</p>
+
+        <div class="sermon-card">
+          <h4>Selected Sayings</h4>
+          <blockquote>
+            <p style="margin-bottom:var(--space-sm)">"People are enemies of what they do not know."</p>
+            <p style="margin-bottom:var(--space-sm)">"The worth of a man is what he does well."</p>
+            <p style="margin-bottom:var(--space-sm)">"Patience is of two kinds: patience over what pains you, and patience against what you covet."</p>
+            <p style="margin-bottom:var(--space-sm)">"Do not let your difficulties fill you with anxiety; after all, it is in the darkest nights that stars shine more brightly."</p>
+            <p>"He who has a thousand friends has not a friend to spare, and he who has one enemy will meet him everywhere."</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Legacy of the Book -->
+      <div class="nahj-section fade-in">
+        <h3>🌍 Legacy & Global Impact</h3>
+        <p>Nahj al-Balagha has been translated into virtually every major language — English, Urdu, Persian, French, German, Spanish, Turkish, Indonesian, Chinese, and many more. Scholars across centuries — both Sunni and Shia — have written extensive commentaries on it.</p>
+        <p>Notable commentaries include those by <strong>Ibn Abi al-Hadid</strong> (a Sunni scholar who wrote a 20-volume commentary), <strong>Allama Mufti Jaffar Husain</strong> (Urdu), and many modern scholars. The work has influenced Islamic philosophy, Sufi thought, political theory, and literary criticism.</p>
+        <p>Kofi Annan, former Secretary-General of the United Nations, cited Ali's letter to Malik al-Ashtar as a remarkable document of early human rights — centuries before the concept was formalized in Western thought.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Continue Exploring</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="sayings.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">Aqwal-e-Zareen</h4><p class="card-text">Searchable collection of golden sayings in English and Urdu.</p><span class="card-link">Explore →</span></a>
+        <a href="governance.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">⚖️</div><h4 class="card-title">Governance & Justice</h4><p class="card-text">His unmatched model of governance and leadership.</p><span class="card-link">Discover →</span></a>
+        <a href="quran.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📗</div><h4 class="card-title">Ali in the Quran</h4><p class="card-text">Quranic verses revealed in his honor.</p><span class="card-link">Read →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

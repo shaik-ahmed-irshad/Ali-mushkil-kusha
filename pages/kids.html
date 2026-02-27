@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kids Section — Learn About Hazrat Ali (RA) — Ali Mushkil Kusha</title>
+  <meta name="description" content="A fun and friendly section for kids to learn about Hazrat Ali ibn Abi Talib (RA) — stories, fun facts, and lessons from his life." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,#1a6a4a 0%,#2a8a6a 40%,#3aa070 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='20' fill='none' stroke='%23FFF' stroke-width='1'/%3E%3Ccircle cx='15' cy='15' r='8' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3Ccircle cx='45' cy='45' r='8' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3C/svg%3E");background-size:60px 60px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .kids-intro {
+      text-align: center;
+      font-size: var(--fs-lg);
+      color: var(--color-text);
+      max-width: 700px;
+      margin: 0 auto var(--space-3xl);
+      line-height: 1.8;
+    }
+
+    .story-card {
+      background: var(--color-white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--space-2xl);
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .story-card:hover { border-color: var(--color-gold); transform: translateY(-3px); box-shadow: var(--shadow-xl); }
+    .story-header {
+      padding: var(--space-xl) var(--space-2xl);
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+    .story-emoji { font-size: 3.5rem; }
+    .story-header h3 { color: var(--color-white); margin: 0; font-size: var(--fs-xl); }
+    .story-header .story-age { color: rgba(255,255,255,0.7); font-size: var(--fs-xs); margin-top: var(--space-xs); }
+    .story-body { padding: var(--space-xl) var(--space-2xl) var(--space-2xl); }
+    .story-body p { color: var(--color-text); line-height: 2; font-size: var(--fs-md); margin-bottom: var(--space-md); }
+    .story-lesson {
+      background: var(--color-gold-subtle);
+      border-radius: 12px;
+      padding: var(--space-lg);
+      border-left: 4px solid var(--color-gold);
+    }
+    .story-lesson strong { color: var(--color-emerald-dark); display: block; margin-bottom: var(--space-xs); }
+    .story-lesson p { color: var(--color-charcoal); margin: 0; font-size: var(--fs-sm); }
+
+    .s-green { background: linear-gradient(135deg, #1a7a4a, #2a9a6a); }
+    .s-blue { background: linear-gradient(135deg, #1a4a7a, #2a6a9a); }
+    .s-purple { background: linear-gradient(135deg, #5a2a8a, #7a4aaa); }
+    .s-orange { background: linear-gradient(135deg, #a05a00, #c07a20); }
+    .s-red { background: linear-gradient(135deg, #8a2a2a, #aa4a4a); }
+    .s-teal { background: linear-gradient(135deg, #0a5a5a, #2a7a7a); }
+
+    .fun-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .fun-fact {
+      background: var(--color-white);
+      border-radius: 16px;
+      padding: var(--space-xl);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 2px dashed var(--color-gold);
+      transition: all 0.3s ease;
+    }
+    .fun-fact:hover { transform: scale(1.03); background: var(--color-gold-subtle); }
+    .fun-fact .fact-emoji { font-size: 2.5rem; margin-bottom: var(--space-sm); }
+    .fun-fact h4 { color: var(--color-emerald-dark); margin-bottom: var(--space-xs); font-size: var(--fs-md); }
+    .fun-fact p { color: var(--color-text); font-size: var(--fs-sm); line-height: 1.6; }
+
+    .quiz-section {
+      background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-navy));
+      border-radius: 20px;
+      padding: var(--space-3xl);
+      color: var(--color-white);
+      text-align: center;
+      margin-top: var(--space-3xl);
+    }
+    .quiz-section h3 { color: var(--color-gold); margin-bottom: var(--space-lg); }
+    .quiz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-lg); text-align: left; }
+    .quiz-item {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: var(--space-lg);
+      border: 1px solid rgba(200,169,81,0.2);
+    }
+    .quiz-item .q { color: var(--color-gold); font-weight: 600; margin-bottom: var(--space-sm); }
+    .quiz-item .a { color: rgba(255,255,255,0.7); font-size: var(--fs-sm); cursor: pointer; padding: var(--space-xs); border-radius: 8px; transition: all 0.2s; }
+    .quiz-item .a:hover { background: rgba(200,169,81,0.15); color: var(--color-gold); }
+
+    @media (max-width: 768px) {
+      .fun-facts { grid-template-columns: 1fr 1fr; }
+      .quiz-grid { grid-template-columns: 1fr; }
+      .quiz-section { padding: var(--space-xl); border-radius: var(--border-radius-lg); }
+      .story-header { padding: var(--space-lg); }
+      .story-body { padding: var(--space-lg); }
+      .story-emoji { font-size: 2.5rem; }
+      .story-header h3 { font-size: var(--fs-lg); }
+    }
+    @media (max-width: 480px) {
+      .fun-facts { grid-template-columns: 1fr; }
+      .story-header { flex-direction: column; text-align: center; padding: var(--space-md); }
+      .story-body { padding: var(--space-md); }
+      .quiz-section { padding: var(--space-lg); }
+      .story-card { border-radius: var(--border-radius-lg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">The Solver of Difficulties</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a><div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html">Family & Lineage</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry & Shayari</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a><a href="calendar.html">Islamic Calendar</a><a href="kids.html" class="active">Kids Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Kids Section</span></div>
+      <p style="font-size:3rem;margin-bottom:var(--space-md)">⭐🌙✨</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Kids Corner</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.85);font-size:var(--fs-lg);max-width:600px;margin:var(--space-md) auto 0">
+        Fun stories and amazing facts about Imam Ali (RA) — just for you!
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <p class="kids-intro fade-in">
+        Hazrat Ali (RA) was one of the bravest, kindest, and wisest people who ever lived. He was the cousin and son-in-law of Prophet Muhammad (PBUH), and he loved God with all his heart. Let's learn some amazing stories about him! 😊
+      </p>
+
+      <!-- Story 1 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-green">
+          <span class="story-emoji">🕋</span>
+          <div>
+            <h3>Born in a Very Special Place</h3>
+            <div class="story-age">Ages 5+</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>Did you know that Hazrat Ali was born inside the Kaaba? The Kaaba is the most sacred building in the whole world for Muslims! When his mother felt that the baby was coming, she went near the Kaaba to pray. The wall of the Kaaba miraculously opened, and she went inside. That's where little Ali was born!</p>
+          <p>No one else in history has ever been born inside the Kaaba. This shows how special Ali was, even from the very beginning of his life. 🌟</p>
+          <div class="story-lesson">
+            <strong>✨ What We Learn:</strong>
+            <p>God has a special plan for everyone. Every person is born unique and special in their own way!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-blue">
+          <span class="story-emoji">📚</span>
+          <div>
+            <h3>The Gate of Knowledge</h3>
+            <div class="story-age">Ages 6+</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>Prophet Muhammad (PBUH) once said: <em>"I am the city of knowledge, and Ali is its gate."</em> This means that if you wanted to learn about Islam, Ali was the best person to go to!</p>
+          <p>Ali loved learning so much. He was always asking questions and trying to understand everything. He never said "I don't need to learn anymore." Even when he was very old and wise, he kept learning new things. 📖</p>
+          <div class="story-lesson">
+            <strong>✨ What We Learn:</strong>
+            <p>Never stop learning! Ask questions, read books, and always be curious. Knowledge is a treasure that no one can ever take away from you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 3 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-purple">
+          <span class="story-emoji">🦁</span>
+          <div>
+            <h3>The Lion of God</h3>
+            <div class="story-age">Ages 7+</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>Ali was called <strong>"Asadullah"</strong> which means "The Lion of God." He was the bravest warrior in all of Arabia! At the Battle of Khaybar, there was a huge, heavy fortress gate that no one could break through.</p>
+          <p>Ali walked up to the gate and lifted it right off with his incredible strength! He used it as a shield. Later, people tried to lift the same gate — it took many strong men together, and they still couldn't do it! 💪</p>
+          <div class="story-lesson">
+            <strong>✨ What We Learn:</strong>
+            <p>True bravery isn't about fighting — it's about standing up for what is right, even when it's hard. Ali was brave because he always did the right thing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 4 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-orange">
+          <span class="story-emoji">⚖️</span>
+          <div>
+            <h3>Fair to Everyone</h3>
+            <div class="story-age">Ages 6+</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>When Ali became the leader (Caliph) of the Muslim world, he was the fairest leader ever. One day, he lost his armor. He later found it being sold by someone in the market.</p>
+          <p>Even though Ali was the <em>leader of the whole country</em>, he didn't just take it back. Instead, he went to the judge — just like anyone else would — and asked the judge to decide! The judge actually ruled against Ali (because Ali didn't have a witness), and Ali accepted the decision calmly. The man was so amazed by Ali's fairness that he became Muslim! 🏛️</p>
+          <div class="story-lesson">
+            <strong>✨ What We Learn:</strong>
+            <p>Always be fair, even when you have the power not to be. True leaders lead by example and follow the rules themselves.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 5 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-red">
+          <span class="story-emoji">❤️</span>
+          <div>
+            <h3>Kindness to the Enemy</h3>
+            <div class="story-age">Ages 8+</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>During a battle, Ali was fighting an enemy soldier. Ali was about to win when the soldier did something very rude — he spat on Ali's face! 😠</p>
+          <p>What do you think Ali did? Instead of getting angry and fighting back, he <em>stopped fighting</em> and walked away! When people asked him why, Ali said: "Before he spat at me, I was fighting for God. But after he spat, I got angry. And I didn't want to fight because of my own anger — I only wanted to fight for what is right."</p>
+          <div class="story-lesson">
+            <strong>✨ What We Learn:</strong>
+            <p>Control your anger! Don't do things when you're upset. Take a deep breath, calm down, and then decide what to do.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 6 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-teal">
+          <span class="story-emoji">🤲</span>
+          <div>
+            <h3>The Ring in the Prayer</h3>
+            <div class="story-age">Ages 6+</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>One day, Ali was praying in the mosque. While he was bowing down in prayer, a poor man came in asking for help. Even though Ali was in the middle of his prayer, he quietly slipped off his ring and gave it to the poor man — all while still praying!</p>
+          <p>God was so pleased with this act of kindness that He revealed a verse in the Holy Quran about it (Surah Al-Ma'idah, verse 55). Imagine — your kindness being mentioned in the Quran! 🌟</p>
+          <div class="story-lesson">
+            <strong>✨ What We Learn:</strong>
+            <p>Be generous whenever you can. Helping others is one of the best things you can do, and God loves those who give to the needy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FUN FACTS -->
+      <div style="margin-top:var(--space-3xl)" class="fade-in">
+        <div class="section-header"><h2>Amazing Facts! 🤩</h2><div class="divider-gold"></div></div>
+        <div class="fun-facts">
+          <div class="fun-fact">
+            <div class="fact-emoji">🏋️</div>
+            <h4>Super Strong</h4>
+            <p>Ali lifted the gate of Khaybar fortress, which many men together couldn't lift!</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">🧒</div>
+            <h4>First Young Muslim</h4>
+            <p>Ali was the first young person to accept Islam — he was only about 10 years old!</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">⚔️</div>
+            <h4>Special Sword</h4>
+            <p>Ali's famous sword was called "Zulfiqar" — it was a gift from the Prophet!</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">🎓</div>
+            <h4>Wisest Person</h4>
+            <p>Ali knew so much that people came from everywhere to ask him questions!</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">💝</div>
+            <h4>Married to Fatima</h4>
+            <p>Ali married Fatima (RA), the beloved daughter of Prophet Muhammad (PBUH).</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">🌍</div>
+            <h4>World Leader</h4>
+            <p>Ali became the Caliph — the leader of the entire Muslim world!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ -->
+      <div class="quiz-section fade-in">
+        <h3>🧠 Quick Quiz — Test Your Knowledge!</h3>
+        <p style="color:rgba(255,255,255,0.7); margin-bottom:var(--space-xl)">Hover over the answers to reveal them!</p>
+        <div class="quiz-grid">
+          <div class="quiz-item">
+            <div class="q">1. Where was Hazrat Ali born?</div>
+            <div class="a" title="Inside the Holy Kaaba in Makkah">🤔 Hover to see answer</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">2. What does "Asadullah" mean?</div>
+            <div class="a" title="The Lion of God">🤔 Hover to see answer</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">3. What was Ali's famous sword called?</div>
+            <div class="a" title="Zulfiqar">🤔 Hover to see answer</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">4. Who did Ali marry?</div>
+            <div class="a" title="Fatima (RA), daughter of the Prophet (PBUH)">🤔 Hover to see answer</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">5. What did the Prophet call Ali regarding knowledge?</div>
+            <div class="a" title="The Gate of the City of Knowledge">🤔 Hover to see answer</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">6. Why did Ali stop fighting the soldier who spat at him?</div>
+            <div class="a" title="Because he got angry and only wanted to fight for God, not for personal anger">🤔 Hover to see answer</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>More to Explore</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="sayings.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">Aqwal-e-Zareen</h4><p class="card-text">Read Ali's wise and golden sayings.</p><span class="card-link">Read →</span></a>
+        <a href="gallery.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">🖼️</div><h4 class="card-title">Gallery</h4><p class="card-text">Beautiful Islamic calligraphy art.</p><span class="card-link">View →</span></a>
+        <a href="biography.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📖</div><h4 class="card-title">Biography</h4><p class="card-text">The full life story of Hazrat Ali.</p><span class="card-link">Learn →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali in Hadith — Sayings of Prophet Muhammad ﷺ About Ali (RA) — Ali Mushkil Kusha</title>
+  <meta name="description" content="Famous Hadiths of Prophet Muhammad (PBUH) about Hazrat Ali ibn Abi Talib (RA) — Ghadir Khumm, Hadith al-Thaqalayn, Hadith al-Manzila, and more." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,var(--color-emerald-dark) 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .hadith-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      margin-bottom: var(--space-2xl);
+      transition: all var(--transition-base);
+    }
+    .hadith-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .hadith-header {
+      padding: var(--space-lg) var(--space-2xl);
+      display: flex; align-items: center; gap: var(--space-md);
+    }
+    .hadith-header .num {
+      background: var(--color-gold);
+      color: var(--color-charcoal);
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: var(--fs-sm);
+      flex-shrink: 0;
+    }
+    .hadith-header h3 { color: var(--color-white); }
+    .hadith-body { padding: var(--space-2xl); }
+    .hadith-arabic {
+      font-family: var(--font-arabic);
+      font-size: var(--fs-lg);
+      color: var(--color-emerald-dark);
+      direction: rtl;
+      text-align: right;
+      line-height: 2;
+      padding: var(--space-lg);
+      background: var(--color-ivory);
+      border-radius: var(--border-radius);
+      margin-bottom: var(--space-lg);
+    }
+    .hadith-text {
+      font-style: italic;
+      color: var(--color-charcoal);
+      font-size: var(--fs-md);
+      line-height: 1.9;
+      padding: var(--space-lg);
+      background: var(--color-gold-subtle);
+      border-left: 3px solid var(--color-gold);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      margin-bottom: var(--space-lg);
+    }
+    .hadith-source {
+      font-size: var(--fs-sm);
+      color: var(--color-text-light);
+      padding: var(--space-md);
+      background: var(--color-ivory);
+      border-radius: var(--border-radius);
+      display: inline-block;
+    }
+    .hadith-context { margin-top: var(--space-lg); }
+    .hadith-context h4 { color: var(--color-emerald); margin-bottom: var(--space-sm); }
+    .hadith-context p { color: var(--color-text); line-height: 1.85; }
+
+    .h-emerald { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .h-navy { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .h-purple { background: linear-gradient(135deg, #3a1a4e, #5a3a6e); }
+    .h-brown { background: linear-gradient(135deg, #3a2a10, #5a4a20); }
+    .h-red { background: linear-gradient(135deg, #4a1020, #7a2040); }
+
+    @media (max-width: 768px) {
+      .hadith-header { padding: var(--space-md) var(--space-lg); }
+      .hadith-body { padding: var(--space-lg); }
+      .hadith-arabic { font-size: var(--fs-md); }
+    }
+    @media (max-width: 480px) {
+      .hadith-header { padding: var(--space-sm) var(--space-md); }
+      .hadith-body { padding: var(--space-md); }
+      .hadith-arabic { font-size: var(--fs-base); }
+      .hadith-header .num { width: 32px; height: 32px; font-size: var(--fs-xs); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">The Solver of Difficulties</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Biography</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Teachings ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Ali in the Quran</a><a href="hadith.html" class="active">Ali in Hadith</a><a href="duas.html">Duas & Supplications</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Legacy ▾</a><div class="nav-dropdown-content"><a href="titles.html">Titles & Attributes</a><a href="battles.html">Battles & Military</a><a href="governance.html">Governance & Justice</a><a href="family.html">Family & Lineage</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a><a href="calendar.html">Islamic Calendar</a><a href="kids.html">Kids Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Ali in Hadith</span></div>
+      <p style="font-family:var(--font-arabic);font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">اَحَادِیثِ نَبَوِیہ</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Ali in Prophetic Hadith</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        Famous sayings of Prophet Muhammad ﷺ about Hazrat Ali — from Sahih collections and other authentic sources
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <!-- 1 -->
+      <div class="hadith-card fade-in">
+        <div class="hadith-header h-emerald">
+          <span class="num">1</span>
+          <h3>Hadith of Ghadir Khumm</h3>
+        </div>
+        <div class="hadith-body">
+          <div class="hadith-arabic">مَنْ كُنْتُ مَوْلَاهُ فَهٰذَا عَلِيٌّ مَوْلَاهُ اَللّٰهُمَّ وَالِ مَنْ وَالَاهُ وَعَادِ مَنْ عَادَاهُ</div>
+          <div class="hadith-text">"Whomsoever I am the Mawla (master/guardian) of, Ali is also his Mawla. O Allah, befriend whoever befriends him, and be hostile to whoever is hostile to him."</div>
+          <div class="hadith-source">📚 Sunan al-Tirmidhi, Musnad Ahmad, al-Nasa'i, Ibn Majah, al-Hakim</div>
+          <div class="hadith-context">
+            <h4>Context</h4>
+            <p>Delivered at Ghadir Khumm on 18th Dhul Hijjah, 10 AH, during the return from the Farewell Pilgrimage. The Prophet stopped at Ghadir Khumm, gathered approximately 100,000 pilgrims, and delivered this declaration. This is one of the most widely transmitted (mutawatir) hadiths in all of Islamic literature.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="hadith-card fade-in">
+        <div class="hadith-header h-navy">
+          <span class="num">2</span>
+          <h3>Hadith al-Manzila</h3>
+        </div>
+        <div class="hadith-body">
+          <div class="hadith-arabic">أَنْتَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَى إِلَّا أَنَّهُ لَا نَبِيَّ بَعْدِي</div>
+          <div class="hadith-text">"You are to me as Harun (Aaron) was to Musa (Moses), except that there is no Prophet after me."</div>
+          <div class="hadith-source">📚 Sahih al-Bukhari, Sahih Muslim</div>
+          <div class="hadith-context">
+            <h4>Context</h4>
+            <p>Spoken by the Prophet when he left Ali in charge of Medina during the expedition to Tabuk. When Ali expressed disappointment at being left behind, the Prophet consoled him with this comparison — Harun was Musa's brother, deputy, minister, and the one he trusted above all others.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="hadith-card fade-in">
+        <div class="hadith-header h-purple">
+          <span class="num">3</span>
+          <h3>Hadith of the City of Knowledge</h3>
+        </div>
+        <div class="hadith-body">
+          <div class="hadith-arabic">أَنَا مَدِينَةُ الْعِلْمِ وَعَلِيٌّ بَابُهَا فَمَنْ أَرَادَ الْمَدِينَةَ فَلْيَأْتِ الْبَابَ</div>
+          <div class="hadith-text">"I am the city of knowledge and Ali is its gate. Whoever wishes to enter the city, let him enter through the gate."</div>
+          <div class="hadith-source">📚 al-Hakim (al-Mustadrak), al-Tabarani, Ibn Adi</div>
+          <div class="hadith-context">
+            <h4>Context</h4>
+            <p>This hadith establishes Ali as the foremost authority on Islamic knowledge after the Prophet. It explains why Ali was considered the most knowledgeable companion and why scholars from all schools of thought have traced chains of knowledge back to him.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="hadith-card fade-in">
+        <div class="hadith-header h-brown">
+          <span class="num">4</span>
+          <h3>Hadith al-Thaqalayn</h3>
+        </div>
+        <div class="hadith-body">
+          <div class="hadith-arabic">إِنِّي تَارِكٌ فِيكُمُ الثَّقَلَيْنِ كِتَابَ اللهِ وَعِتْرَتِي أَهْلَ بَيْتِي</div>
+          <div class="hadith-text">"I am leaving among you two weighty things: the Book of Allah (the Quran) and my Itrah (progeny), the Ahl al-Bayt. If you hold fast to both, you will never go astray after me."</div>
+          <div class="hadith-source">📚 Sahih Muslim, Sunan al-Tirmidhi, Musnad Ahmad</div>
+          <div class="hadith-context">
+            <h4>Context</h4>
+            <p>Spoken during the Farewell Pilgrimage, this hadith places the Ahl al-Bayt alongside the Quran as the two indispensable guides for the Muslim community. Ali, as the head of the Ahl al-Bayt after the Prophet, is the primary figure through whom this guidance is transmitted.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="hadith-card fade-in">
+        <div class="hadith-header h-red">
+          <span class="num">5</span>
+          <h3>Hadith of Love and Faith</h3>
+        </div>
+        <div class="hadith-body">
+          <div class="hadith-arabic">لَا يُحِبُّكَ إِلَّا مُؤْمِنٌ وَلَا يُبْغِضُكَ إِلَّا مُنَافِقٌ</div>
+          <div class="hadith-text">"None loves you except a believer, and none hates you except a hypocrite."</div>
+          <div class="hadith-source">📚 Sahih Muslim, Sunan al-Tirmidhi, Sunan al-Nasa'i, Musnad Ahmad</div>
+          <div class="hadith-context">
+            <h4>Context</h4>
+            <p>The Prophet made love for Ali a criterion of faith itself. This hadith indicates that love for Ali is inseparable from true faith (iman). Ali himself narrated this hadith, saying: "By the One who split the grain and created the soul, it is the covenant of the unlettered Prophet to me."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="hadith-card fade-in">
+        <div class="hadith-header h-emerald">
+          <span class="num">6</span>
+          <h3>Hadith of the Standard at Khaybar</h3>
+        </div>
+        <div class="hadith-body">
+          <div class="hadith-text">"Tomorrow I shall give the standard to a man who loves Allah and His Messenger, and whom Allah and His Messenger love. Allah will grant victory at his hands."</div>
+          <div class="hadith-source">📚 Sahih al-Bukhari, Sahih Muslim</div>
+          <div class="hadith-context">
+            <h4>Context</h4>
+            <p>After multiple failed attempts to conquer the fortress of Khaybar, the Prophet made this declaration. Every companion hoped to be chosen. The next morning, the Prophet called for Ali — who was suffering from an eye infection — healed his eyes with his blessed saliva, and gave him the standard. Ali then conquered the fortress single-handedly.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="hadith-card fade-in">
+        <div class="hadith-header h-navy">
+          <span class="num">7</span>
+          <h3>Ali with Truth, Truth with Ali</h3>
+        </div>
+        <div class="hadith-body">
+          <div class="hadith-arabic">عَلِيٌّ مَعَ الْحَقِّ وَالْحَقُّ مَعَ عَلِيٍّ</div>
+          <div class="hadith-text">"Ali is with the Truth, and the Truth is with Ali. They will never separate until they meet me at the Fountain (of Kawthar on the Day of Judgment)."</div>
+          <div class="hadith-source">📚 Ibn Asakir, al-Khatib al-Baghdadi, al-Haythami</div>
+          <div class="hadith-context">
+            <h4>Context</h4>
+            <p>This hadith declares Ali as the embodiment of truth itself — wherever Ali stands, truth is with him, and wherever truth is, Ali is found there. This became a foundational principle for understanding Ali's positions during the political conflicts of his era.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Continue Exploring</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="quran.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📗</div><h4 class="card-title">Ali in the Quran</h4><p class="card-text">Quranic verses revealed in his honor.</p><span class="card-link">Read →</span></a>
+        <a href="sayings.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">Aqwal-e-Zareen</h4><p class="card-text">His own golden sayings and wisdom.</p><span class="card-link">Explore →</span></a>
+        <a href="duas.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">🤲</div><h4 class="card-title">Duas & Supplications</h4><p class="card-text">Sacred prayers and invocations.</p><span class="card-link">Discover →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>The definitive resource dedicated to the life, wisdom, and eternal legacy of Hazrat Ali ibn Abi Talib (RA).</p></div>
+        <div><h4>Quick Links</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Biography</a><a href="sayings.html">Aqwal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Titles</a><a href="battles.html">Battles</a><a href="governance.html">Governance</a><a href="family.html">Family</a></div></div>
+        <div><h4>More</h4><div class="footer-links"><a href="books.html">Books</a><a href="poetry.html">Poetry</a><a href="sacred-places.html">Sacred Places</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>
