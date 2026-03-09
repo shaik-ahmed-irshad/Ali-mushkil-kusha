@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دعائیں — حضرت علی (رضی اللہ عنہ) سے منسوب دعائیں — علی مشکل کشا</title>
+  <meta name="description" content="حضرت علی ابن ابی طالب (رضی اللہ عنہ) سے منسوب مقدس دعائیں — نادِ علی، دعائے کمیل، دعائے مشلول اور مزید۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,#0a3a2a 50%,#1a2a4a 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .dua-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      margin-bottom: var(--space-2xl);
+      transition: all var(--transition-base);
+    }
+    .dua-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .dua-header { padding: var(--space-xl) var(--space-2xl); }
+    .dua-header h3 { color: var(--color-white); margin-bottom: var(--space-xs); }
+    .dua-header .dua-sub { color: var(--color-gold); font-size: var(--fs-sm); font-weight: 600; }
+    .dh-emerald { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .dh-navy { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .dh-gold { background: linear-gradient(135deg, #3a2a10, #5a4a20); }
+    .dh-purple { background: linear-gradient(135deg, #3a1a4e, #5a3a6e); }
+    .dh-dark { background: linear-gradient(135deg, var(--color-charcoal), #2a2a3e); }
+    .dua-body { padding: var(--space-2xl); }
+    .dua-arabic-block {
+      font-family: 'Amiri', serif;
+      font-size: var(--fs-xl);
+      color: var(--color-emerald-dark);
+      direction: rtl;
+      text-align: right;
+      line-height: 2.2;
+      padding: var(--space-xl);
+      background: var(--color-ivory);
+      border-radius: var(--border-radius-lg);
+      border: 1px solid var(--color-gold-subtle);
+      margin-bottom: var(--space-lg);
+    }
+    .dua-translation {
+      font-style: italic;
+      color: var(--color-charcoal);
+      font-size: var(--fs-md);
+      line-height: 2.5;
+      padding: var(--space-lg);
+      background: var(--color-gold-subtle);
+      border-right: 3px solid var(--color-gold);
+      border-left: none;
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
+      margin-bottom: var(--space-lg);
+    }
+    .dua-occasion {
+      background: var(--color-ivory);
+      padding: var(--space-lg);
+      border-radius: var(--border-radius);
+      margin-top: var(--space-md);
+    }
+    .dua-occasion strong { color: var(--color-emerald); }
+    .dua-occasion p, .dua-body > p { color: var(--color-text); line-height: 2.5; }
+
+    .teachings-section {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-2xl);
+      box-shadow: var(--shadow-sm);
+      margin-top: var(--space-2xl);
+    }
+    .teachings-section h3 { color: var(--color-emerald); margin-bottom: var(--space-lg); }
+    .teachings-section ul { padding-right: var(--space-xl); padding-left: 0; }
+    .teachings-section li { color: var(--color-text); line-height: 2.5; margin-bottom: var(--space-md); }
+    .teachings-section li strong { color: var(--color-charcoal); }
+
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width: 768px) {
+      .dua-header { padding: var(--space-lg); }
+      .dua-body { padding: var(--space-lg); }
+      .dua-arabic-block { padding: var(--space-md); font-size: var(--fs-lg); }
+    }
+    @media (max-width: 480px) {
+      .dua-header { padding: var(--space-md); }
+      .dua-body { padding: var(--space-md); }
+      .dua-arabic-block { padding: var(--space-sm); font-size: var(--fs-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html" class="active">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a><a href="calendar.html">اسلامی کیلنڈر</a><a href="kids.html">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/duas.html" class="lang-btn">EN</a>
+          <a href="duas.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">دعائیں</span></div>
+      <p style="font-family:'Amiri',serif;font-size:var(--fs-3xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">اَلدُّعَاء</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">مقدس دعائیں اور مناجات</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:700px;margin:var(--space-md) auto 0">
+        حضرت علی ابن ابی طالب (رضی اللہ عنہ) سے منسوب اور ان سے متعلق مقدس دعائیں
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <div style="background:var(--color-white);border-radius:var(--border-radius-xl);padding:var(--space-2xl);margin-bottom:var(--space-2xl);box-shadow:var(--shadow-sm)" class="fade-in">
+        <p style="color:var(--color-text);line-height:2">حضرت علی (رضی اللہ عنہ) اپنی عبادت اور اللہ سے گہری قربت کے لیے مشہور تھے۔ ان سے منسوب دعائیں اسلامی روحانیت کے عظیم ترین خزانوں میں شمار ہوتی ہیں — یہ عاجزی، توبہ، محبتِ الٰہی اور سچی آرزو کی عکاسی کرتی ہیں۔</p>
+      </div>
+
+      <!-- 1. نادِ علی -->
+      <div class="dua-card fade-in">
+        <div class="dua-header dh-emerald">
+          <h3>نادِ علی</h3>
+          <span class="dua-sub">علی کو پکارو</span>
+        </div>
+        <div class="dua-body">
+          <div class="dua-arabic-block">نَادِ عَلِيًّا مَظْهَرَ الْعَجَائِبِ ۔ تَجِدْهُ عَوْنًا لَكَ فِی النَّوَائِبِ ۔ كُلُّ هَمٍّ وَغَمٍّ سَيَنْجَلِي ۔ بِوَلَايَتِكَ يَا عَلِيُّ يَا عَلِيُّ يَا عَلِيّ</div>
+          <div class="dua-translation">"علی کو پکارو — عجائبات ظاہر کرنے والے۔ تم انہیں مصیبتوں میں مددگار پاؤ گے۔ ہر غم اور پریشانی دور ہو جائے گی — تمہاری ولایت سے، اے علی، اے علی، اے علی!"</div>
+          <p>نادِ علی سب سے مشہور دعاؤں میں سے ایک ہے جو پوری دنیا کے مسلمان مشکلات میں پڑھتے ہیں۔ روایت ہے کہ یہ جبریل نے غزوۂ اُحد میں نبی ﷺ کو سکھائی تھی۔ یہ حضرت علی میں اللہ کے اذن سے مدد کی طاقت پر ایمان کا اظہار ہے۔</p>
+          <div class="dua-occasion">
+            <strong>پڑھنے کا موقع:</strong>
+            <p>مشکلات اور پریشانیوں کے وقت، خاص طور پر جب مشکل فیصلوں کا سامنا ہو۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. دعائے کمیل -->
+      <div class="dua-card fade-in">
+        <div class="dua-header dh-navy">
+          <h3>دعائے کمیل</h3>
+          <span class="dua-sub">کمیل بن زیاد سے روایت — حضرت علی کی تعلیم</span>
+        </div>
+        <div class="dua-body">
+          <div class="dua-arabic-block">اللَّهُمَّ إِنِّي أَسأَلُكَ بِرَحمَتِكَ الَّتِي وَسِعَت كُلَّ شَيءٍ ۔ وَبِقُوَّتِكَ الَّتِي قَهَرتَ بِهَا كُلَّ شَيءٍ ۔ وَخَضَعَ لَهَا كُلُّ شَيءٍ ۔ وَذَلَّ لَهَا كُلُّ شَيء</div>
+          <div class="dua-translation">"اے اللہ! میں تجھ سے تیری اس رحمت کے واسطے مانگتا ہوں جو ہر چیز پر محیط ہے، اور تیری اس قوت کے واسطے جس نے ہر چیز کو مغلوب کر دیا، جس کے سامنے ہر چیز جھکی اور جس کے آگے ہر چیز عاجز ہوئی۔"</div>
+          <p>دعائے کمیل اسلام کی سب سے عظیم الشان دعاؤں میں سے ایک ہے۔ حضرت علی نے یہ دعا اپنے وفادار شاگرد کمیل بن زیاد النخعی کو سکھائی۔ یہ دعا توبہ، اللہ کی بخشش کی التجا اور آخرت کی فکر کی ایک شاہکار ہے — عربی ادب کے لحاظ سے بھی بلند مقام رکھتی ہے۔</p>
+          <div class="dua-occasion">
+            <strong>پڑھنے کا موقع:</strong>
+            <p>ہر جمعرات کی رات (شبِ جمعہ) اور شعبان کے وسط کی رات (نصفِ شعبان) خاص طور پر مستحب ہے۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. نماز کے بعد کی دعا -->
+      <div class="dua-card fade-in">
+        <div class="dua-header dh-gold">
+          <h3>حضرت علی کی نماز کے بعد کی دعا</h3>
+          <span class="dua-sub">فرض نماز کے بعد</span>
+        </div>
+        <div class="dua-body">
+          <div class="dua-arabic-block">يَا مَن لَا يَشغَلُهُ سَمعٌ عَن سَمعٍ ۔ وَيَا مَن لَا تُغلِطُهُ الْمَسَائِل ۔ وَيَا مَن لَا يَتَبَرَّمُ مِن إِلحَاحِ الْمُلِحِّين</div>
+          <div class="dua-translation">"اے وہ ذات جسے ایک سننا دوسرے سننے سے نہیں روکتا! اے وہ جسے سوالات الجھا نہیں سکتے! اے وہ جو مانگنے والوں کے اصرار سے تنگ نہیں آتا!"</div>
+          <p>حضرت علی یہ دعا فرض نمازوں کے بعد پڑھا کرتے تھے۔ اس دعا میں اللہ تعالیٰ کی لامحدود صفات کا ذکر ہے — وہ ذات جو بیک وقت ہر مخلوق کی سنتی ہے، جو لاتعداد سوالات سے تھکتی نہیں، اور جو مسلسل التجا کرنے والوں کو ثواب دیتی ہے۔</p>
+          <div class="dua-occasion">
+            <strong>پڑھنے کا موقع:</strong>
+            <p>پانچ وقت کی فرض نماز کے بعد، بطور ذکر اور دعا۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. دعائے مشلول -->
+      <div class="dua-card fade-in">
+        <div class="dua-header dh-purple">
+          <h3>دعائے مشلول</h3>
+          <span class="dua-sub">فلج زدہ شخص کی دعا</span>
+        </div>
+        <div class="dua-body">
+          <div class="dua-arabic-block">اللَّهُمَّ إِنِّي أَسأَلُكَ بِاسمِكَ بِسمِ اللَّهِ الرَّحمَنِ الرَّحِيمِ يَا ذَا الْجَلَالِ وَالْإِكرَام</div>
+          <div class="dua-translation">"اے اللہ! میں تجھ سے تیرے نام کے واسطے مانگتا ہوں — بسم اللہ الرحمٰن الرحیم — اے عزّت و بزرگی والے!"</div>
+          <p>دعائے مشلول کی روایت ہے کہ ایک نوجوان جو فالج سے مفلوج ہو گیا تھا، اسے خواب میں حضرت علی نے یہ دعا سکھائی۔ دعا پڑھنے کے بعد اسے شفا مل گئی۔ یہ دعا اسمائے الٰہی کا خوبصورت مجموعہ ہے جو روحانی شفا اور اللہ کی قربت حاصل کرنے کے لیے پڑھی جاتی ہے۔</p>
+          <div class="dua-occasion">
+            <strong>پڑھنے کا موقع:</strong>
+            <p>بیماری، مشکل اور روحانی ضرورت کے وقت — خاص طور پر تہجد کی نماز کے بعد۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. صبح و شام -->
+      <div class="dua-card fade-in">
+        <div class="dua-header dh-dark">
+          <h3>صبح و شام کے اذکار</h3>
+          <span class="dua-sub">حضرت علی کے روزانہ کے معمولات</span>
+        </div>
+        <div class="dua-body">
+          <div class="dua-arabic-block">أَصبَحتُ اللَّهُمَّ مُتَعَرِّضًا لِفَضلِكَ ۔ فَقِيرًا إِلَى رَحمَتِكَ ۔ مُستَجِيرًا بِعَفوِكَ مِن عُقُوبَتِك</div>
+          <div class="dua-translation">"اے اللہ! میں نے صبح کی تیرے فضل کی امید میں، تیری رحمت کا محتاج، تیرے عفو میں تیری سزا سے پناہ مانگتا ہوا۔"</div>
+          <p>حضرت علی ہر صبح اور شام مخصوص دعائیں پڑھا کرتے تھے۔ ان کے صبح کے اذکار میں عاجزی، اللہ پر توکّل، اور نئے دن کو اللہ کی رضا میں گزارنے کا عہد شامل ہوتا تھا۔ شام کی دعاؤں میں دن بھر کے گناہوں کی معافی، رات کی حفاظت اور اللہ کی پناہ کی التجا ہوتی تھی۔</p>
+          <div class="dua-occasion">
+            <strong>پڑھنے کا موقع:</strong>
+            <p>فجر کے بعد اور مغرب کے بعد، روزانہ کے معمول کے طور پر۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- فنِ دعا -->
+      <div class="teachings-section fade-in">
+        <h3>🤲 حضرت علی کی دعا کے بارے میں تعلیمات</h3>
+        <p style="color:var(--color-text);line-height: 2.5;margin-bottom:var(--space-lg)">حضرت علی (رضی اللہ عنہ) نے فنِ دعا کے بارے میں ایسی تعلیمات دیں جو آج بھی لاکھوں مسلمانوں کے لیے رہنمائی کا ذریعہ ہیں:</p>
+        <ul>
+          <li><strong>اخلاص ضروری ہے:</strong> "اللہ ایسے دل سے دعا قبول نہیں کرتا جو غافل ہو۔" — دعا صرف زبان سے نہیں بلکہ دل کی گہرائیوں سے ہونی چاہیے۔</li>
+          <li><strong>قبولیت پر یقین:</strong> "جب تم اللہ سے مانگو تو ایسے مانگو جیسے تم یقین رکھتے ہو کہ وہ تمہیں دے گا۔" — دعا کرتے وقت اللہ کی رحمت پر شک نہیں ہونا چاہیے۔</li>
+          <li><strong>تکبّر کی نفی:</strong> "دعا کا خیال ہے کہ تم اپنی ضرورت تسلیم کرو اور اللہ کے سامنے اپنی بے بسی کا اعتراف کرو۔"</li>
+          <li><strong>دوسروں کے لیے دعا:</strong> "سب سے بہترین دعا وہ ہے جو تم اپنے بھائی کی غیر موجودگی میں اس کے لیے کرو۔" — نہج البلاغہ</li>
+          <li><strong>استقامت:</strong> "دعا چھوڑو نہیں چاہے جواب میں تاخیر ہو — اللہ کی حکمت تمہاری عجلت سے بلند ہے۔"</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="quran.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📖</div><h4 class="card-title">علی قرآن میں</h4><p class="card-text">حضرت علی کی شان میں نازل ہونے والی قرآنی آیات۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="hadith.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📜</div><h4 class="card-title">علی حدیث میں</h4><p class="card-text">نبی ﷺ کے تصدیق شدہ ارشادات۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="sayings.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">اقوالِ زریں</h4><p class="card-text">حضرت علی کے سنہری اقوال اور حکمت بھرے الفاظ۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>

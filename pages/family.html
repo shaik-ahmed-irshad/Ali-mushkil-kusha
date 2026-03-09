@@ -6,6 +6,8 @@
   <title>Family & Lineage of Hazrat Ali (RA) — Ali Mushkil Kusha</title>
   <meta name="description" content="Explore the blessed family tree of Hazrat Ali ibn Abi Talib (RA) — his lineage, marriage to Fatima Zahra (SA), children including Hasan, Husayn, Zainab, and Umm Kulthum." />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
@@ -203,7 +205,13 @@
         </div>
         <a href="blog.html">Blog</a>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en" title="English">EN</button>
+          <button class="lang-btn" data-lang="ur" title="اردو">اردو</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </nav>
   <div class="nav-overlay" id="navOverlay"></div>
@@ -349,5 +357,6 @@
 
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
   <script src="../js/main.js"></script>
+  <script src="../js/lang-switcher.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* ============================================================
    Language Switcher — Ali Mushkil Kusha
-   Handles navigation between EN / Urdu / Roman Urdu versions
+   Handles navigation between EN / Urdu versions
    ============================================================ */
 
 (function () {
@@ -10,7 +10,6 @@
   function getCurrentLang() {
     var path = window.location.pathname;
     if (path.indexOf('/ur/') !== -1) return 'ur';
-    if (path.indexOf('/ru/') !== -1) return 'ru';
     return 'en';
   }
 
@@ -24,8 +23,6 @@
     var basePath;
     if (currentLang === 'ur') {
       basePath = path.replace(/\/ur\//, '/');
-    } else if (currentLang === 'ru') {
-      basePath = path.replace(/\/ru\//, '/');
     } else {
       basePath = path;
     }
@@ -35,7 +32,7 @@
       return basePath;
     }
 
-    // For ur/ru, insert the language folder after the root
+    // For ur, insert the language folder after the root
     // Handle both /index.html and /pages/xyz.html patterns
     var parts = basePath.split('/');
     // Find where the site root is and insert language folder after it

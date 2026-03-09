@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مقدس مقامات — حضرت علی (رضی اللہ عنہ) — علی مشکل کشا</title>
+  <meta name="description" content="حضرت علی ابن ابی طالب (رضی اللہ عنہ) سے جڑے مقدس مقامات — مسجدِ امام علی نجف، مسجدِ کوفہ، کعبہ اور مزید۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,var(--color-emerald-dark) 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 10 L110 60 L60 110 L10 60 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='60' cy='60' r='40' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:120px 120px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .place-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border-light);
+      margin-bottom: var(--space-2xl);
+      transition: all var(--transition-base);
+    }
+    .place-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-3px); }
+    .place-banner { padding: var(--space-2xl); display: flex; align-items: center; gap: var(--space-lg); }
+    .place-icon {
+      font-size: 3rem; flex-shrink: 0; width: 80px; height: 80px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.15); border-radius: var(--border-radius-full);
+    }
+    .place-banner h3 { color: var(--color-white); margin: 0 0 var(--space-xs); }
+    .place-banner .location { color: var(--color-gold); font-size: var(--fs-sm); }
+    .place-body { padding: var(--space-xl) var(--space-2xl) var(--space-2xl); }
+    .place-body p { color: var(--color-text); line-height: 2.5; margin-bottom: var(--space-md); }
+    .place-body p:last-child { margin-bottom: 0; }
+    .place-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg); margin-top: var(--space-lg); }
+    .place-detail-item { background: var(--color-ivory); padding: var(--space-md); border-radius: var(--border-radius); }
+    .place-detail-item strong { display: block; color: var(--color-emerald-dark); font-size: var(--fs-xs); margin-bottom: var(--space-xs); }
+    .place-detail-item span { color: var(--color-charcoal); font-size: var(--fs-sm); }
+
+    .b-emerald { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .b-navy { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .b-gold { background: linear-gradient(135deg, #6a5a20, #8a7a30); }
+    .b-brown { background: linear-gradient(135deg, #3a2a10, #5a4a30); }
+    .b-teal { background: linear-gradient(135deg, #064040, #0a6060); }
+    .b-dark { background: linear-gradient(135deg, var(--color-charcoal), #2a2a3e); }
+
+    .map-note {
+      background: linear-gradient(135deg, var(--color-gold-subtle), #f5e6c0);
+      border: 1px solid var(--color-gold);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+      color: var(--color-charcoal);
+      margin-top: var(--space-xl);
+      line-height: 2.5;
+    }
+    .map-note strong { color: var(--color-emerald-dark); }
+
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width: 768px) {
+      .place-banner { flex-wrap: wrap; justify-content: center; text-align: center; }
+      .place-icon { width: 60px; height: 60px; font-size: 2rem; }
+      .place-body { padding: var(--space-lg); }
+      .place-details { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .place-banner { padding: var(--space-md); gap: var(--space-sm); }
+      .place-icon { width: 50px; height: 50px; font-size: 1.5rem; }
+      .place-body { padding: var(--space-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html" class="active">مقدس مقامات</a><a href="gallery.html">گیلری</a><a href="calendar.html">اسلامی کیلنڈر</a><a href="kids.html">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/sacred-places.html" class="lang-btn">EN</a>
+          <a href="sacred-places.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">مقدس مقامات</span></div>
+      <p style="font-family:'Amiri',serif;font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">الأَمَاكِنُ المُقَدَّسَة</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">مقدس مقامات</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        حضرت علی (رضی اللہ عنہ) کی زندگی، عبادت اور آرام گاہ سے جڑے مقدس مقامات
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <!-- مسجدِ امام علی، نجف -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-emerald">
+          <div class="place-icon">🕌</div>
+          <div>
+            <h3>مسجدِ امام علی (مسجد الامام علی)</h3>
+            <p class="location">📍 نجف، عراق</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>نجف، عراق میں مسجدِ امام علی حضرت علی (رضی اللہ عنہ) سے جڑا سب سے مقدس مقام ہے۔ یہ چوتھے خلیفہ کا مزار ہے اور اسلامی دنیا کے سب سے زیادہ زیارت کیے جانے والے مقامات میں سے ایک ہے۔ مسجد میں شاندار سنہری گنبد اور جڑواں مینار ہیں جو میلوں دور سے نظر آتے ہیں۔</p>
+          <p>یہ مزار صدیوں میں کئی بار تعمیرِ نو، تجدید اور توسیع سے گزرا ہے۔ موجودہ عمارت بنیادی طور پر 17ویں صدی کی ہے، بعد کی صدیوں میں مزید اضافے کیے گئے۔ ہر سال لاکھوں زائرین احترام کے لیے آتے ہیں۔</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>تعمیر</strong><span>اصل: 977ء (موجودہ گنبد: 17ویں صدی)</span></div>
+            <div class="place-detail-item"><strong>خصوصیات</strong><span>سنہری گنبد، جڑواں مینار، وسیع صحن</span></div>
+            <div class="place-detail-item"><strong>اہمیت</strong><span>امام علی (رضی اللہ عنہ) کا مزار، اسلام کے مقدس ترین مقامات میں سے ایک</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- کعبہ — جائے پیدائش -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-dark">
+          <div class="place-icon">🕋</div>
+          <div>
+            <h3>بیت اللہ (کعبہ) — جائے پیدائش</h3>
+            <p class="location">📍 مکہ مکرمہ، سعودی عرب</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>متعدد علماء کی تاریخی روایات کے مطابق، حضرت علی (رضی اللہ عنہ) کعبۃ اللہ کے اندر پیدا ہوئے — یہ اعزاز اسلامی تاریخ میں کسی اور شخصیت کو حاصل نہیں۔ روایت ہے کہ ان کی والدہ فاطمہ بنت اسد کو جب درد زہ ہوا تو وہ کعبہ میں داخل ہوئیں اور دیوار معجزانہ طور پر ان کے لیے کھل گئی۔</p>
+          <p>یہ واقعہ الحاکم نے <em>المستدرک</em> میں اور المسعودی نے <em>مروج الذہب</em> میں درج کیا ہے — یہ حضرت علی کو پیدائش سے قبل ہی عطا کیے گئے منفرد روحانی مقام کو ظاہر کرتا ہے۔</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>واقعہ</strong><span>علی ابن ابی طالب کی پیدائش، 13 رجب، ~600ء</span></div>
+            <div class="place-detail-item"><strong>ماخذ</strong><span>الحاکم، المسعودی، ابن صبّاغ، شاہ ولی اللہ</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- مسجدِ کوفہ -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-navy">
+          <div class="place-icon">🏛️</div>
+          <div>
+            <h3>مسجدِ کوفہ (مسجدِ اعظم)</h3>
+            <p class="location">📍 کوفہ، عراق</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>مسجدِ کوفہ دنیا کی قدیم ترین مساجد میں سے ایک ہے اور حضرت علی کی خلافت کے دوران ان کی مرکزی مسجد کے طور پر خدمات انجام دیتی رہی۔ کوفہ ان کا دارالخلافہ تھا (656–661ء) اور اسی مسجد میں 19 رمضان 40 ہجری (661ء) کو نمازِ فجر کے دوران ابنِ مُلجَم نے ان پر زہر آلود تلوار سے حملہ کیا۔</p>
+          <p>اس مسجد کی تاریخی اہمیت بے حد ہے۔ یہ حضرت علی کی حکومت کا مرکز، ان کی عدالت اور وہ مقام تھا جہاں انہوں نے نہج البلاغہ میں مرتب بہت سے مشہور خطبات دیے۔ جہاں حملہ ہوا اور جہاں آپ نماز پڑھتے تھے — دونوں محراب آج بھی مسجد میں محفوظ ہیں۔</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>بنیاد</strong><span>639ء (خلافتِ عمر کے دور میں)</span></div>
+            <div class="place-detail-item"><strong>اہم واقعہ</strong><span>شہادتِ امام علی، 21 رمضان 40 ہجری</span></div>
+            <div class="place-detail-item"><strong>خصوصیات</strong><span>متعدد محرابیں، تاریخی ستون، محفوظ نماز کے مقامات</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- مسجدِ نبوی -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-teal">
+          <div class="place-icon">🌙</div>
+          <div>
+            <h3>مسجدِ نبوی</h3>
+            <p class="location">📍 مدینہ منورہ، سعودی عرب</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>مدینہ منورہ میں مسجدِ نبوی حضرت علی کی زندگی سے گہرا تعلق رکھتی ہے۔ ہجرت کے بعد حضرت علی مدینہ پہنچے اور نبی ﷺ کے ساتھ مل کر اس مسجد کی تعمیر میں حصہ لیا۔ یہاں ابتدائی اسلام کے بہت سے فیصلہ کن واقعات رونما ہوئے اور حضرت علی نے برسوں نبی ﷺ سے براہِ راست علم حاصل کیا۔</p>
+          <p>حضرت علی نبی ﷺ کے گھرانے میں پلے بڑھے اور مسجد میں مستقل حاضری رکھتے تھے — نماز، تعلیم اور خدمت میں مصروف رہتے تھے۔ قریبی جنت البقیع قبرستان میں حضرت علی کے خاندان کے بہت سے افراد مدفون ہیں بشمول ان کے بیٹے حسن (رضی اللہ عنہ) اور دیگر اولاد۔</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>تعلق</strong><span>حضرت علی نے مسجد کی تعمیر میں مدد کی، یہاں دہائیوں تک نماز پڑھی اور تعلیم حاصل کی</span></div>
+            <div class="place-detail-item"><strong>قریبی مقام</strong><span>جنت البقیع — امام حسن (رض) اور اہلِ بیت کی تدفین گاہ</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- وادی السلام -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-brown">
+          <div class="place-icon">🌿</div>
+          <div>
+            <h3>وادی السلام (سلامتی کی وادی)</h3>
+            <p class="location">📍 نجف، عراق</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>نجف میں وادی السلام دنیا کا سب سے بڑا قبرستان ہے جو 1,485 ایکڑ سے زائد رقبے پر پھیلا ہوا ہے۔ 1,400 سال سے زائد عرصے سے مسلمانوں نے امام علی (رضی اللہ عنہ) کے مزار کے قرب میں دفن ہونے کی خواہش رکھی ہے اور ان کی آرام گاہ کی قربت کی برکات پر یقین رکھتے ہیں۔ اس قبرستان میں تخمینہ لگایا جاتا ہے کہ 50 سے 60 لاکھ قبریں ہیں۔</p>
+          <p>یہ یونیسکو عالمی ثقافتی ورثے کی فہرست میں شامل ہے اور صدیوں اور براعظموں کے پار حضرت علی کے لیے پائیدار محبت اور عقیدت کی طاقتور گواہی ہے۔</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>رقبہ</strong><span>1,485.5 ایکڑ (6 مربع کلومیٹر)</span></div>
+            <div class="place-detail-item"><strong>تخمینی تدفینات</strong><span>50 لاکھ سے زائد</span></div>
+            <div class="place-detail-item"><strong>حیثیت</strong><span>یونیسکو عالمی ثقافتی ورثہ</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- غدیرِ خم -->
+      <div class="place-card fade-in">
+        <div class="place-banner b-gold">
+          <div class="place-icon">⭐</div>
+          <div>
+            <h3>غدیرِ خم</h3>
+            <p class="location">📍 مکہ اور مدینہ کے درمیان، سعودی عرب</p>
+          </div>
+        </div>
+        <div class="place-body">
+          <p>غدیرِ خم وہ تاریخی نخلستان ہے جہاں 18 ذوالحجہ 10 ہجری (632ء) کو نبی محمد ﷺ نے حجۃ الوداع سے واپسی پر اپنا مشہور خطبہ دیا۔ یہاں آپ ﷺ نے اعلان فرمایا: <em>"جس کا میں مولا ہوں اُس کے علی بھی مولا ہیں۔"</em></p>
+          <p>یہ واقعہ جسے "واقعۂ غدیر" کہا جاتا ہے، اسلامی تاریخ کے سب سے زیادہ روایت شدہ واقعات میں سے ایک ہے اور تمام مکاتبِ فکر کے علماء نے اسے درج کیا ہے۔ یہ مقام خاص اہمیت رکھتا ہے کیونکہ یہاں ہزاروں صحابہ کے سامنے حضرت علی کی روحانی سرپرستی کا عوامی اعلان کیا گیا۔</p>
+          <div class="place-details">
+            <div class="place-detail-item"><strong>تاریخ</strong><span>18 ذوالحجہ، 10 ہجری (مارچ 632ء)</span></div>
+            <div class="place-detail-item"><strong>اہم اعلان</strong><span>"من کنتُ مولاہُ فہذا علیٌّ مولاہ"</span></div>
+            <div class="place-detail-item"><strong>شاہدین</strong><span>تخمینہ 1 لاکھ سے زائد صحابہ موجود</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-note fade-in">
+        <strong>🗺️ نوٹ:</strong> یہ مقدس مقامات جدید عراق، سعودی عرب اور وسیع تر مسلم دنیا میں پھیلے ہوئے ہیں۔ ہر مقام ایسے انسان کی روحانی چھاپ رکھتا ہے جس کی پوری زندگی اللہ کی عبادت اور انسانیت کی خدمت کے لیے وقف تھی۔
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="gallery.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">🖼️</div><h4 class="card-title">گیلری</h4><p class="card-text">حضرت علی سے متعلق خطاطی اور اسلامی فن۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+        <a href="biography.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📖</div><h4 class="card-title">سوانح حیات</h4><p class="card-text">پیدائش سے شہادت تک مکمل زندگی۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="calendar.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📅</div><h4 class="card-title">اسلامی کیلنڈر</h4><p class="card-text">حضرت علی کی زندگی کی اہم تاریخیں۔</p><span class="card-link"><span>→</span> جانیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اسلامی کیلنڈر — حضرت علی (رضی اللہ عنہ) کی اہم تاریخیں — علی مشکل کشا</title>
+  <meta name="description" content="حضرت علی ابن ابی طالب (رضی اللہ عنہ) سے متعلق اسلامی کیلنڈر کی اہم تاریخیں — ولادت، شہادت، غدیرِ خم اور دیگر مقدس واقعات۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-navy) 0%,var(--color-charcoal) 50%,var(--color-emerald-dark) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='35' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Cpath d='M40 5 L45 35 L75 40 L45 45 L40 75 L35 45 L5 40 L35 35Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:80px 80px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .calendar-grid { display: grid; gap: var(--space-xl); }
+    .event-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      display: grid;
+      grid-template-columns: 1fr 140px;
+      transition: all var(--transition-base);
+    }
+    .event-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .event-date {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: var(--space-xl); color: var(--color-white); text-align: center;
+    }
+    .event-date .day { font-size: 2.5rem; font-weight: 700; line-height: 1; font-family: var(--font-heading); }
+    .event-date .month { font-size: var(--fs-sm); margin-top: var(--space-xs); opacity: 0.9; }
+    .event-date .year { font-size: var(--fs-xs); margin-top: var(--space-xs); opacity: 0.7; }
+    .event-content { padding: var(--space-xl); }
+    .event-content h3 { color: var(--color-charcoal); margin-bottom: var(--space-xs); font-size: var(--fs-lg); }
+    .event-arabic { font-family: 'Amiri', serif; color: var(--color-gold); direction: rtl; font-size: var(--fs-md); margin-bottom: var(--space-sm); }
+    .event-content p { color: var(--color-text); line-height: 2.5; font-size: var(--fs-sm); }
+    .event-type {
+      display: inline-block; padding: 2px 10px; border-radius: var(--border-radius-full);
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: var(--space-sm);
+    }
+    .type-celebration { background: #e6f7e9; color: #1a7a2e; }
+    .type-mourning { background: #f7e6e6; color: #7a1a1a; }
+    .type-historic { background: #e6eaf7; color: #1a2a7a; }
+    .d-emerald { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .d-navy { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .d-dark { background: linear-gradient(135deg, var(--color-charcoal), #2a2a3e); }
+    .d-red { background: linear-gradient(135deg, #5a1020, #7a2040); }
+    .d-gold { background: linear-gradient(135deg, #6a5a20, #8a7a30); }
+    .d-purple { background: linear-gradient(135deg, #3a1a4e, #5a3a6e); }
+    .d-teal { background: linear-gradient(135deg, #064040, #0a6060); }
+    .hijri-note {
+      background: var(--color-gold-subtle); border: 1px solid var(--color-gold);
+      border-radius: var(--border-radius-lg); padding: var(--space-lg);
+      font-size: var(--fs-sm); color: var(--color-charcoal); line-height: 2.5;
+      margin-bottom: var(--space-2xl); text-align: center;
+    }
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width: 600px) {
+      .event-card { grid-template-columns: 1fr; }
+      .event-date { flex-direction: row; gap: var(--space-sm); padding: var(--space-md); }
+      .event-date .day { font-size: 1.8rem; }
+    }
+    @media (max-width: 480px) {
+      .event-content { padding: var(--space-md); }
+      .event-date .day { font-size: 1.5rem; }
+      .hijri-note { padding: var(--space-md); }
+      .calendar-grid { gap: var(--space-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a><a href="calendar.html" class="active">اسلامی کیلنڈر</a><a href="kids.html">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/calendar.html" class="lang-btn">EN</a>
+          <a href="calendar.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">اسلامی کیلنڈر</span></div>
+      <p style="font-family:'Amiri',serif;font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">التَّقْوِيمُ الهِجْرِي</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">اسلامی کیلنڈر کے واقعات</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        حضرت علی (رضی اللہ عنہ) کی زندگی اور میراث سے جڑی اسلامی (ہجری) کیلنڈر کی مقدس تاریخیں
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <div class="hijri-note fade-in">
+        🌙 <strong>نوٹ:</strong> تمام تاریخیں اسلامی (ہجری) قمری کیلنڈر کے مطابق ہیں۔ عیسوی تاریخیں ہر سال بدلتی ہیں کیونکہ قمری کیلنڈر شمسی کیلنڈر سے تقریباً 11 دن چھوٹا ہوتا ہے۔
+      </div>
+
+      <div class="calendar-grid">
+
+        <!-- 13 رجب — ولادت -->
+        <div class="event-card fade-in">
+          <div class="event-content">
+            <span class="event-type type-celebration">خوشی / جشن</span>
+            <h3>ولادتِ امام علی (رضی اللہ عنہ)</h3>
+            <p class="event-arabic">وِلَادَةُ الإِمَامِ عَلِيِّ بْنِ أَبِي طَالِب</p>
+            <p>حضرت علی 13 رجب کو مکہ مکرمہ میں بیت اللہ (کعبہ) کے اندر پیدا ہوئے — یہ اعزاز اسلامی تاریخ میں کسی اور کو حاصل نہیں۔ مسلمان اس دن نماز، تلاوت اور مجالسِ ذکر سے مناتے ہیں۔ ان کی والدہ فاطمہ بنت اسد جب درد زہ میں آئیں تو کعبہ میں داخل ہوئیں اور دیوار معجزانہ طور پر ان کے لیے کھل گئی۔</p>
+          </div>
+          <div class="event-date d-emerald">
+            <span class="day">13</span>
+            <span class="month">رجب</span>
+            <span class="year">~600ء</span>
+          </div>
+        </div>
+
+        <!-- 15 شعبان -->
+        <div class="event-card fade-in">
+          <div class="event-content">
+            <span class="event-type type-celebration">خوشی / جشن</span>
+            <h3>شبِ برات / نصفِ شعبان</h3>
+            <p class="event-arabic">لَيْلَةُ النِّصْفِ مِنْ شَعْبَان</p>
+            <p>قسمت اور مغفرت کی رات، پوری دنیائے اسلام میں منائی جاتی ہے۔ یہ رات حضرت علی کی اولاد سے بھی جڑی ہے — بہت سے فرقے اسے امام محمد المہدی کی ولادت کی یادگار مناتے ہیں جو حضرت علی کے بیٹے حسین کی نسل سے ہیں۔</p>
+          </div>
+          <div class="event-date d-gold">
+            <span class="day">15</span>
+            <span class="month">شعبان</span>
+          </div>
+        </div>
+
+        <!-- 17 رمضان — غزوۂ بدر -->
+        <div class="event-card fade-in">
+          <div class="event-content">
+            <span class="event-type type-historic">تاریخی واقعہ</span>
+            <h3>غزوۂ بدر</h3>
+            <p class="event-arabic">غَزْوَةُ بَدْر</p>
+            <p>اسلام کی پہلی بڑی جنگ بدر میں حضرت علی نے فیصلہ کن کردار ادا کیا۔ وہ سب سے آگے لڑنے والے مجاہدین میں سے تھے جنہوں نے نوزائیدہ مسلم برادری کا دفاع کیا۔ حضرت علی نے قریش کے بہت سے نامور جنگجوؤں کو مقابلۂ تن بہ تن میں شکست دی اور اسلام کی تاریخ بدلنے والی اس فیصلہ کن فتح میں کلیدی کردار ادا کیا۔</p>
+          </div>
+          <div class="event-date d-navy">
+            <span class="day">17</span>
+            <span class="month">رمضان</span>
+            <span class="year">2 ہجری / 624ء</span>
+          </div>
+        </div>
+
+        <!-- 19 رمضان — حملہ -->
+        <div class="event-card fade-in">
+          <div class="event-content">
+            <span class="event-type type-mourning">سوگ</span>
+            <h3>حضرت علی (رضی اللہ عنہ) پر حملہ</h3>
+            <p class="event-arabic">ضَرْبُ الإِمَامِ عَلِيّ</p>
+            <p>مسجدِ کوفہ میں نمازِ فجر کی امامت کے دوران خوارج کے قاتل ابنِ مُلجَم نے حضرت علی کے سر پر زہر آلود تلوار سے حملہ کیا۔ مہلک زخم کے باوجود حضرت علی کی پہلی فکر اپنے حملہ آور کے ساتھ انصاف تھی، انہوں نے اپنے بیٹوں کو ہدایت دی: "اگر میں بچ گیا تو خود فیصلہ کروں گا؛ اگر شہید ہو گیا تو اسے صرف ایک ہی ضرب لگاؤ جیسی اس نے لگائی ہے۔"</p>
+          </div>
+          <div class="event-date d-red">
+            <span class="day">19</span>
+            <span class="month">رمضان</span>
+            <span class="year">40 ہجری / 661ء</span>
+          </div>
+        </div>
+
+        <!-- 21 رمضان — شہادت -->
+        <div class="event-card fade-in">
+          <div class="event-content">
+            <span class="event-type type-mourning">سوگ</span>
+            <h3>شہادتِ امام علی (رضی اللہ عنہ)</h3>
+            <p class="event-arabic">شَهَادَةُ الإِمَامِ عَلِيِّ بْنِ أَبِي طَالِب</p>
+            <p>حملے کے دو دن بعد 21 رمضان کو حضرت علی (رضی اللہ عنہ) اس دنیا سے رخصت ہوئے۔ ان کے آخری الفاظ میں یہ شامل تھے: <em>"کعبے کے رب کی قسم، میں کامیاب ہو گیا!"</em> انہیں نجف، عراق میں دفنایا گیا جہاں آج ان کا شاندار مزار موجود ہے۔ یہ دن پوری دنیائے اسلام میں سوگ، نماز اور تفکر سے منایا جاتا ہے۔</p>
+          </div>
+          <div class="event-date d-dark">
+            <span class="day">21</span>
+            <span class="month">رمضان</span>
+            <span class="year">40 ہجری / 661ء</span>
+          </div>
+        </div>
+
+        <!-- 18 ذوالحجہ — عیدِ غدیر -->
+        <div class="event-card fade-in">
+          <div class="event-content">
+            <span class="event-type type-celebration">خوشی / جشن</span>
+            <h3>عیدِ غدیر (واقعۂ غدیرِ خم)</h3>
+            <p class="event-arabic">عِيدُ الغَدِير</p>
+            <p>حجۃ الوداع سے واپسی پر نبی محمد ﷺ غدیرِ خم پر رکے اور ہزاروں صحابہ کے سامنے اعلان فرمایا: <em>"جس کا میں مولا ہوں اس کے علی بھی مولا ہیں۔"</em> یہ واقعہ اسلامی تاریخ کے اہم ترین دنوں میں سے ایک کے طور پر منایا جاتا ہے۔ اس کے بعد یہ آیت نازل ہوئی: "آج میں نے تمہارے لیے تمہارا دین مکمل کر دیا" (قرآن 5:3)۔</p>
+          </div>
+          <div class="event-date d-emerald">
+            <span class="day">18</span>
+            <span class="month">ذوالحجہ</span>
+            <span class="year">10 ہجری / 632ء</span>
+          </div>
+        </div>
+
+        <!-- 24 ذوالحجہ — مباہلہ -->
+        <div class="event-card fade-in">
+          <div class="event-content">
+            <span class="event-type type-historic">تاریخی واقعہ</span>
+            <h3>یومِ مباہلہ</h3>
+            <p class="event-arabic">يَوْمُ المُبَاهَلَة</p>
+            <p>نجران کے عیسائیوں کے ساتھ مباہلہ (باہمی لعنت) کا واقعہ۔ نبی ﷺ حضرت علی کو اپنے "نفس" (ذات)، حضرت فاطمہ کو اپنی "خواتین" اور حسن و حسین کو اپنے "بیٹوں" کے طور پر لائے جیسا کہ قرآن 3:61 میں مذکور ہے۔ نجران کے عیسائی ان نورانی چہروں کو دیکھ کر مباہلہ سے باز آ گئے اور معاہدے پر رضامند ہو گئے۔</p>
+          </div>
+          <div class="event-date d-purple">
+            <span class="day">24</span>
+            <span class="month">ذوالحجہ</span>
+            <span class="year">10 ہجری / 632ء</span>
+          </div>
+        </div>
+
+        <!-- 1 محرم -->
+        <div class="event-card fade-in">
+          <div class="event-content">
+            <span class="event-type type-historic">تاریخی واقعہ</span>
+            <h3>اسلامی نیا سال</h3>
+            <p class="event-arabic">رَأْسُ السَّنَةِ الهِجْرِيَّة</p>
+            <p>اسلامی نیا سال ہجری کیلنڈر کے آغاز کی علامت ہے۔ محرم کا مہینہ مقدس ہے اور حضرت علی اور ان کے خاندان کی قربانیوں پر غور و فکر کا وقت ہے۔ محرم کے پہلے دس دن خاص طور پر پرسوز ہیں جن کا اختتام عاشورا (10 محرم) پر ہوتا ہے — جو حضرت علی کے بیٹے امام حسین (رضی اللہ عنہ) کی 61 ہجری میں کربلا میں شہادت کی یاد میں منایا جاتا ہے۔</p>
+          </div>
+          <div class="event-date d-teal">
+            <span class="day">1</span>
+            <span class="month">محرم</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="biography.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📖</div><h4 class="card-title">سوانح حیات</h4><p class="card-text">حضرت علی کی مکمل زندگی کی کہانی۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="sacred-places.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">🕌</div><h4 class="card-title">مقدس مقامات</h4><p class="card-text">حضرت علی سے جڑے مقدس مقامات۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+        <a href="battles.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">⚔️</div><h4 class="card-title">غزوات</h4><p class="card-text">جنگی مہمات اور حضرت علی کی بہادری۔</p><span class="card-link"><span>→</span> جانیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>

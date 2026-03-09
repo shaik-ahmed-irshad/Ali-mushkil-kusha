@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>کتابیں و ادب — حضرت علی (رضی اللہ عنہ) — علی مشکل کشا</title>
+  <meta name="description" content="حضرت علی ابن ابی طالب (رضی اللہ عنہ) کے بارے میں اہم کتابیں اور علمی کام — نہج البلاغہ، سوانح عمریاں، تحقیقات اور تجویز کردہ مطالعہ۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,#2a1a10 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .book-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      margin-bottom: var(--space-xl);
+      display: flex;
+      flex-direction: row-reverse;
+      transition: all var(--transition-base);
+    }
+    .book-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .book-spine { width: 8px; flex-shrink: 0; }
+    .book-content { padding: var(--space-xl) var(--space-2xl); flex: 1; }
+    .book-category {
+      display: inline-block;
+      background: var(--color-ivory);
+      color: var(--color-text-light);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--border-radius-full);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+    .book-content h3 { color: var(--color-charcoal); margin-bottom: var(--space-xs); }
+    .book-author { color: var(--color-emerald); font-size: var(--fs-sm); font-weight: 600; margin-bottom: var(--space-md); }
+    .book-content p { color: var(--color-text); line-height: 2.5; font-size: var(--fs-sm); }
+    .book-lang {
+      display: inline-block;
+      background: var(--color-gold-subtle);
+      color: var(--color-charcoal);
+      padding: 2px var(--space-sm);
+      border-radius: var(--border-radius);
+      font-size: var(--fs-xs);
+      margin-top: var(--space-sm);
+    }
+
+    .spine-emerald { background: var(--color-emerald); }
+    .spine-gold { background: var(--color-gold); }
+    .spine-navy { background: var(--color-navy); }
+    .spine-red { background: #c0392b; }
+    .spine-purple { background: #6a3a8a; }
+
+    .section-label {
+      font-size: var(--fs-lg);
+      font-weight: 700;
+      color: var(--color-emerald);
+      margin: var(--space-3xl) 0 var(--space-xl);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid var(--color-gold);
+      display: inline-block;
+    }
+
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width:768px) {
+      .book-card { flex-direction: column-reverse; }
+      .book-spine { width: 100%; height: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html" class="active">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a><a href="calendar.html">اسلامی کیلنڈر</a><a href="kids.html">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/books.html" class="lang-btn">EN</a>
+          <a href="books.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">کتابیں و ادب</span></div>
+      <p style="font-size:4rem;margin-bottom:var(--space-sm)">📚</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">کتابیں و ادب</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور میراث کے بارے میں ضروری مطالعہ
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <p class="section-label">📖 بنیادی ماخذ</p>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-emerald"></div>
+        <div class="book-content">
+          <span class="book-category">بنیادی ماخذ</span>
+          <h3>نہج البلاغہ (فصاحت کی چوٹی)</h3>
+          <p class="book-author">مرتّب: سید الشریف الرضی (~1010ء)</p>
+          <p>حضرت علی کے خطبات، خطوط اور اقوال کا سب سے اہم مجموعہ۔ 241 خطبات، 79 خطوط اور 489 مختصر اقوال شامل ہیں۔ قرآن کے بعد عربی نثر کا سب سے اہم شاہکار سمجھا جاتا ہے۔ حضرت علی کی فکر، روحانیت اور فصاحت سمجھنے کے خواہشمند ہر شخص کے لیے لازمی مطالعہ۔</p>
+          <span class="book-lang">عربی (انگریزی، اردو، فارسی اور 30 سے زائد زبانوں میں تراجم)</span>
+        </div>
+      </div>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-gold"></div>
+        <div class="book-content">
+          <span class="book-category">شرح</span>
+          <h3>شرح نہج البلاغہ</h3>
+          <p class="book-author">ابنِ ابی الحدید (1190–1258ء)</p>
+          <p>معتزلی سنی عالم ابنِ ابی الحدید کی 20 جلدوں پر مشتمل عظیم شرح۔ اسلامی ادبی تنقید کی عظیم ترین تصانیف میں شمار ہوتی ہے اور تاریخی، الٰہیاتی اور لسانی تجزیے پر مشتمل ہے۔ اصل متن کی لازمی ساتھی کتاب۔</p>
+          <span class="book-lang">عربی</span>
+        </div>
+      </div>
+
+      <p class="section-label">📜 کلاسیکی سوانح عمریاں</p>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-navy"></div>
+        <div class="book-content">
+          <span class="book-category">سوانح عمری</span>
+          <h3>الاستیعاب فی معرفۃ الاصحاب</h3>
+          <p class="book-author">ابن عبدالبر (978–1071ء)</p>
+          <p>نبی ﷺ کے صحابہ کی جامع تذکرہ نگاری جس میں حضرت علی ابن ابی طالب کے بارے میں تفصیلی مندرجات موجود ہیں — ان کے فضائل، علم، شجاعت اور ابتدائی اسلام میں کردار کا احاطہ۔ قرطبہ کے مشہور مالکی عالم کی تصنیف۔</p>
+          <span class="book-lang">عربی</span>
+        </div>
+      </div>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-red"></div>
+        <div class="book-content">
+          <span class="book-category">سوانح عمری</span>
+          <h3>تاریخ الطبری</h3>
+          <p class="book-author">الطبری (839–923ء)</p>
+          <p>915ء تک اسلامی دنیا کی سب سے جامع تاریخ۔ ابتدائی اسلام کے ہر اہم واقعے — پہلی وحی سے لے کر خلافت اور خانہ جنگیوں تک — میں حضرت علی کے کردار کا تفصیلی بیان۔ حضرت علی کی زندگی کے سنجیدہ مطالعے کے لیے ناگزیر بنیادی ماخذ۔</p>
+          <span class="book-lang">عربی (انگریزی ترجمہ: 40 جلدیں، SUNY پریس)</span>
+        </div>
+      </div>
+
+      <p class="section-label">🌍 جدید تحقیقات</p>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-purple"></div>
+        <div class="book-content">
+          <span class="book-category">جدید تحقیق</span>
+          <h3>علی ابن ابی طالب</h3>
+          <p class="book-author">ڈاکٹر احمد ابراہیم الشریف</p>
+          <p>ایک جامع جدید سوانح عمری جو کلاسیکی ماخذ سے استفادہ کرتے ہوئے عصری تحقیقی طریقہ کار استعمال کرتی ہے۔ پیدائش سے شہادت تک حضرت علی کی زندگی کا احاطہ، ان کی حکمرانی، عدالتی فیصلوں اور فکری خدمات پر خصوصی توجہ۔</p>
+          <span class="book-lang">عربی، اردو</span>
+        </div>
+      </div>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-emerald"></div>
+        <div class="book-content">
+          <span class="book-category">جدید تحقیق</span>
+          <h3>صوتُ العدالۃ الانسانیہ (انسانی عدالت کی آواز)</h3>
+          <p class="book-author">جارج جرداق</p>
+          <p>لبنانی عیسائی مصنف جارج جرداق کی قابلِ ذکر تحقیق جنہوں نے حضرت علی کی زندگی اور حکمرانی پر برسوں تحقیق کی۔ یہ کتاب حضرت علی کو انسانی عدل کا نمونہ پیش کرتی ہے اور ان کے اصولوں کا اعلامیۂ حقوقِ انسانی سے موازنہ کرتی ہے۔ ایک غیر مسلم محقق کا منفرد نقطۂ نظر۔</p>
+          <span class="book-lang">عربی (اردو اور انگریزی تراجم دستیاب)</span>
+        </div>
+      </div>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-gold"></div>
+        <div class="book-content">
+          <span class="book-category">جدید تحقیق</span>
+          <h3>After the Prophet (نبی کے بعد)</h3>
+          <p class="book-author">لیزلی ہیزلٹن</p>
+          <p>نبی ﷺ کی رحلت کے بعد کے واقعات کی دلچسپ تاریخی بیان، حضرت علی کے کردار پر مرکوز۔ مغربی قارئین کے لیے لکھی گئی، ناول کی طرح پڑھی جاتی ہے لیکن تاریخی درستگی برقرار رکھتی ہے۔ نئے قارئین کے لیے بہترین تعارف۔</p>
+          <span class="book-lang">انگریزی</span>
+        </div>
+      </div>
+
+      <p class="section-label">📕 اردو ادب</p>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-navy"></div>
+        <div class="book-content">
+          <span class="book-category">اردو</span>
+          <h3>علی نامہ</h3>
+          <p class="book-author">متعدد مصنّفین</p>
+          <p>حضرت علی (رضی اللہ عنہ) کی زندگی، فضائل اور حکمت کا جشن منانے والی اردو تصانیف کا مجموعہ۔ صدیوں کے نامور اردو علماء اور شعراء کی شاعری، سوانحی بیانات اور روحانی تاملات شامل ہیں۔</p>
+          <span class="book-lang">اردو</span>
+        </div>
+      </div>
+
+      <div class="book-card fade-in">
+        <div class="book-spine spine-red"></div>
+        <div class="book-content">
+          <span class="book-category">اردو ترجمہ</span>
+          <h3>نہج البلاغہ — اردو ترجمہ</h3>
+          <p class="book-author">مفتی جعفر حسین</p>
+          <p>نہج البلاغہ کے سب سے زیادہ پڑھے جانے والے اردو تراجم میں سے ایک، تفصیلی تشریح اور وضاحتوں کے ساتھ۔ حضرت علی کی عمیق حکمت کو دنیا بھر کے اردو بولنے والے قارئین تک پہنچاتا ہے۔</p>
+          <span class="book-lang">اردو</span>
+        </div>
+      </div>
+
+      <!-- مطالعے کی رہنمائی -->
+      <div style="background:linear-gradient(135deg,var(--color-emerald-dark),var(--color-navy));color:var(--color-white);border-radius:var(--border-radius-xl);padding:var(--space-3xl);margin-top:var(--space-2xl)" class="fade-in">
+        <h3 style="color:var(--color-gold);margin-bottom:var(--space-md)">📖 شروع کہاں سے کریں؟</h3>
+        <p style="color:rgba(255,255,255,0.85);line-height:2">اگر آپ حضرت علی (رضی اللہ عنہ) کا مطالعہ پہلی بار کر رہے ہیں تو یہ ترتیب تجویز ہے:</p>
+        <ol style="margin:var(--space-md) 0;padding-right:var(--space-xl);padding-left:0;color:rgba(255,255,255,0.85);line-height:2.5">
+          <li><strong>اس ویب سائٹ سے شروع کریں</strong> — ہمارے سوانح حیات اور اقوال سیکشن بہترین تعارف فراہم کرتے ہیں</li>
+          <li><strong>نہج البلاغہ</strong> (اردو ترجمہ) — ضروری بنیادی ماخذ</li>
+          <li><strong>After the Prophet</strong> از لیزلی ہیزلٹن — تاریخی پس منظر کے لیے</li>
+          <li><strong>صوتُ العدالۃ الانسانیہ</strong> از جارج جرداق — حکمرانی کی میراث کے لیے</li>
+          <li><strong>ابنِ ابی الحدید کی شرح</strong> — اعلیٰ سطحی علمی مطالعے کے لیے</li>
+        </ol>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="poetry.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">🎭</div><h4 class="card-title">شاعری</h4><p class="card-text">حضرت علی کی شان میں اردو و فارسی شاعری۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="nahj-al-balagha.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📖</div><h4 class="card-title">نہج البلاغہ</h4><p class="card-text">فصاحت کی چوٹی آن لائن پڑھیں۔</p><span class="card-link"><span>→</span> جانیں</span></a>
+        <a href="sayings.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">اقوالِ زریں</h4><p class="card-text">سنہری اقوال۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>

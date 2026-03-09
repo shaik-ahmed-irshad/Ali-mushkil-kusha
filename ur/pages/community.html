@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>کمیونٹی — ہمارے ساتھ شامل ہوں — علی مشکل کشا</title>
+  <meta name="description" content="علی مشکل کشا کمیونٹی میں شامل ہوں — ساتھی طالبانِ علم سے جڑیں، تفکرات شیئر کریں اور حضرت علی (رضی اللہ عنہ) کی حکمت پھیلائیں۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-emerald-dark) 0%,var(--color-navy) 50%,var(--color-charcoal) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .community-stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-lg); margin: var(--space-3xl) auto; max-width: 700px;
+    }
+    .stat-item {
+      text-align: center; padding: var(--space-xl);
+      background: var(--color-white); border-radius: var(--border-radius-xl); box-shadow: var(--shadow-sm);
+    }
+    .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--color-emerald-dark); font-family: var(--font-heading); }
+    .stat-label { color: var(--color-text-light); font-size: var(--fs-sm); margin-top: var(--space-xs); }
+    .ways-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-xl); margin-top: var(--space-xl);
+    }
+    .way-card {
+      background: var(--color-white); border-radius: var(--border-radius-xl); padding: var(--space-2xl);
+      box-shadow: var(--shadow-sm); border: 1px solid var(--color-border-light); text-align: center;
+      transition: all var(--transition-base);
+    }
+    .way-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); border-color: var(--color-gold); }
+    .way-icon { font-size: 3rem; margin-bottom: var(--space-md); }
+    .way-card h3 { color: var(--color-charcoal); margin-bottom: var(--space-sm); }
+    .way-card p { color: var(--color-text); font-size: var(--fs-sm); line-height: 2.5; margin-bottom: var(--space-lg); }
+    .way-btn {
+      display: inline-block; padding: var(--space-sm) var(--space-xl);
+      border-radius: var(--border-radius-full); font-weight: 600; font-size: var(--fs-sm); text-decoration: none; transition: all 0.3s;
+    }
+    .btn-emerald { background: var(--color-emerald-dark); color: var(--color-white); }
+    .btn-emerald:hover { background: var(--color-emerald); }
+    .btn-gold { background: var(--color-gold); color: var(--color-charcoal); }
+    .btn-gold:hover { background: #dab961; }
+    .btn-navy { background: var(--color-navy); color: var(--color-white); }
+    .btn-navy:hover { background: #2a3a6a; }
+    .values-section { margin-top: var(--space-3xl); }
+    .values-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: var(--space-lg); margin-top: var(--space-xl);
+    }
+    .value-item {
+      background: var(--color-white); border-radius: var(--border-radius-lg); padding: var(--space-xl);
+      text-align: center; box-shadow: var(--shadow-sm); border-top: 3px solid var(--color-gold);
+    }
+    .value-item h4 { color: var(--color-emerald-dark); margin-bottom: var(--space-sm); }
+    .value-item p { color: var(--color-text); font-size: var(--fs-sm); line-height: 2.5; }
+    .contact-form-section {
+      background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-navy));
+      border-radius: var(--border-radius-xl); padding: var(--space-3xl);
+      margin-top: var(--space-3xl); color: var(--color-white);
+    }
+    .contact-form-section h3 { color: var(--color-gold); text-align: center; margin-bottom: var(--space-md); }
+    .contact-form-section > p { text-align: center; color: rgba(255,255,255,0.7); margin-bottom: var(--space-xl); }
+    .contact-form { max-width: 600px; margin: 0 auto; display: grid; gap: var(--space-md); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+    .contact-form input, .contact-form textarea, .contact-form select {
+      width: 100%; padding: var(--space-md) var(--space-lg);
+      border: 1px solid rgba(200,169,81,0.3); border-radius: var(--border-radius);
+      background: rgba(255,255,255,0.08); color: var(--color-white);
+      font-family: 'Gulzar', 'Amiri', serif; font-size: var(--fs-sm);
+    }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.4); }
+    .contact-form select option { color: var(--color-charcoal); background: var(--color-white); }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form button {
+      padding: var(--space-md) var(--space-xl); background: var(--color-gold);
+      color: var(--color-charcoal); border: none; border-radius: var(--border-radius);
+      font-weight: 600; font-size: var(--fs-md); cursor: pointer; transition: all 0.3s;
+      font-family: 'Gulzar', serif;
+    }
+    .contact-form button:hover { background: #dab961; }
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width: 768px) {
+      .ways-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .contact-form-section { padding: var(--space-xl); }
+      .way-card { padding: var(--space-xl); }
+    }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .community-stats { grid-template-columns: 1fr 1fr; }
+      .way-card { padding: var(--space-lg); }
+      .contact-form-section { padding: var(--space-lg); border-radius: var(--border-radius-lg); }
+      .stat-number { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a><a href="calendar.html">اسلامی کیلنڈر</a><a href="kids.html">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/community.html" class="lang-btn">EN</a>
+          <a href="community.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">کمیونٹی</span></div>
+      <p style="font-family:'Amiri',serif;font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">المُجْتَمَع</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">ہماری کمیونٹی میں شامل ہوں</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        ساتھی طالبانِ علم سے جڑیں اور حضرت علی (رضی اللہ عنہ) کی لازوال حکمت بانٹیں
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:1000px">
+
+      <!-- اعداد و شمار -->
+      <div class="community-stats fade-in">
+        <div class="stat-item">
+          <div class="stat-number">18</div>
+          <div class="stat-label">مواد کے صفحات</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">25</div>
+          <div class="stat-label">اقوال کا مجموعہ</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">7</div>
+          <div class="stat-label">احادیث کے حوالے</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">6</div>
+          <div class="stat-label">قرآنی آیات</div>
+        </div>
+      </div>
+
+      <!-- شامل ہونے کے طریقے -->
+      <div class="section-header fade-in"><h2>شامل ہونے کے طریقے</h2><div class="divider-gold"></div></div>
+      <div class="ways-grid">
+        <div class="way-card fade-in">
+          <div class="way-icon">📧</div>
+          <h3>نیوز لیٹر</h3>
+          <p>ہفتہ وار حکمت، نئے مضامین اور تقریبات کی یاد دہانیاں براہِ راست اپنے ان باکس میں حاصل کریں۔ علی کی تعلیمات سے جڑے رہیں۔</p>
+          <a href="../index.html#newsletter" class="way-btn btn-emerald">سبسکرائب کریں</a>
+        </div>
+        <div class="way-card fade-in">
+          <div class="way-icon">📤</div>
+          <h3>حکمت پھیلائیں</h3>
+          <p>سوشل میڈیا پر حضرت علی کے سنہرے اقوال شیئر کریں۔ ہر شیئر کیا گیا قول کسی کی زندگی بدلنے کی صلاحیت رکھتا ہے۔</p>
+          <a href="sayings.html" class="way-btn btn-gold">اقوال شیئر کریں</a>
+        </div>
+        <div class="way-card fade-in">
+          <div class="way-icon">✍️</div>
+          <h3>مواد فراہم کریں</h3>
+          <p>کیا آپ مصنف، عالم یا محقق ہیں؟ ہم مضامین، تراجم اور تصحیحات کی شراکت کا خیرمقدم کرتے ہیں۔</p>
+          <a href="#contact" class="way-btn btn-navy">رابطہ کریں</a>
+        </div>
+      </div>
+
+      <!-- اقدار -->
+      <div class="values-section fade-in">
+        <div class="section-header"><h2>ہماری کمیونٹی کی اقدار</h2><div class="divider-gold"></div></div>
+        <p style="text-align:center;color:var(--color-text);max-width:600px;margin:0 auto var(--space-xl);line-height:2">
+          حضرت علی (رضی اللہ عنہ) کے کردار سے متاثر، ہماری کمیونٹی ان اصولوں پر قائم ہے:
+        </p>
+        <div class="values-grid">
+          <div class="value-item fade-in">
+            <h4>🔬 علم</h4>
+            <p>"سب سے بہترین دولت عقل کی دولت ہے" — ہم مستند اور حوالہ جات پر مبنی اسلامی علم کو ترجیح دیتے ہیں۔</p>
+          </div>
+          <div class="value-item fade-in">
+            <h4>🤝 اتحاد</h4>
+            <p>ہم تمام مکاتبِ فکر کے مسلمانوں کا خیرمقدم کرتے ہیں، جو حضرت علی (رضی اللہ عنہ) کی محبت میں متحد ہیں۔</p>
+          </div>
+          <div class="value-item fade-in">
+            <h4>🕊️ احترام</h4>
+            <p>"پھول کی طرح بنو جو اسے کچلنے والے ہاتھ کو بھی خوشبو دے" — ہم سب کے ساتھ عزت اور احترام سے پیش آتے ہیں۔</p>
+          </div>
+          <div class="value-item fade-in">
+            <h4>📚 مستند مواد</h4>
+            <p>تمام مواد تسلیم شدہ اسلامی علمی ماخذ اور مستند تاریخی ریکارڈ سے احتیاط سے اخذ کیا گیا ہے۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- رابطہ فارم -->
+      <div class="contact-form-section fade-in" id="contact">
+        <h3>📬 ہم سے رابطہ کریں</h3>
+        <p>کوئی سوال، تجویز یا شراکت ہے؟ ہم آپ سے سننا چاہیں گے۔</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='پیغام بھیج دیا گیا ✓'; setTimeout(()=>this.reset(),2000);">
+          <div class="form-row">
+            <input type="text" placeholder="آپ کا نام" required />
+            <input type="email" placeholder="آپ کی ای میل" required />
+          </div>
+          <select>
+            <option value="" disabled selected>موضوع منتخب کریں</option>
+            <option>عمومی سوال</option>
+            <option>مواد کی شراکت</option>
+            <option>تصحیح یا تجویز</option>
+            <option>تکنیکی مسئلہ</option>
+            <option>شراکتِ کار</option>
+            <option>دیگر</option>
+          </select>
+          <textarea placeholder="آپ کا پیغام..." required></textarea>
+          <button type="submit">پیغام بھیجیں</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="../index.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">🏠</div><h4 class="card-title">ہوم</h4><p class="card-text">مرکزی صفحے پر واپس جائیں۔</p><span class="card-link"><span>→</span> جائیں</span></a>
+        <a href="blog.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📝</div><h4 class="card-title">بلاگ</h4><p class="card-text">ہمارے تازہ ترین مضامین اور تفکرات پڑھیں۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="sayings.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">اقوالِ زریں</h4><p class="card-text">حضرت علی کے سنہرے اقوال۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>

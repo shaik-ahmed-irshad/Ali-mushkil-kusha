@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بلاگ — مضامین اور بصیرت — علی مشکل کشا</title>
+  <meta name="description" content="حضرت علی ابن ابی طالب (رضی اللہ عنہ) اور ان کی لازوال تعلیمات پر بلاگ مضامین، تفکرات اور علمی بصیرت۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,var(--color-navy) 50%,var(--color-emerald-dark) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: var(--space-xl);
+    }
+    .blog-card {
+      background: var(--color-white); border-radius: var(--border-radius-xl);
+      overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border-light);
+      transition: all var(--transition-base); display: flex; flex-direction: column;
+    }
+    .blog-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+    .blog-thumb {
+      height: 180px; display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .blog-thumb-icon { font-size: 3.5rem; position: relative; z-index: 2; }
+    .blog-thumb-overlay {
+      position: absolute; inset: 0; opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .blog-body { padding: var(--space-xl); flex: 1; display: flex; flex-direction: column; }
+    .blog-meta { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-md); flex-wrap: wrap; }
+    .blog-category {
+      background: var(--color-gold-subtle); color: var(--color-charcoal); padding: 2px 10px;
+      border-radius: var(--border-radius-full); font-size: 0.7rem; font-weight: 600;
+    }
+    .blog-date { color: var(--color-text-light); font-size: var(--fs-xs); }
+    .blog-body h3 { color: var(--color-charcoal); margin-bottom: var(--space-sm); font-size: var(--fs-lg); }
+    .blog-body p { color: var(--color-text); line-height: 2.5; font-size: var(--fs-sm); flex: 1; }
+    .blog-link {
+      display: inline-block; color: var(--color-emerald-dark); font-weight: 600;
+      font-size: var(--fs-sm); margin-top: var(--space-md); text-decoration: none;
+    }
+    .blog-link:hover { color: var(--color-gold); }
+    .bg-e { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .bg-n { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .bg-p { background: linear-gradient(135deg, #3a1a4e, #5a3a6e); }
+    .bg-d { background: linear-gradient(135deg, var(--color-charcoal), #2a2a3e); }
+    .bg-t { background: linear-gradient(135deg, #064040, #0a6060); }
+    .bg-b { background: linear-gradient(135deg, #3a2a10, #5a4a30); }
+    .subscribe-banner {
+      background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-navy));
+      border-radius: var(--border-radius-xl); padding: var(--space-3xl);
+      text-align: center; color: var(--color-white); margin-top: var(--space-3xl);
+    }
+    .subscribe-banner h3 { color: var(--color-gold); margin-bottom: var(--space-md); }
+    .subscribe-banner p { color: rgba(255,255,255,0.8); margin-bottom: var(--space-xl); max-width: 500px; margin-left: auto; margin-right: auto; }
+    .subscribe-form { display: flex; gap: var(--space-sm); max-width: 450px; margin: 0 auto; direction: ltr; }
+    .subscribe-form input {
+      flex: 1; padding: var(--space-md) var(--space-lg);
+      border: 1px solid rgba(200,169,81,0.3); border-radius: var(--border-radius);
+      background: rgba(255,255,255,0.1); color: var(--color-white); font-size: var(--fs-sm);
+    }
+    .subscribe-form input::placeholder { color: rgba(255,255,255,0.4); }
+    .subscribe-form button {
+      padding: var(--space-md) var(--space-xl); background: var(--color-gold);
+      color: var(--color-charcoal); border: none; border-radius: var(--border-radius);
+      font-weight: 600; cursor: pointer; transition: all 0.3s; font-family: 'Gulzar', serif;
+    }
+    .subscribe-form button:hover { background: #dab961; }
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .subscribe-form { flex-direction: column; }
+      .subscribe-banner { padding: var(--space-xl); }
+    }
+    @media (max-width: 480px) {
+      .blog-body { padding: var(--space-lg); }
+      .blog-thumb { height: 150px; }
+      .subscribe-banner { padding: var(--space-lg); border-radius: var(--border-radius-lg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a><a href="calendar.html">اسلامی کیلنڈر</a><a href="kids.html">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html" class="active">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/blog.html" class="lang-btn">EN</a>
+          <a href="blog.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">بلاگ</span></div>
+      <p style="font-family:'Amiri',serif;font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">المَقَالَات</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">بلاگ اور مضامین</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        حضرت علی کی لازوال حکمت پر تفکرات، علمی بصیرت اور تحقیقات
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container">
+
+      <div class="blog-grid">
+
+        <!-- مضمون 1 -->
+        <article class="blog-card fade-in">
+          <div class="blog-thumb bg-e">
+            <div class="blog-thumb-overlay"></div>
+            <span class="blog-thumb-icon">⚖️</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">حکمرانی</span>
+              <span class="blog-date">15 جون، 2025</span>
+            </div>
+            <h3>حضرت علی کا مالک الاشتر کے نام خط: عادلانہ حکمرانی کا نقشہ</h3>
+            <p>مصر کے لیے مقرر کردہ گورنر کو امام علی کے مشہور انتظامی خط کا گہرا تجزیہ — جسے علماء انسانی تاریخ کے جامع ترین حکومتی دستاویزات میں شمار کرتے ہیں۔</p>
+            <span class="blog-link">مضمون پڑھیں ←</span>
+          </div>
+        </article>
+
+        <!-- مضمون 2 -->
+        <article class="blog-card fade-in">
+          <div class="blog-thumb bg-n">
+            <div class="blog-thumb-overlay"></div>
+            <span class="blog-thumb-icon">🧠</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">حکمت</span>
+              <span class="blog-date">10 جون، 2025</span>
+            </div>
+            <h3>امام علی کے 10 اقوال جو آپ کا نظریہ بدل دیں</h3>
+            <p>حضرت علی کے سب سے طاقتور حکمت نامے جدید تبصرے کے ساتھ — خود شناسی، صبر، عدل اور روزمرہ زندگی میں حق کی تلاش جیسے موضوعات کا احاطہ۔</p>
+            <span class="blog-link">مضمون پڑھیں ←</span>
+          </div>
+        </article>
+
+        <!-- مضمون 3 -->
+        <article class="blog-card fade-in">
+          <div class="blog-thumb bg-p">
+            <div class="blog-thumb-overlay"></div>
+            <span class="blog-thumb-icon">📖</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">روحانیت</span>
+              <span class="blog-date">5 جون، 2025</span>
+            </div>
+            <h3>نہج البلاغہ کے روحانی پہلو</h3>
+            <p>نہج البلاغہ میں چھپی تصوف اور روحانی تعلیمات کی کھوج — حضرت علی کی ذاتِ الٰہی کی معرفت سے لے کر روح کے خدا کی طرف سفر کی تعلیمات تک۔</p>
+            <span class="blog-link">مضمون پڑھیں ←</span>
+          </div>
+        </article>
+
+        <!-- مضمون 4 -->
+        <article class="blog-card fade-in">
+          <div class="blog-thumb bg-d">
+            <div class="blog-thumb-overlay"></div>
+            <span class="blog-thumb-icon">🗡️</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">تاریخ</span>
+              <span class="blog-date">28 مئی، 2025</span>
+            </div>
+            <h3>غزوۂ خیبر: ایمان، شجاعت اور ذوالفقار کی طاقت</h3>
+            <p>مشہور غزوۂ خیبر کا تفصیلی تاریخی بیان، جہاں حضرت علی نے اکیلے جنگ کا رخ موڑ دیا — قلعے کا دروازہ اکھاڑ کر اور سردار مرحب کو شکست دے کر۔</p>
+            <span class="blog-link">مضمون پڑھیں ←</span>
+          </div>
+        </article>
+
+        <!-- مضمون 5 -->
+        <article class="blog-card fade-in">
+          <div class="blog-thumb bg-t">
+            <div class="blog-thumb-overlay"></div>
+            <span class="blog-thumb-icon">👨‍👩‍👧‍👦</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">خاندان</span>
+              <span class="blog-date">20 مئی، 2025</span>
+            </div>
+            <h3>علی اور فاطمہ: محبت، ایمان اور مساوات پر مبنی رشتہ</h3>
+            <p>اسلامی تاریخ کے سب سے مشہور زوج کی کہانی — کیسے علی اور فاطمہ زہرا (رضی اللہ عنہا) نے مادی تنگی کے باوجود نماز، سادگی اور بے لوث محبت کا گھرانہ بسایا۔</p>
+            <span class="blog-link">مضمون پڑھیں ←</span>
+          </div>
+        </article>
+
+        <!-- مضمون 6 -->
+        <article class="blog-card fade-in">
+          <div class="blog-thumb bg-b">
+            <div class="blog-thumb-overlay"></div>
+            <span class="blog-thumb-icon">🌍</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">میراث</span>
+              <span class="blog-date">12 مئی، 2025</span>
+            </div>
+            <h3>حضرت علی کی تعلیمات نے جدید انسانی حقوق کو کیسے متاثر کیا</h3>
+            <p>اقوامِ متحدہ کا مالک الاشتر کے خط کا حوالہ دینے سے لے کر ان کی حکمرانی کے علمی مطالعات تک — حضرت علی کے 7ویں صدی کے اصول جدید انسانی حقوق کے ڈھانچے سے کیسے ہم آہنگ ہیں۔</p>
+            <span class="blog-link">مضمون پڑھیں ←</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- سبسکرائب -->
+      <div class="subscribe-banner fade-in">
+        <h3>تازہ ترین رہیں</h3>
+        <p>حضرت علی (رضی اللہ عنہ) کی حکمت پر نئے مضامین، بصیرت اور تفکرات حاصل کرنے کے لیے سبسکرائب کریں۔</p>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='سبسکرائب ہو گئے ✓'; this.querySelector('input').value='';">
+          <input type="email" placeholder="اپنا ای میل درج کریں" required />
+          <button type="submit">سبسکرائب</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="sayings.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">اقوالِ زریں</h4><p class="card-text">اردو اور انگریزی میں سنہرے اقوال۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+        <a href="nahj-al-balagha.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📕</div><h4 class="card-title">نہج البلاغہ</h4><p class="card-text">فصاحت کی معراج — خطبات اور خطوط۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="kids.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">⭐</div><h4 class="card-title">بچوں کا سیکشن</h4><p class="card-text">بچوں کے لیے دلچسپ کہانیاں اور حقائق۔</p><span class="card-link"><span>→</span> جانیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>

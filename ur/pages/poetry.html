@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شاعری و منقبت — حضرت علی (رضی اللہ عنہ) — علی مشکل کشا</title>
+  <meta name="description" content="حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی شان میں اردو، فارسی اور عربی شاعری — منقبت، قصیدہ، شاعری از علامہ اقبال، مولانا رومی، میر انیس اور مزید۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,#2a1a3a 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .poem-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      margin-bottom: var(--space-2xl);
+      transition: all var(--transition-base);
+    }
+    .poem-card:hover { box-shadow: var(--shadow-lg); }
+    .poem-header { padding: var(--space-xl) var(--space-2xl); }
+    .poem-header h3 { color: var(--color-white); margin-bottom: var(--space-xs); }
+    .poem-header .poet { color: var(--color-gold); font-size: var(--fs-sm); }
+    .poem-body { padding: var(--space-2xl); }
+
+    .urdu-verse {
+      font-family: 'Gulzar', 'Amiri', serif;
+      font-size: 1.3rem;
+      color: var(--color-charcoal);
+      direction: rtl;
+      text-align: center;
+      line-height: 2.8;
+      padding: var(--space-xl);
+      background: var(--color-ivory);
+      border-radius: var(--border-radius-lg);
+      border: 1px solid var(--color-gold-subtle);
+      margin-bottom: var(--space-lg);
+    }
+    .translation-box {
+      font-style: italic;
+      color: var(--color-text);
+      text-align: center;
+      line-height: 2.5;
+      padding: var(--space-lg);
+      background: var(--color-gold-subtle);
+      border-radius: var(--border-radius);
+      margin-bottom: var(--space-lg);
+    }
+    .poem-note { font-size: var(--fs-sm); color: var(--color-text-light); line-height: 2.5; }
+    .poem-type {
+      display: inline-block;
+      background: var(--color-gold-subtle);
+      color: var(--color-charcoal);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--border-radius-full);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+    }
+
+    .ph-emerald { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .ph-navy { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .ph-purple { background: linear-gradient(135deg, #3a1a4e, #5a3a6e); }
+    .ph-brown { background: linear-gradient(135deg, #3a2a10, #5a4a20); }
+    .ph-dark { background: linear-gradient(135deg, var(--color-charcoal), #2a2a3e); }
+    .ph-red { background: linear-gradient(135deg, #4a1020, #6a2040); }
+
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width: 768px) {
+      .poem-header, .poem-body { padding: var(--space-lg); }
+      .urdu-verse { font-size: 1.1rem; line-height: 2.4; padding: var(--space-md); }
+    }
+    @media (max-width: 480px) {
+      .poem-header, .poem-body { padding: var(--space-md); }
+      .urdu-verse { font-size: 1rem; line-height: 2.2; padding: var(--space-sm); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html">کتابیں</a><a href="poetry.html" class="active">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a><a href="calendar.html">اسلامی کیلنڈر</a><a href="kids.html">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/poetry.html" class="lang-btn">EN</a>
+          <a href="poetry.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">شاعری و منقبت</span></div>
+      <p style="font-family:'Amiri',serif;font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">شَاعِری و مَنقَبَت</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">شاعری و منقبت</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        حضرت علی (رضی اللہ عنہ) کی عظمت کے بارے میں صدیوں کی اردو، فارسی اور عربی شاعری
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <!-- علامہ اقبال -->
+      <div class="poem-card fade-in">
+        <div class="poem-header ph-emerald">
+          <h3>علامہ محمد اقبال</h3>
+          <p class="poet">شاعرِ مشرق (1877–1938)</p>
+        </div>
+        <div class="poem-body">
+          <span class="poem-type">منقبت</span>
+          <div class="urdu-verse">
+            عَلی عَشقِ حقیقی کا حقیقی مَظہَر<br/>
+            عَلی فقرِ اِلٰہی کا جلال و جَبروت<br/>
+            عَلی نے مسلمانوں کو مِلّت دی<br/>
+            اور قومِ رسولِ ہاشمی کا نظام
+          </div>
+          <div class="translation-box">
+            علی عشقِ حقیقی کا سچا مظہر ہیں<br/>
+            علی الٰہی فقر کی شان و شوکت ہیں<br/>
+            علی نے مسلمانوں کو ملّت عطا کی<br/>
+            اور رسولِ ہاشمی کی قوم کو منظّم کیا
+          </div>
+          <p class="poem-note">علامہ اقبال حضرت علی کو مکمل مسلمان کا نمونہ سمجھتے تھے — روحانی گہرائی کے ساتھ دنیوی عمل، اور عشقِ الٰہی کے ساتھ عدل کا اجتماع۔ اپنی تصانیف "اسرارِ خودی" اور "زبورِ عجم" میں اقبال بار بار حضرت علی کو مثالی مسلم شخصیت کے طور پر پیش کرتے ہیں۔</p>
+        </div>
+      </div>
+
+      <!-- مولانا رومی -->
+      <div class="poem-card fade-in">
+        <div class="poem-header ph-purple">
+          <h3>مولانا جلال الدین رومی</h3>
+          <p class="poet">عظیم صوفی بزرگ (1207–1273)</p>
+        </div>
+        <div class="poem-body">
+          <span class="poem-type">فارسی شعر — مثنوی</span>
+          <div class="urdu-verse" style="font-family:'Amiri',serif">
+            شیرِ حق خوانَد علی را مصطفیٰ<br/>
+            شیرِ حق نه شیرِ نفسِ جان فزا
+          </div>
+          <div class="translation-box">
+            نبی ﷺ نے علی کو شیرِ خدا کہا<br/>
+            خدا کا شیر — نفسانی خواہشات کا نہیں
+          </div>
+          <p class="poem-note">مولانا رومی نے اپنی مثنوی میں حضرت علی کی روحانی صفات کے بارے میں مفصل ابواب لکھے۔ رومی کے نزدیک حضرت علی مکمل صوفی تھے — جنہوں نے نفس کو مکمل طور پر مغلوب کر کے صرف خدا کے لیے زندگی گزاری۔ مثنوی میں وہ مشہور واقعہ بھی ہے جب حضرت علی نے دشمن کو معاف کر دیا جس نے ان کے منہ پر تھوکا — تاکہ وہ غصے میں قتل نہ کریں۔</p>
+        </div>
+      </div>
+
+      <!-- امیر خسرو -->
+      <div class="poem-card fade-in">
+        <div class="poem-header ph-brown">
+          <h3>امیر خسرو</h3>
+          <p class="poet">طوطیِ ہند (1253–1325)</p>
+        </div>
+        <div class="poem-body">
+          <span class="poem-type">قصیدہ</span>
+          <div class="urdu-verse">
+            حیدری فقر است در جہاں ہمہ<br/>
+            تاجِ سر عرفاں بود امامِ ہمہ
+          </div>
+          <div class="translation-box">
+            علی کی الٰہی فقیری پوری دنیا کو روشن کرتی ہے<br/>
+            عرفان کا تاج، سب کے امام
+          </div>
+          <p class="poem-note">امیر خسرو، دہلی کے مشہور صوفی شاعر، نے حضرت علی کی شان میں متعدد قصائد اور غزلیں لکھیں۔ ان کی فارسی اور ہندوی شاعری خوبصورتی سے برصغیر کے جذبات کو اسلامی روحانیت سے ملاتی ہے اور حضرت علی کی محبت کو عام لوگوں تک پہنچاتی ہے۔</p>
+        </div>
+      </div>
+
+      <!-- میر انیس -->
+      <div class="poem-card fade-in">
+        <div class="poem-header ph-red">
+          <h3>میر ببر علی انیس</h3>
+          <p class="poet">استادِ مرثیہ (1803–1874)</p>
+        </div>
+        <div class="poem-body">
+          <span class="poem-type">مرثیہ / منقبت</span>
+          <div class="urdu-verse">
+            شیرِ خدا ہے عَلی، شاہِ ولایت ہے عَلی<br/>
+            بابِ مدینۃُ العلم ہے، عین ہدایت ہے عَلی<br/>
+            جس نے خیبر کا دروازہ اُکھاڑا تنہا<br/>
+            وہ شجاعت کی دلیل و شرافت ہے عَلی
+          </div>
+          <div class="translation-box">
+            شیرِ خدا ہے علی، ولایت کا بادشاہ ہے علی<br/>
+            شہرِ علم کا دروازہ ہے، عینِ ہدایت ہے علی<br/>
+            جس نے خیبر کا دروازہ اکیلے اکھاڑا<br/>
+            وہ بہادری کی دلیل اور شرافت ہے علی
+          </div>
+          <p class="poem-note">میر انیس اردو مرثیہ (سوگواری شاعری) کے عظیم ترین شاعر تسلیم کیے جاتے ہیں۔ کربلا کے سانحے اور حضرت علی اور ان کے خاندان کے فضائل پر ان کے کلام ادبی عمدگی کی ایسی بلندیوں پر پہنچے ہیں جو اردو ادب میں بے مثال ہیں۔</p>
+        </div>
+      </div>
+
+      <!-- حسان بن ثابت -->
+      <div class="poem-card fade-in">
+        <div class="poem-header ph-dark">
+          <h3>حسان بن ثابت (رضی اللہ عنہ)</h3>
+          <p class="poet">شاعرِ رسول (وفات 674ء)</p>
+        </div>
+        <div class="poem-body">
+          <span class="poem-type">عربی قصیدہ — دورِ صحابہ</span>
+          <div class="urdu-verse" style="font-family:'Amiri',serif">
+            وَصِيُّ رَسُولِ اللهِ مِنْ دُونِ أَهْلِهِ<br/>
+            وَفَارِسُهُ إِذْ يَتَّقُونَ ذَا بَأْسِ
+          </div>
+          <div class="translation-box">
+            رسول اللہ ﷺ کے خاندان میں سے ان کے وصی<br/>
+            اور ان کے سپہ سالار — جب طاقتور دشمن سے خوف کھاتے تھے
+          </div>
+          <p class="poem-note">حسان بن ثابت خود نبی محمد ﷺ کے دربار کے شاعر تھے۔ حضرت علی کی شجاعت اور فضائل کی تعریف میں ان کے اشعار خاص وزن رکھتے ہیں کیونکہ یہ ایسے صحابی نے لکھے جو واقعات کے عینی شاہد تھے۔</p>
+        </div>
+      </div>
+
+      <!-- جوش ملیح آبادی -->
+      <div class="poem-card fade-in">
+        <div class="poem-header ph-navy">
+          <h3>جوش ملیح آبادی</h3>
+          <p class="poet">شاعرِ انقلاب (1894–1982)</p>
+        </div>
+        <div class="poem-body">
+          <span class="poem-type">منقبت</span>
+          <div class="urdu-verse">
+            عَلی وہ مردِ خدا ہے کہ جس کی تلوار سے<br/>
+            حق و باطل میں فرق کر دیا خدا نے<br/>
+            سچائی کا نام ہے عَلی، عدالت کا نشان ہے عَلی<br/>
+            ہر مشکل کا حل ہے عَلی
+          </div>
+          <div class="translation-box">
+            علی وہ مردِ خدا ہے جس کی تلوار سے<br/>
+            اللہ نے حق و باطل کی تمیز قائم کی<br/>
+            سچائی کا نام ہے علی، عدالت کی نشانی ہے علی<br/>
+            ہر مشکل کا حل ہے علی
+          </div>
+          <p class="poem-note">جوش ملیح آبادی جن کا لقب "شاعرِ انقلاب" ہے، نے حضرت علی کے عدل اور شجاعت کی تعریف میں زبردست منقبتیں لکھیں۔ ان کا آتشیں اسلوب اور انقلابی روح قدرتی طور پر اُس سپاہی-ولی کی مدح میں جھلکتی ہے جو ہر ظلم کے خلاف کھڑے ہوئے۔</p>
+        </div>
+      </div>
+
+      <!-- حضرت علی کی اپنی شاعری -->
+      <div style="background:linear-gradient(135deg,var(--color-emerald-dark),var(--color-navy));border-radius:var(--border-radius-xl);padding:var(--space-3xl);color:var(--color-white);margin-top:var(--space-xl)" class="fade-in">
+        <h3 style="color:var(--color-gold);margin-bottom:var(--space-md)">✍️ حضرت علی کی اپنی شاعری</h3>
+        <p style="color:rgba(255,255,255,0.85);line-height: 2.5;margin-bottom:var(--space-lg)">حضرت علی (رضی اللہ عنہ) خود ایک بلند پایہ شاعر تھے۔ ان کے عربی اشعار حکمت، فانی دنیا اور زندگی کی ناپائیداری جیسے موضوعات پر ہیں:</p>
+        <div style="font-family:'Amiri',serif;font-size:var(--fs-xl);color:var(--color-gold);direction:rtl;text-align:center;line-height:2.5;padding:var(--space-lg);background:rgba(0,0,0,0.2);border-radius:var(--border-radius-lg)">
+          النَّاسُ مِنْ جِهَةِ التِّمثَالِ أَكْفَاءُ<br/>
+          أَبُوهُمُ آدَمُ وَالأُمُّ حَوَّاءُ
+        </div>
+        <p style="text-align:center;color:rgba(255,255,255,0.7);margin-top:var(--space-md);font-style:italic">"سب لوگ اپنی انسانیت میں برابر ہیں —<br/>ان کا باپ آدم ہے اور ماں حوا ہے۔"</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="books.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📚</div><h4 class="card-title">کتابیں و ادب</h4><p class="card-text">حضرت علی کے بارے میں ضروری مطالعہ۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+        <a href="sayings.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">اقوالِ زریں</h4><p class="card-text">سنہری اقوال۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="sacred-places.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">🕌</div><h4 class="card-title">مقدس مقامات</h4><p class="card-text">حضرت علی سے جڑے مقدس مقامات۔</p><span class="card-link"><span>→</span> جانیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>

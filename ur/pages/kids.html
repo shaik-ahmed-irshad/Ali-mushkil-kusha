@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بچوں کا سیکشن — حضرت علی (رضی اللہ عنہ) — علی مشکل کشا</title>
+  <meta name="description" content="بچوں کے لیے حضرت علی ابن ابی طالب (رضی اللہ عنہ) کے بارے میں دلچسپ کہانیاں، حیرت انگیز حقائق اور سبق آموز واقعات۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,#1a6a4a 0%,#2a8a6a 40%,#3aa070 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='20' fill='none' stroke='%23FFF' stroke-width='1'/%3E%3Ccircle cx='15' cy='15' r='8' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3Ccircle cx='45' cy='45' r='8' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3C/svg%3E");background-size:60px 60px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .kids-intro { text-align: center; font-size: var(--fs-lg); color: var(--color-text); max-width: 700px; margin: 0 auto var(--space-3xl); line-height: 2.5; }
+    .story-card {
+      background: var(--color-white); border-radius: 20px; overflow: hidden;
+      box-shadow: var(--shadow-md); margin-bottom: var(--space-2xl);
+      border: 2px solid transparent; transition: all 0.3s ease;
+    }
+    .story-card:hover { border-color: var(--color-gold); transform: translateY(-3px); box-shadow: var(--shadow-xl); }
+    .story-header { padding: var(--space-xl) var(--space-2xl); display: flex; align-items: center; gap: var(--space-lg); }
+    .story-emoji { font-size: 3.5rem; }
+    .story-header h3 { color: var(--color-white); margin: 0; font-size: var(--fs-xl); }
+    .story-header .story-age { color: rgba(255,255,255,0.7); font-size: var(--fs-xs); margin-top: var(--space-xs); }
+    .story-body { padding: var(--space-xl) var(--space-2xl) var(--space-2xl); }
+    .story-body p { color: var(--color-text); line-height: 2.5; font-size: var(--fs-md); margin-bottom: var(--space-md); }
+    .story-lesson {
+      background: var(--color-gold-subtle); border-radius: 12px; padding: var(--space-lg);
+      border-right: 4px solid var(--color-gold); border-left: none;
+    }
+    .story-lesson strong { color: var(--color-emerald-dark); display: block; margin-bottom: var(--space-xs); }
+    .story-lesson p { color: var(--color-charcoal); margin: 0; font-size: var(--fs-sm); }
+    .s-green { background: linear-gradient(135deg, #1a7a4a, #2a9a6a); }
+    .s-blue { background: linear-gradient(135deg, #1a4a7a, #2a6a9a); }
+    .s-purple { background: linear-gradient(135deg, #5a2a8a, #7a4aaa); }
+    .s-orange { background: linear-gradient(135deg, #a05a00, #c07a20); }
+    .s-red { background: linear-gradient(135deg, #8a2a2a, #aa4a4a); }
+    .s-teal { background: linear-gradient(135deg, #0a5a5a, #2a7a7a); }
+    .fun-facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: var(--space-lg); margin-top: var(--space-xl); }
+    .fun-fact {
+      background: var(--color-white); border-radius: 16px; padding: var(--space-xl);
+      text-align: center; box-shadow: var(--shadow-sm); border: 2px dashed var(--color-gold);
+      transition: all 0.3s ease;
+    }
+    .fun-fact:hover { transform: scale(1.03); background: var(--color-gold-subtle); }
+    .fun-fact .fact-emoji { font-size: 2.5rem; margin-bottom: var(--space-sm); }
+    .fun-fact h4 { color: var(--color-emerald-dark); margin-bottom: var(--space-xs); font-size: var(--fs-md); }
+    .fun-fact p { color: var(--color-text); font-size: var(--fs-sm); line-height: 2.5; }
+    .quiz-section {
+      background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-navy));
+      border-radius: 20px; padding: var(--space-3xl); color: var(--color-white); text-align: center; margin-top: var(--space-3xl);
+    }
+    .quiz-section h3 { color: var(--color-gold); margin-bottom: var(--space-lg); }
+    .quiz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-lg); text-align: right; }
+    .quiz-item {
+      background: rgba(255,255,255,0.08); border-radius: 12px; padding: var(--space-lg);
+      border: 1px solid rgba(200,169,81,0.2);
+    }
+    .quiz-item .q { color: var(--color-gold); font-weight: 600; margin-bottom: var(--space-sm); }
+    .quiz-item .a { color: rgba(255,255,255,0.7); font-size: var(--fs-sm); cursor: pointer; padding: var(--space-xs); border-radius: 8px; transition: all 0.2s; }
+    .quiz-item .a:hover { background: rgba(200,169,81,0.15); color: var(--color-gold); }
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width: 768px) {
+      .fun-facts { grid-template-columns: 1fr 1fr; }
+      .quiz-grid { grid-template-columns: 1fr; }
+      .quiz-section { padding: var(--space-xl); border-radius: var(--border-radius-lg); }
+      .story-header { padding: var(--space-lg); }
+      .story-body { padding: var(--space-lg); }
+      .story-emoji { font-size: 2.5rem; }
+      .story-header h3 { font-size: var(--fs-lg); }
+    }
+    @media (max-width: 480px) {
+      .fun-facts { grid-template-columns: 1fr; }
+      .story-header { flex-direction: column; text-align: center; padding: var(--space-md); }
+      .story-body { padding: var(--space-md); }
+      .quiz-section { padding: var(--space-lg); }
+      .story-card { border-radius: var(--border-radius-lg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a><a href="calendar.html">اسلامی کیلنڈر</a><a href="kids.html" class="active">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/kids.html" class="lang-btn">EN</a>
+          <a href="kids.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">بچوں کا سیکشن</span></div>
+      <p style="font-size:3rem;margin-bottom:var(--space-md)">⭐🌙✨</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">بچوں کا کونہ</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.85);font-size:var(--fs-lg);max-width:600px;margin:var(--space-md) auto 0">
+        امام علی (رضی اللہ عنہ) کے بارے میں دلچسپ کہانیاں اور حیرت انگیز حقائق — صرف تمہارے لیے!
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <p class="kids-intro fade-in">
+        حضرت علی (رضی اللہ عنہ) اس دنیا میں آنے والے سب سے بہادر، مہربان اور عقلمند لوگوں میں سے تھے۔ وہ نبی محمد ﷺ کے چچازاد بھائی اور داماد تھے، اور وہ اللہ سے دل و جان سے محبت کرتے تھے۔ آؤ ان کے بارے میں کچھ حیرت انگیز کہانیاں سیکھتے ہیں! 😊
+      </p>
+
+      <!-- کہانی 1 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-green">
+          <span class="story-emoji">🕋</span>
+          <div>
+            <h3>ایک بہت خاص جگہ پیدا ہوئے</h3>
+            <div class="story-age">عمر 5+ سال</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>کیا تمہیں معلوم ہے کہ حضرت علی کعبے کے اندر پیدا ہوئے تھے؟ کعبہ مسلمانوں کے لیے پوری دنیا کی سب سے مقدس عمارت ہے! جب ان کی امی کو محسوس ہوا کہ بچہ آنے والا ہے تو وہ کعبے کے پاس دعا کرنے گئیں۔ کعبے کی دیوار معجزانہ طور پر کھل گئی اور وہ اندر چلی گئیں۔ وہیں چھوٹے علی پیدا ہوئے!</p>
+          <p>تاریخ میں کوئی اور شخص کبھی کعبے کے اندر پیدا نہیں ہوا۔ اس سے پتا چلتا ہے کہ علی اپنی زندگی کے بالکل شروع سے ہی کتنے خاص تھے۔ 🌟</p>
+          <div class="story-lesson">
+            <strong>✨ ہم نے کیا سیکھا:</strong>
+            <p>اللہ کا ہر ایک کے لیے ایک خاص منصوبہ ہے۔ ہر شخص اپنے طریقے سے منفرد اور خاص پیدا ہوتا ہے!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- کہانی 2 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-blue">
+          <span class="story-emoji">📚</span>
+          <div>
+            <h3>علم کا دروازہ</h3>
+            <div class="story-age">عمر 6+ سال</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>نبی محمد ﷺ نے ایک بار فرمایا: <em>"میں علم کا شہر ہوں اور علی اس کا دروازہ ہیں۔"</em> اس کا مطلب ہے کہ اگر آپ اسلام کے بارے میں سیکھنا چاہتے تو علی سب سے بہترین شخص تھے جن سے پوچھا جا سکتا تھا!</p>
+          <p>علی کو پڑھائی سے بہت محبت تھی۔ وہ ہمیشہ سوالات پوچھتے اور ہر چیز سمجھنے کی کوشش کرتے۔ انہوں نے کبھی نہیں کہا "مجھے مزید پڑھنے کی ضرورت نہیں۔" جب وہ بہت بوڑھے اور عقلمند ہو گئے تب بھی نئی چیزیں سیکھتے رہے۔ 📖</p>
+          <div class="story-lesson">
+            <strong>✨ ہم نے کیا سیکھا:</strong>
+            <p>کبھی سیکھنا نہ چھوڑو! سوالات پوچھو، کتابیں پڑھو اور ہمیشہ جاننے کا شوق رکھو۔ علم ایک ایسا خزانہ ہے جو کوئی تم سے چھین نہیں سکتا۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- کہانی 3 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-purple">
+          <span class="story-emoji">🦁</span>
+          <div>
+            <h3>اللہ کا شیر</h3>
+            <div class="story-age">عمر 7+ سال</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>علی کو <strong>"اسد اللہ"</strong> کہا جاتا تھا جس کا مطلب ہے "اللہ کا شیر۔" وہ پورے عرب کے سب سے بہادر جنگجو تھے! خیبر کی جنگ میں ایک بہت بڑا اور بھاری قلعے کا دروازہ تھا جسے کوئی توڑ نہیں سکتا تھا۔</p>
+          <p>علی دروازے کے پاس گئے اور اپنی ناقابلِ یقین طاقت سے اسے اکھاڑ دیا! انہوں نے اسے ڈھال کے طور پر استعمال کیا۔ بعد میں لوگوں نے وہی دروازہ اٹھانے کی کوشش کی — بہت سے طاقتور مردوں نے مل کر کوشش کی مگر نہ اٹھا سکے! 💪</p>
+          <div class="story-lesson">
+            <strong>✨ ہم نے کیا سیکھا:</strong>
+            <p>اصل بہادری لڑائی میں نہیں — بلکہ جو صحیح ہے اس کے لیے کھڑے ہونے میں ہے، چاہے مشکل بھی ہو۔ علی اس لیے بہادر تھے کیونکہ وہ ہمیشہ صحیح کام کرتے تھے۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- کہانی 4 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-orange">
+          <span class="story-emoji">⚖️</span>
+          <div>
+            <h3>سب کے ساتھ انصاف</h3>
+            <div class="story-age">عمر 6+ سال</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>جب علی مسلم دنیا کے حکمران (خلیفہ) بنے تو وہ اب تک کے سب سے منصف حکمران تھے۔ ایک دن ان کی زرہ کھو گئی۔ بعد میں انہوں نے دیکھا کہ کوئی شخص اسے بازار میں بیچ رہا ہے۔</p>
+          <p>اگرچہ علی <em>پورے ملک کے حکمران</em> تھے، لیکن انہوں نے زبردستی واپس نہیں لی۔ بلکہ وہ قاضی کے پاس گئے — بالکل کسی عام شخص کی طرح — اور قاضی سے فیصلے کی درخواست کی! قاضی نے دراصل علی کے خلاف فیصلہ دیا (کیونکہ علی کے پاس گواہ نہیں تھا) اور علی نے خاموشی سے فیصلہ قبول کر لیا۔ وہ شخص علی کے انصاف سے اتنا متاثر ہوا کہ مسلمان ہو گیا! 🏛️</p>
+          <div class="story-lesson">
+            <strong>✨ ہم نے کیا سیکھا:</strong>
+            <p>ہمیشہ انصاف کرو، چاہے تمہارے پاس طاقت ہو نہ کرنے کی۔ سچے رہنما مثال سے رہنمائی کرتے ہیں اور خود بھی قوانین کی پابندی کرتے ہیں۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- کہانی 5 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-red">
+          <span class="story-emoji">❤️</span>
+          <div>
+            <h3>دشمن کے ساتھ مہربانی</h3>
+            <div class="story-age">عمر 8+ سال</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>ایک جنگ میں علی ایک دشمن سپاہی سے لڑ رہے تھے۔ علی جیتنے ہی والے تھے کہ اس سپاہی نے بہت بدتمیزی کی — اس نے علی کے چہرے پر تھوک دیا! 😠</p>
+          <p>تمہیں کیا لگتا ہے علی نے کیا کیا؟ غصے میں آ کر ہاتھ اٹھانے کے بجائے، انہوں نے <em>لڑنا بند کر دیا</em> اور آگے بڑھ گئے! جب لوگوں نے پوچھا کیوں، تو علی نے فرمایا: "جب تک اس نے مجھ پر تھوکا نہیں تھا، میں اللہ کے لیے لڑ رہا تھا۔ لیکن اس کے بعد مجھے غصہ آ گیا۔ اور میں اپنے غصے کی وجہ سے نہیں لڑنا چاہتا تھا — میں صرف حق کے لیے لڑنا چاہتا تھا۔"</p>
+          <div class="story-lesson">
+            <strong>✨ ہم نے کیا سیکھا:</strong>
+            <p>اپنے غصے پر قابو رکھو! جب ناراض ہو تو کام نہ کرو۔ گہری سانس لو، پرسکون ہو جاؤ، اور پھر فیصلہ کرو۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- کہانی 6 -->
+      <div class="story-card fade-in">
+        <div class="story-header s-teal">
+          <span class="story-emoji">🤲</span>
+          <div>
+            <h3>نماز میں انگوٹھی کا صدقہ</h3>
+            <div class="story-age">عمر 6+ سال</div>
+          </div>
+        </div>
+        <div class="story-body">
+          <p>ایک دن علی مسجد میں نماز پڑھ رہے تھے۔ جب وہ رکوع میں جھکے ہوئے تھے، ایک غریب آدمی مسجد میں آیا اور مدد مانگی۔ اگرچہ علی نماز کے بیچ میں تھے، انہوں نے خاموشی سے اپنی انگوٹھی اتاری اور اسے غریب آدمی کو دے دی — اور نماز جاری رہی!</p>
+          <p>اللہ تعالیٰ اس مہربانی سے اتنے خوش ہوئے کہ اس کے بارے میں قرآن پاک میں آیت نازل فرمائی (سورۃ المائدہ، آیت 55)۔ سوچو — تمہاری مہربانی کا ذکر قرآن میں ہو! 🌟</p>
+          <div class="story-lesson">
+            <strong>✨ ہم نے کیا سیکھا:</strong>
+            <p>جب بھی موقع ملے فیاض بنو۔ دوسروں کی مدد کرنا سب سے بہترین کاموں میں سے ہے، اور اللہ ضرورت مندوں کو دینے والوں سے محبت کرتا ہے۔</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- حیرت انگیز حقائق -->
+      <div style="margin-top:var(--space-3xl)" class="fade-in">
+        <div class="section-header"><h2>حیرت انگیز حقائق! 🤩</h2><div class="divider-gold"></div></div>
+        <div class="fun-facts">
+          <div class="fun-fact">
+            <div class="fact-emoji">🏋️</div>
+            <h4>انتہائی طاقتور</h4>
+            <p>علی نے خیبر کے قلعے کا دروازہ اٹھایا جسے بہت سے مرد مل کر بھی نہ اٹھا سکے!</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">🧒</div>
+            <h4>پہلے نوجوان مسلمان</h4>
+            <p>علی سب سے پہلے نوجوان تھے جنہوں نے اسلام قبول کیا — ان کی عمر صرف تقریباً 10 سال تھی!</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">⚔️</div>
+            <h4>خاص تلوار</h4>
+            <p>علی کی مشہور تلوار کا نام "ذوالفقار" تھا — یہ نبی ﷺ کا تحفہ تھا!</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">🎓</div>
+            <h4>سب سے عقلمند</h4>
+            <p>علی اتنا علم رکھتے تھے کہ لوگ ہر جگہ سے ان سے سوالات پوچھنے آتے!</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">💝</div>
+            <h4>فاطمہ سے شادی</h4>
+            <p>علی نے فاطمہ (رضی اللہ عنہا) سے شادی کی جو نبی محمد ﷺ کی محبوب بیٹی تھیں۔</p>
+          </div>
+          <div class="fun-fact">
+            <div class="fact-emoji">🌍</div>
+            <h4>عالمی رہنما</h4>
+            <p>علی خلیفہ بنے — پوری مسلم دنیا کے حکمران!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- کوئز -->
+      <div class="quiz-section fade-in">
+        <h3>🧠 فوری کوئز — اپنا علم جانچو!</h3>
+        <p style="color:rgba(255,255,255,0.7); margin-bottom:var(--space-xl)">جواب دیکھنے کے لیے ماؤس رکھو!</p>
+        <div class="quiz-grid">
+          <div class="quiz-item">
+            <div class="q">1. حضرت علی کہاں پیدا ہوئے؟</div>
+            <div class="a" title="مکہ مکرمہ میں بیت اللہ (کعبہ) کے اندر">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">2. "اسد اللہ" کا کیا مطلب ہے؟</div>
+            <div class="a" title="اللہ کا شیر">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">3. علی کی مشہور تلوار کا کیا نام تھا؟</div>
+            <div class="a" title="ذوالفقار">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">4. علی نے کس سے شادی کی؟</div>
+            <div class="a" title="فاطمہ (رضی اللہ عنہا)، نبی ﷺ کی بیٹی">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">5. نبی ﷺ نے علم کے بارے میں علی کو کیا کہا؟</div>
+            <div class="a" title="شہرِ علم کا دروازہ">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
+          </div>
+          <div class="quiz-item">
+            <div class="q">6. علی نے اس سپاہی سے لڑنا کیوں چھوڑا جس نے ان پر تھوکا؟</div>
+            <div class="a" title="کیونکہ انہیں غصہ آ گیا اور وہ صرف اللہ کے لیے لڑنا چاہتے تھے، ذاتی غصے کے لیے نہیں">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="sayings.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📿</div><h4 class="card-title">اقوالِ زریں</h4><p class="card-text">حضرت علی کے حکمت بھرے سنہرے اقوال پڑھیں۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="gallery.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">🖼️</div><h4 class="card-title">گیلری</h4><p class="card-text">خوبصورت اسلامی خطاطی کا فن۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+        <a href="biography.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📖</div><h4 class="card-title">سوانح حیات</h4><p class="card-text">حضرت علی کی مکمل زندگی کی کہانی۔</p><span class="card-link"><span>→</span> جانیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>

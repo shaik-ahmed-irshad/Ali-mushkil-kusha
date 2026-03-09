@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>گیلری — اسلامی خطاطی اور فن — علی مشکل کشا</title>
+  <meta name="description" content="حضرت علی ابن ابی طالب (رضی اللہ عنہ) کے اعزاز میں اسلامی خطاطی، مقدس فن اور بصری خراجِ تحسین کی گیلری۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Gulzar:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    body { font-family: 'Gulzar', 'Amiri', serif; line-height: 2.5; }
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,#2a1a3a 50%,var(--color-emerald-dark) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 5 Q65 25, 95 50 Q65 75, 50 95 Q35 75, 5 50 Q35 25, 50 5Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl);direction:ltr}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-xl);
+      margin-top: var(--space-xl);
+    }
+    .gallery-item {
+      background: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      transition: all var(--transition-base);
+    }
+    .gallery-item:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+    .gallery-visual {
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .calligraphy-art {
+      font-family: 'Amiri', serif;
+      color: var(--color-gold);
+      text-align: center;
+      direction: rtl;
+      padding: var(--space-xl);
+    }
+    .calligraphy-art .main-text {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.8;
+      text-shadow: 0 2px 20px rgba(200,169,81,0.3);
+    }
+    .gallery-info {
+      padding: var(--space-lg) var(--space-xl);
+      border-top: 1px solid var(--color-border-light);
+    }
+    .gallery-info h4 { color: var(--color-charcoal); margin-bottom: var(--space-xs); }
+    .gallery-info p { color: var(--color-text-light); font-size: var(--fs-sm); line-height: 2.5; }
+    .gallery-tag {
+      display: inline-block;
+      background: var(--color-gold-subtle);
+      color: var(--color-charcoal);
+      padding: 2px 10px;
+      border-radius: var(--border-radius-full);
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+    .bg-1 { background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-emerald)); }
+    .bg-2 { background: linear-gradient(135deg, var(--color-navy), #2a3a6a); }
+    .bg-3 { background: linear-gradient(135deg, var(--color-charcoal), #1a1a2e); }
+    .bg-4 { background: linear-gradient(135deg, #3a1a4e, #5a3a6e); }
+    .bg-5 { background: linear-gradient(135deg, #6a5a20, #8a7a30); }
+    .bg-6 { background: linear-gradient(135deg, #064040, #0a6060); }
+    .bg-7 { background: linear-gradient(135deg, #4a1020, #6a2040); }
+    .bg-8 { background: linear-gradient(135deg, #2a1a3a, var(--color-charcoal)); }
+    .bg-9 { background: linear-gradient(135deg, #1a3a2a, #2a5a3a); }
+    .geometric-overlay {
+      position: absolute; inset: 0; opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3Ccircle cx='40' cy='40' r='25' fill='none' stroke='%23FFF' stroke-width='0.5'/%3E%3C/svg%3E");
+      background-size: 80px 80px; pointer-events: none;
+    }
+    .section-intro { text-align: center; max-width: 700px; margin: 0 auto var(--space-2xl); color: var(--color-text); line-height: 2.5; }
+    .nav-links, .lang-switcher { direction: ltr; }
+    .card-link span { transform: scaleX(-1); display: inline-block; }
+
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-visual { height: 220px; }
+      .gallery-info { padding: var(--space-md) var(--space-lg); }
+    }
+    @media (max-width: 480px) {
+      .gallery-visual { height: 180px; }
+      .calligraphy-art { padding: var(--space-md); }
+      .gallery-info { padding: var(--space-sm) var(--space-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">علی مشکل کشا</span><span class="brand-tagline">مشکلات کا حل کرنے والے</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">تعلیمات ▾</a><div class="nav-dropdown-content"><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a><a href="quran.html">علی قرآن میں</a><a href="hadith.html">علی حدیث میں</a><a href="duas.html">دعائیں</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">میراث ▾</a><div class="nav-dropdown-content"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی و عدل</a><a href="family.html">خاندان</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">مزید ▾</a><div class="nav-dropdown-content"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html" class="active">گیلری</a><a href="calendar.html">اسلامی کیلنڈر</a><a href="kids.html">بچوں کا سیکشن</a></div></div>
+        <a href="blog.html">بلاگ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <a href="../../pages/gallery.html" class="lang-btn">EN</a>
+          <a href="gallery.html" class="lang-btn active">اردو</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">ہوم</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">گیلری</span></div>
+      <p style="font-family:'Amiri',serif;font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin-bottom:var(--space-md)">مَعْرَضُ الفُنُون</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">گیلری اور اسلامی فن</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        حضرت علی (رضی اللہ عنہ) کے اعزاز میں اسلامی خطاطی، ہندسی فن اور بصری خراجِ تحسین
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <main class="section bg-ivory">
+    <div class="container">
+
+      <p class="section-intro fade-in">اسلامی روایت میں الٰہی حُسن کا اظہار تصویری نمائندگی سے نہیں بلکہ خطاطی، ہندسی نقوش اور تعمیراتی آرائش کے مقدس فن سے ہوتا ہے۔ ذیل میں حضرت علی (رضی اللہ عنہ) کے ناموں، القابات اور حکمت کو خراجِ تحسین پیش کرنے والی خطاطی تراکیب کا مجموعہ ہے۔</p>
+
+      <div class="gallery-grid">
+
+        <!-- 1 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-1">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">عَلِیٌّ<br/>مُشْکِلْ کُشَا</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ ثلث</span>
+            <h4>علی مشکل کشا</h4>
+            <p>"علی، مشکلات کا حل کرنے والے" — حضرت علی کی روحانی مدد اور شفاعت کے طالبوں کی فطرتی پکار۔</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-3">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">بِسْمِ ٱللَّهِ<br/>ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ نسخ</span>
+            <h4>بسم اللہ الرحمٰن الرحیم</h4>
+            <p>"اللہ کے نام سے جو بے حد مہربان نہایت رحم والا ہے" — ہر تلاوت، عمل اور کوشش انہی الفاظ سے شروع ہوتی ہے۔</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-2">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">أَسَدُ ٱللَّهِ<br/>ٱلْغَالِب</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ دیوانی</span>
+            <h4>اسد اللہ الغالب</h4>
+            <p>"اللہ کا ہمیشہ فتح پانے والا شیر" — حضرت علی کو ان کی بے مثال بہادری کی وجہ سے یہ لقب عطا ہوا۔</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-4">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">نَادِ عَلِيًّا<br/>مَظْهَرَ الْعَجَائِبِ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ ثلث</span>
+            <h4>نادِ علی</h4>
+            <p>"علی کو پکارو، عجائبات کے مظہر" — عالمِ اسلام میں سب سے زیادہ پڑھی جانے والی دعاؤں کی ابتدائی سطر۔</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-5">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">لَا فَتَىٰ<br/>إِلَّا عَلِيّ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ کوفی</span>
+            <h4>لا فتیٰ الا علی</h4>
+            <p>"علی کے سوا کوئی جوان (بہادر) نہیں" — جنگِ اُحد میں حضرت علی کی بہادری کی تحسین میں سنائی دینے والی فرشتوں کی ندا۔</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-6">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text">أَمِيرُ<br/>ٱلْمُؤْمِنِينَ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ نستعلیق</span>
+            <h4>امیر المؤمنین</h4>
+            <p>"مؤمنوں کے سردار" — حضرت علی کا بطور چوتھے خلیفۂ راشد لقب۔</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-7">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text" style="font-size:clamp(1.2rem,3vw,1.8rem)">اَنَا مَدِينَةُ الْعِلْمِ<br/>وَعَلِيٌّ بَابُهَا</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ ثلث</span>
+            <h4>شہرِ علم</h4>
+            <p>"میں علم کا شہر ہوں اور علی اس کا دروازہ ہیں" — نبی ﷺ کی حدیث جو علی کی اسلامی علم میں بے مثال مہارت کی تصدیق کرتی ہے۔</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-8">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text" style="font-size:clamp(1.2rem,3vw,1.8rem)">مَنْ كُنْتُ مَوْلَاهُ<br/>فَهَذَا عَلِيٌّ مَوْلَاهُ</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ نسخ</span>
+            <h4>اعلانِ غدیر</h4>
+            <p>"جس کا میں مولا ہوں اس کے علی بھی مولا ہیں" — غدیرِ خم کا تاریخی اعلان۔</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="gallery-item fade-in">
+          <div class="gallery-visual bg-9">
+            <div class="geometric-overlay"></div>
+            <div class="calligraphy-art"><div class="main-text" style="font-size:clamp(1.5rem,4vw,2.5rem)">ذُو ٱلْفِقَار</div></div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">خطِ کوفی</span>
+            <h4>ذوالفقار — مشہور تلوار</h4>
+            <p>نبی ﷺ کی طرف سے حضرت علی کو عطا کردہ دو دھاری تلوار، ذوالفقار الٰہی انصاف اور حق کے دفاع کی علامت بن گئی۔</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:linear-gradient(135deg,var(--color-emerald-dark),var(--color-navy));border-radius:var(--border-radius-xl);padding:var(--space-2xl);color:var(--color-white);margin-top:var(--space-3xl);text-align:center" class="fade-in">
+        <p style="color:var(--color-gold);font-family:'Amiri',serif;font-size:var(--fs-xl);margin-bottom:var(--space-md);direction:rtl">إِنَّ ٱللَّهَ جَمِيلٌ يُحِبُّ ٱلْجَمَالَ</p>
+        <p style="color:rgba(255,255,255,0.85)">"بے شک اللہ خوبصورت ہے اور خوبصورتی کو پسند فرماتا ہے۔" — حدیث</p>
+        <p style="color:rgba(255,255,255,0.6);font-size:var(--fs-sm);margin-top:var(--space-md)">اسلامی خطاطی فن کی اعلیٰ ترین شکلوں میں سے ایک سمجھی جاتی ہے جو تحریری لفظ کو بصری عبادت میں تبدیل کرتی ہے۔</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>مزید دریافت کریں</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="poetry.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">📜</div><h4 class="card-title">شاعری</h4><p class="card-text">حضرت علی کے بارے میں اردو، فارسی اور عربی شاعری۔</p><span class="card-link"><span>→</span> پڑھیں</span></a>
+        <a href="sacred-places.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">🕌</div><h4 class="card-title">مقدس مقامات</h4><p class="card-text">حضرت علی سے جڑے مقدس مقامات۔</p><span class="card-link"><span>→</span> دیکھیں</span></a>
+        <a href="titles.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">⭐</div><h4 class="card-title">القابات</h4><p class="card-text">حضرت علی کو عطا کیے گئے عظیم الشان القابات۔</p><span class="card-link"><span>→</span> جانیں</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">علی مشکل کشا</div><p>حضرت علی ابن ابی طالب (رضی اللہ عنہ) کی زندگی، حکمت اور ابدی میراث کے لیے وقف۔</p></div>
+        <div><h4>فوری روابط</h4><div class="footer-links"><a href="../index.html">ہوم</a><a href="biography.html">سوانح حیات</a><a href="sayings.html">اقوالِ زریں</a><a href="nahj-al-balagha.html">نہج البلاغہ</a></div></div>
+        <div><h4>دریافت کریں</h4><div class="footer-links"><a href="titles.html">القابات</a><a href="battles.html">غزوات</a><a href="governance.html">حکمرانی</a><a href="family.html">خاندان</a></div></div>
+        <div><h4>مزید</h4><div class="footer-links"><a href="books.html">کتابیں</a><a href="poetry.html">شاعری</a><a href="sacred-places.html">مقدس مقامات</a><a href="gallery.html">گیلری</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 علی مشکل کشا۔ جملہ حقوق محفوظ ہیں۔</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>
