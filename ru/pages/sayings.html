@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ur-Latn" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aqwaal-e-Zareen — Hazrat Ali (RA) Ke Sunehre Aqwaal | Ali Mushkil Kusha</title>
+  <meta name="description" content="Hazrat Ali ibn Abi Talib (RA) ke Aqwaal-e-Zareen ka qaabil-e-talaash majmooa — Arabi, Urdu aur Angrezi mein. Sabr, adl, ilm aur zindagi ki hikmat." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    .page-hero {
+      position: relative;
+      padding: calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);
+      background: linear-gradient(160deg, var(--color-charcoal) 0%, var(--color-navy) 40%, var(--color-emerald-dark) 100%);
+      text-align: center;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");
+      background-size: 100px 100px;
+      pointer-events: none;
+    }
+    .page-hero * { position: relative; z-index: 2; }
+    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: var(--space-sm); font-size: var(--fs-sm); color: rgba(255,255,255,0.5); margin-bottom: var(--space-xl); }
+    .breadcrumb a { color: rgba(255,255,255,0.6); }
+    .breadcrumb a:hover { color: var(--color-gold); }
+
+    .search-bar {
+      max-width: 600px;
+      margin: 0 auto var(--space-2xl);
+      position: relative;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 16px 24px 16px 50px;
+      border: 2px solid var(--color-border);
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: var(--fs-base);
+      background: var(--color-white);
+      color: var(--color-text);
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .search-bar input:focus {
+      border-color: var(--color-gold);
+      box-shadow: 0 0 0 3px var(--color-gold-glow);
+    }
+    .search-bar .search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: var(--color-text-light);
+    }
+
+    .category-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-2xl);
+    }
+    .category-btn {
+      padding: 8px 20px;
+      border: 1.5px solid var(--color-border);
+      border-radius: 50px;
+      font-size: var(--fs-sm);
+      font-weight: 500;
+      color: var(--color-text-light);
+      background: var(--color-white);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .category-btn:hover {
+      border-color: var(--color-gold);
+      color: var(--color-gold-dark);
+      background: var(--color-gold-subtle);
+    }
+    .category-btn.active {
+      background: var(--color-emerald);
+      color: var(--color-white);
+      border-color: var(--color-emerald);
+    }
+
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: var(--space-xl);
+    }
+    .saying-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-2xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      transition: all var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+    .saying-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-gold), var(--color-emerald));
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+    .saying-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .saying-card:hover::before { opacity: 1; }
+    .saying-card .quote-number {
+      position: absolute;
+      top: var(--space-lg);
+      right: var(--space-lg);
+      font-family: var(--font-heading);
+      font-size: var(--fs-2xl);
+      color: var(--color-gold-glow);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .saying-card .category-tag {
+      display: inline-block;
+      padding: 3px 12px;
+      background: var(--color-gold-subtle);
+      color: var(--color-gold-dark);
+      border-radius: 50px;
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-md);
+    }
+    .saying-card .quote-english {
+      font-family: var(--font-heading);
+      font-size: var(--fs-md);
+      color: var(--color-charcoal);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+    }
+    .saying-card .quote-urdu {
+      font-family: var(--font-urdu), var(--font-arabic);
+      font-size: var(--fs-base);
+      color: var(--color-text-light);
+      direction: rtl;
+      text-align: right;
+      line-height: 2;
+      margin-bottom: var(--space-md);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-border-light);
+    }
+    .saying-card .quote-arabic {
+      font-family: var(--font-arabic);
+      font-size: var(--fs-md);
+      color: var(--color-gold);
+      direction: rtl;
+      text-align: right;
+      line-height: 2;
+      margin-bottom: var(--space-md);
+    }
+    .saying-card .card-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: var(--space-sm);
+    }
+    .saying-card .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: 6px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: 50px;
+      font-size: var(--fs-xs);
+      color: var(--color-text-light);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .saying-card .share-btn:hover {
+      border-color: var(--color-gold);
+      color: var(--color-gold-dark);
+      background: var(--color-gold-subtle);
+    }
+    .no-results { text-align: center; padding: var(--space-3xl); color: var(--color-text-light); }
+    .no-results h3 { color: var(--color-text-light); font-weight: 400; }
+    .quote-count { text-align: center; font-size: var(--fs-sm); color: var(--color-text-light); margin-bottom: var(--space-xl); }
+
+    @media (max-width: 768px) {
+      .saying-card { padding: var(--space-xl); }
+      .search-bar input { padding: 14px 18px 14px 44px; }
+    }
+    @media (max-width: 480px) {
+      .quotes-grid { grid-template-columns: 1fr; }
+      .saying-card { padding: var(--space-lg); }
+      .search-bar input { padding: 12px 14px 12px 40px; font-size: var(--fs-xs); }
+      .category-btn { padding: 6px 14px; font-size: var(--fs-xs); }
+      .no-results { padding: var(--space-xl); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon">
+          <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/>
+            <polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Ali Mushkil Kusha</span>
+          <span class="brand-tagline">Mushkilein Hal Karne Waale</span>
+        </div>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="biography.html">Sawaneh Hayat</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Taleemat ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="sayings.html" class="active">Aqwaal-e-Zareen</a>
+            <a href="nahj-al-balagha.html">Nahj al-Balagha</a>
+            <a href="quran.html">Quran Mein Ali</a>
+            <a href="hadith.html">Hadees Mein Ali</a>
+            <a href="duas.html">Duayein</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Miraas ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="titles.html">Alqaabaat</a>
+            <a href="battles.html">Jangein</a>
+            <a href="governance.html">Hukumat wa Adl</a>
+            <a href="family.html">Khandaan</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Explore ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="books.html">Kitaabein</a>
+            <a href="poetry.html">Shayari</a>
+            <a href="sacred-places.html">Muqaddas Maqamaat</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="calendar.html">Islami Calendar</a>
+            <a href="kids.html">Bachon Ka Section</a>
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+      </div>
+
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ur">اردو</button>
+          <button class="lang-btn active" data-lang="ru">RU</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+
+  <!-- ═══ HERO ═══ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span style="color: rgba(255,255,255,0.3);">/</span>
+        <span style="color: var(--color-gold);">Aqwaal-e-Zareen</span>
+      </div>
+      <p style="font-family: var(--font-arabic); font-size: var(--fs-2xl); color: var(--color-gold); direction: rtl; margin-bottom: var(--space-md);">اقوالِ زرّیں</p>
+      <h1 style="color: var(--color-white); margin-bottom: var(--space-md);">Aqwaal-e-Zareen</h1>
+      <p style="font-family: var(--font-heading); font-size: var(--fs-lg); color: var(--color-gold); font-style: italic; margin-bottom: var(--space-sm);">Sunehre Aqwaal</p>
+      <div class="divider-gold"></div>
+      <p style="color: rgba(255,255,255,0.75); font-size: var(--fs-md); max-width: 650px; margin: var(--space-md) auto 0;">
+        Ameer-ul-Momineen ki zuban se nikle huye laazwaal moti — sachai, adl aur nek zindagi ki raah roshni
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══ FEATURED QUOTE ═══ -->
+  <section class="section-sm bg-gold-subtle">
+    <div class="container">
+      <div class="quote-card fade-in pulse-glow" style="max-width: 800px; margin: 0 auto;">
+        <p style="font-size: var(--fs-xs); color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; margin-bottom: var(--space-md);">✦ Numaayaan Qol</p>
+        <div class="quote-mark">"</div>
+        <p class="quote-text-arabic">اَلنَّاسُ أَعْدَاءُ مَا جَهِلُوا</p>
+        <p class="quote-text">"Log us cheez ke dushman hain jise woh nahi jaante."</p>
+        <p style="font-family: var(--font-urdu), var(--font-arabic); color: rgba(255,255,255,0.6); direction: rtl; font-size: var(--fs-base); margin-top: var(--space-sm);">
+          لوگ اس چیز کے دشمن ہیں جسے وہ نہیں جانتے۔
+        </p>
+        <div class="divider-gold" style="margin: var(--space-lg) auto;"></div>
+        <p class="quote-source">— Hazrat Ali ibn Abi Talib (RA)</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SAYINGS COLLECTION ═══ -->
+  <section class="section bg-ivory" id="sayings-collection">
+    <div class="container">
+      <div class="section-header">
+        <h2>Tamaam Aqwaal Dekhein</h2>
+        <div class="divider-gold"></div>
+      </div>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Aqwaal talaash karein..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="category-filters" id="categoryFilters">
+        <button class="category-btn active" data-category="all">Sab</button>
+      </div>
+
+      <p class="quote-count" id="quoteCount"></p>
+
+      <div class="quotes-grid" id="quotesGrid"></div>
+
+      <div class="no-results hidden" id="noResults">
+        <h3>Koi qol nahi mila</h3>
+        <p>Koi aur lafz ya zamra aazmaayein</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name">Ali Mushkil Kusha</div>
+          <p>Hazrat Ali ibn Abi Talib (RA) ki zindagi, hikmat aur abdi miraas ka mustanad zariya.</p>
+        </div>
+        <div>
+          <h4>Fori Rawabit</h4>
+          <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="biography.html">Sawaneh Hayat</a>
+            <a href="sayings.html">Aqwaal-e-Zareen</a>
+            <a href="nahj-al-balagha.html">Nahj al-Balagha</a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="titles.html">Alqaabaat</a>
+            <a href="battles.html">Jangein</a>
+            <a href="governance.html">Hukumat</a>
+            <a href="family.html">Khandaan</a>
+          </div>
+        </div>
+        <div>
+          <h4>Mazeed</h4>
+          <div class="footer-links">
+            <a href="books.html">Kitaabein</a>
+            <a href="poetry.html">Shayari</a>
+            <a href="sacred-places.html">Muqaddas Maqamaat</a>
+            <a href="gallery.html">Gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="divider-islamic" style="opacity: 0.3;"></div>
+      <div class="footer-bottom">
+        <p>© 2025 Ali Mushkil Kusha. Tamaam huqooq mahfooz hain.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/quotes.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('quotesGrid');
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilters = document.getElementById('categoryFilters');
+    const quoteCount = document.getElementById('quoteCount');
+    const noResults = document.getElementById('noResults');
+
+    let currentCategory = 'all';
+    let currentSearch = '';
+
+    const categories = getAllCategories();
+    categories.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'category-btn';
+      btn.dataset.category = cat;
+      btn.textContent = cat;
+      categoryFilters.appendChild(btn);
+    });
+
+    function renderQuotes() {
+      let filtered = aqwalEZareen;
+
+      if (currentCategory !== 'all') {
+        filtered = filtered.filter(q => q.category === currentCategory);
+      }
+
+      if (currentSearch) {
+        const search = currentSearch.toLowerCase();
+        filtered = filtered.filter(q =>
+          q.english.toLowerCase().includes(search) ||
+          q.urdu.includes(currentSearch) ||
+          q.category.toLowerCase().includes(search)
+        );
+      }
+
+      quoteCount.textContent = `${aqwalEZareen.length} mein se ${filtered.length} aqwaal dikhaye ja rahe hain`;
+
+      if (filtered.length === 0) {
+        noResults.classList.remove('hidden');
+        grid.innerHTML = '';
+        return;
+      } else {
+        noResults.classList.add('hidden');
+      }
+
+      grid.innerHTML = filtered.map((q, i) => `
+        <div class="saying-card fade-in">
+          <span class="quote-number">${String(i + 1).padStart(2, '0')}</span>
+          <span class="category-tag">${q.category}</span>
+          ${q.arabic ? `<p class="quote-arabic">${q.arabic}</p>` : ''}
+          <p class="quote-english">"${q.english}"</p>
+          <p class="quote-urdu">${q.urdu}</p>
+          <div class="card-actions">
+            <span style="font-size: var(--fs-xs); color: var(--color-text-light);">— Hazrat Ali (RA)</span>
+            <button class="share-btn" onclick="shareQuote('${q.english.replace(/'/g, "\\'")}')">
+              ↗ Share Karein
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      initScrollAnimations();
+    }
+
+    categoryFilters.addEventListener('click', (e) => {
+      if (e.target.classList.contains('category-btn')) {
+        categoryFilters.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        currentCategory = e.target.dataset.category;
+        renderQuotes();
+      }
+    });
+
+    let searchTimeout;
+    searchInput.addEventListener('input', (e) => {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        currentSearch = e.target.value.trim();
+        renderQuotes();
+      }, 300);
+    });
+
+    renderQuotes();
+  });
+  </script>
+
+</body>
+</html>

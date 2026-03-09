@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ur-Latn" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jangein wa Fauji Miraas — Hazrat Ali (RA) | Ali Mushkil Kusha</title>
+  <meta name="description" content="Hazrat Ali (RA) ke shaandaar fauji career ko daryaaft karein — Badr, Uhud, Khandaq, Khaybar aur mazeed. Naaqaabil-e-shikast jangju aur Zulfiqar ke haamil." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+
+  <style>
+    .page-hero{position:relative;padding:calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);background:linear-gradient(160deg,var(--color-charcoal) 0%,#3a1020 50%,var(--color-navy) 100%);text-align:center;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23C8A951' stroke-width='0.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none}
+    .page-hero *{position:relative;z-index:2}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);font-size:var(--fs-sm);color:rgba(255,255,255,0.5);margin-bottom:var(--space-xl)}
+    .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
+
+    .battle-card{background:var(--color-white);border-radius:var(--border-radius-xl);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--color-border-light);margin-bottom:var(--space-2xl);transition:all var(--transition-base)}
+    .battle-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+    .battle-header{padding:var(--space-xl) var(--space-2xl);display:flex;align-items:center;gap:var(--space-lg);flex-wrap:wrap}
+    .battle-year{background:var(--color-gold);color:var(--color-charcoal);padding:var(--space-sm) var(--space-lg);border-radius:var(--border-radius-full);font-family:var(--font-heading);font-weight:700;font-size:var(--fs-sm);flex-shrink:0}
+    .battle-header h3{color:var(--color-white);flex:1}
+    .battle-header .emoji{font-size:2rem}
+    .battle-body{padding:0 var(--space-2xl) var(--space-2xl)}
+    .battle-body p{color:var(--color-text);line-height:1.85}
+    .battle-highlight{background:var(--color-gold-subtle);border-left:3px solid var(--color-gold);padding:var(--space-lg);border-radius:0 var(--border-radius) var(--border-radius) 0;margin-top:var(--space-lg)}
+    .battle-highlight p{font-style:italic;color:var(--color-charcoal)}
+    .battle-highlight .source{font-style:normal;font-size:var(--fs-xs);color:var(--color-text-light)}
+    .battle-stats{display:flex;gap:var(--space-xl);flex-wrap:wrap;margin-top:var(--space-lg)}
+    .battle-stat{background:var(--color-ivory);padding:var(--space-md);border-radius:var(--border-radius);text-align:center;min-width:120px}
+    .battle-stat strong{display:block;color:var(--color-emerald);font-size:var(--fs-lg)}
+    .battle-stat span{font-size:var(--fs-xs);color:var(--color-text-light)}
+
+    .zulfiqar-section{background:linear-gradient(135deg,var(--color-charcoal),var(--color-navy));color:var(--color-white);border-radius:var(--border-radius-xl);padding:var(--space-3xl);text-align:center;margin:var(--space-3xl) 0}
+    .zulfiqar-section h3{color:var(--color-gold);font-size:var(--fs-2xl)}
+    .zulfiqar-section p{color:rgba(255,255,255,0.85);line-height:1.85;max-width:700px;margin:0 auto}
+    .zulfiqar-arabic{font-family:var(--font-arabic);font-size:var(--fs-2xl);color:var(--color-gold);direction:rtl;margin:var(--space-lg) 0}
+
+    .battle-header.badr{background:linear-gradient(135deg,var(--color-emerald-dark),var(--color-emerald))}
+    .battle-header.uhud{background:linear-gradient(135deg,#4a2020,#8a3030)}
+    .battle-header.khandaq{background:linear-gradient(135deg,var(--color-navy),#2a3a6a)}
+    .battle-header.khaybar{background:linear-gradient(135deg,#3a2a10,#6a4a20)}
+    .battle-header.hunayn{background:linear-gradient(135deg,#2a3a2a,#4a6a4a)}
+
+    @media(max-width:768px){.battle-header{padding:var(--space-lg)}.battle-body{padding:0 var(--space-lg) var(--space-lg)}.zulfiqar-section{padding:var(--space-xl)}.zulfiqar-arabic{font-size:var(--fs-xl)}.battle-stat{min-width:100px}}
+    @media(max-width:480px){.battle-header{flex-direction:column;text-align:center;padding:var(--space-md)}.battle-body{padding:0 var(--space-md) var(--space-md)}.zulfiqar-section{padding:var(--space-lg);border-radius:var(--border-radius-lg)}.battle-stats{gap:var(--space-sm)}.battle-stat{min-width:0;flex:1 1 45%;padding:var(--space-sm)}.battle-highlight{padding:var(--space-md)}}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 5 C15 5, 7 15, 7 25 C7 35, 15 45, 25 45 C20 40, 17 33, 17 25 C17 17, 20 10, 25 5Z" fill="#C8A951" opacity="0.9"/><polygon points="35,15 37,21 43,21 38,25 40,31 35,27 30,31 32,25 27,21 33,21" fill="#C8A951" opacity="0.9"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Ali Mushkil Kusha</span><span class="brand-tagline">Mushkilein Hal Karne Waale</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a><a href="biography.html">Sawaneh Hayat</a>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Taleemat ▾</a><div class="nav-dropdown-content"><a href="sayings.html">Aqwaal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a><a href="quran.html">Quran Mein Ali</a><a href="hadith.html">Hadees Mein Ali</a><a href="duas.html">Duayein</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Miraas ▾</a><div class="nav-dropdown-content"><a href="titles.html">Alqaabaat</a><a href="battles.html" class="active">Jangein</a><a href="governance.html">Hukumat wa Adl</a><a href="family.html">Khandaan</a></div></div>
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle">Explore ▾</a><div class="nav-dropdown-content"><a href="books.html">Kitaabein</a><a href="poetry.html">Shayari</a><a href="sacred-places.html">Muqaddas Maqamaat</a><a href="gallery.html">Gallery</a><a href="calendar.html">Islami Calendar</a><a href="kids.html">Bachon Ka Section</a></div></div>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ur">اردو</button>
+          <button class="lang-btn active" data-lang="ru">RU</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span style="color:rgba(255,255,255,0.3)">/</span><span style="color:var(--color-gold)">Jangein wa Fauji Kaarnaame</span></div>
+      <p style="font-size:4rem;margin-bottom:var(--space-sm)">⚔️</p>
+      <h1 style="color:var(--color-white);margin-bottom:var(--space-md)">Jangein wa Fauji Miraas</h1>
+      <div class="divider-gold"></div>
+      <p style="color:rgba(255,255,255,0.75);font-size:var(--fs-md);max-width:650px;margin:var(--space-md) auto 0">
+        Islam ka naaqaabil-e-shikast jangju — Badr ki pehli jang se Khaybar ke qile tak, Hazrat Ali (RA) ne kabhi shikast ka zaaiqha nahi chakha
+      </p>
+    </div>
+  </section>
+
+  <!-- BATTLES -->
+  <main class="section bg-ivory">
+    <div class="container" style="max-width:900px">
+
+      <!-- Zulfiqar -->
+      <div class="zulfiqar-section fade-in">
+        <h3>⚔️ Zulfiqar — Afsaanwi Talwaar</h3>
+        <p class="zulfiqar-arabic">لَا فَتَىٰ إِلَّا عَلِيٌّ لَا سَيْفَ إِلَّا ذُو الْفِقَار</p>
+        <p>"Koi bahaadur jawaan nahi siwaaye Ali ke, aur koi talwaar nahi siwaaye Zulfiqar ke."</p>
+        <p style="margin-top:var(--space-lg);color:rgba(255,255,255,0.85);">Zulfiqar woh afsaanwi do dhaari talwaar thi jo Hazrat Ali (RA) ko Nabi Kareem ﷺ ne Jang-e-Uhud ke dauraan ata farmaai. Yeh Islami taarikh ki sab se mashoor talwaar aur ilahi adl wa taaqat ki alaamat ban gayi. Is ke naam ka matlab "Reedh Ki Haddi Waali" ya "Mehron Ko Cheerne Waali" hai.</p>
+      </div>
+
+      <!-- Badr -->
+      <div class="battle-card fade-in">
+        <div class="battle-header badr">
+          <span class="battle-year">624 CE</span>
+          <h3>Jang-e-Badr</h3>
+          <span class="emoji">🏴</span>
+        </div>
+        <div class="battle-body">
+          <p>Islami taarikh ki pehli badi fauji mudbheed. 313 Musalmaanon ne taqreeban 1,000 musalah Qureshi jangjuon ka saamna kiya. Ali sirf taqreeban 23 saal ke the, alambardar the aur jang ke aaghaz mein mubaarazat ke liye chune gaye teen soormaon mein se ek the.</p>
+          <p>Ali ne ibtidaai mubaarazat mein <strong>Walid bin Utba</strong> ko shikast di, phir Hamza aur Ubayda ki madad ki. Asl jang ke dauraan Ali ne ghair-maamooli bahaaduri se ladaai ki aur dushman ki halaakaton ka ek bada hissa un ke haathon hua.</p>
+          <div class="battle-stats">
+            <div class="battle-stat"><strong>313</strong><span>Muslim Afwaaj</span></div>
+            <div class="battle-stat"><strong>~1,000</strong><span>Quraish Ki Fauj</span></div>
+            <div class="battle-stat"><strong>Fatah</strong><span>Faisla Kun Jeet</span></div>
+          </div>
+          <div class="battle-highlight">
+            <p>"Badr mein dushman ki taqreeban aadhi halaakaten Ali ke haathon huin."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Uhud -->
+      <div class="battle-card fade-in">
+        <div class="battle-header uhud">
+          <span class="battle-year">625 CE</span>
+          <h3>Jang-e-Uhud</h3>
+          <span class="emoji">⛰️</span>
+        </div>
+        <div class="battle-body">
+          <p>Uhud mein jab Khalid bin Walid ke shehswaaron ke peechhe se achaanak hamle ki wajah se bohat se Sahaba bhaag gaye, <strong>Ali Nabi ﷺ ke saath datte rahe</strong>. Aap ne Nabi ﷺ ko apne jism se dhaaltay huye <strong>16 se zyada zakhm</strong> khaaye.</p>
+          <p>Jab yeh afwaah phaili ke Nabi ﷺ shaheed ho gaye hain, Ali un chand logon mein se the jo datte rahe, hamle par hamle ko rokte rahe. Isi jang mein aasmaan se aawaaz sunaai di: <em>"Koi bahaadur jawaan nahi siwaaye Ali ke, aur koi talwaar nahi siwaaye Zulfiqar ke."</em></p>
+          <div class="battle-highlight">
+            <p>Ali ne Nabi ﷺ ki hifaazat karte huye 16 zakhm khaaye aur ek qadam bhi peechhe nahi hate.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Khandaq -->
+      <div class="battle-card fade-in">
+        <div class="battle-header khandaq">
+          <span class="battle-year">627 CE</span>
+          <h3>Jang-e-Khandaq (Ahzaab)</h3>
+          <span class="emoji">🏰</span>
+        </div>
+        <div class="battle-body">
+          <p>Jab 10,000 dushman faujion ne Madina ka muhaasira kiya, Musalmaanon ne Salman Farsi ke mashware par khandaq khodi. Sab se naazuk lamha us waqt aaya jab mashoor Arab jangju <strong>Amr ibn Abd Wudd</strong> — jise hazaar jangjuon ke baraabar samjha jaata tha — ne khandaq uboor kar ke Musalmaanon ko mubaarazat ka challenge diya.</p>
+          <p>Ali ke siwa kisi ne un ka saamna karne ki himmat nahi ki. Nabi ﷺ ne farmaaya: <em>"Poora emaan poore kufr ke muqaable mein nikla hai."</em> Ali ne Amr se shadeed mubaarazat ki aur use qatl kiya, jis se dushman ka hausla toot gaya aur woh aakhirkaar paspa ho gaye.</p>
+          <div class="battle-highlight">
+            <p>"Khandaq ke din Ali ka ek waar tamaam jinnon aur insaanon ki ibaadat se behtar hai."</p>
+            <p class="source">— Nabi Kareem ﷺ se mansoob</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Khaybar -->
+      <div class="battle-card fade-in">
+        <div class="battle-header khaybar">
+          <span class="battle-year">628 CE</span>
+          <h3>Jang-e-Khaybar</h3>
+          <span class="emoji">🏯</span>
+        </div>
+        <div class="battle-body">
+          <p>Khaybar ke mazboot qile ka muhaasira Ali ke fauji career ki sab se draamaai waaqiaat mein se ek tha. Jab dusre commander qile ko fatah karne mein naakaam rahe toh Nabi ﷺ ne farmaaya:</p>
+          <div class="battle-highlight">
+            <p>"Kal main jhanda us shakhs ko dunga jo Allah aur Uske Rasool se mohabbat karta hai, aur jis se Allah aur Uska Rasool mohabbat karte hain. Woh waapas nahi aayega jab tak Allah use fatah ata na kar de."</p>
+            <p class="source">— Nabi Kareem ﷺ (Sahih al-Bukhari wa Sahih Muslim)</p>
+          </div>
+          <p style="margin-top:var(--space-lg)">Agli subah Nabi ﷺ ne jhanda Ali ko diya jo aankhon ke infection mein mubtala the. Nabi ﷺ ne apna mubaarak luaab un ki aankhon par lagaaya aur fori shifa ho gayi. Phir Ali ne qile ki taraf march kiya, soorma <strong>Marhab</strong> se mubaarazat ki aur use qatl kiya, phir <strong>Khaybar ka azeem lohe ka darwaaza</strong> ukhaadha aur dhaal ke taur par istimaal kiya.</p>
+          <p>Baad mein logon ke ek giroah ne darwaaze ko ulattne ki koshish ki — <strong>aath ya is se zyada aadmiyon</strong> ne koshish ki lekin phir bhi sahih tarah se uttha na sake. Yeh waaqia Ali ko ata karda ilahi taaqat ka afsaanwi saboot ban gaya.</p>
+        </div>
+      </div>
+
+      <!-- Hunayn -->
+      <div class="battle-card fade-in">
+        <div class="battle-header hunayn">
+          <span class="battle-year">630 CE</span>
+          <h3>Jang-e-Hunayn</h3>
+          <span class="emoji">🏹</span>
+        </div>
+        <div class="battle-body">
+          <p>Fatah-e-Makkah ke baad 12,000 Muslim fauji Hunayn mein Hawazin qabeele ke khilaaf nikle. Jab dushman ne ek tang waadi mein un par ghaat laga kar hamla kiya toh badi Muslim fauj mein khauf phail gaya aur bohat se bhaag nikle. Ali un chand logon mein se the jo Nabi ﷺ ke ird-gird datte rahe aur us waqt tak ladte rahe jab tak Musalman dobaara jama ho kar fatah haasil na kar li.</p>
+          <p>Hunayn mein un ki saabit-qadmi ne, jaisa ke Uhud mein, saabit kiya ke un ki bahaaduri mahaz jaar-hiyat nahi balke usooli bahaaduri thi — woh wahaan datte rahe jahaan sab se zyada zaroorat thi, khawah mushkilaat kuch bhi hon.</p>
+        </div>
+      </div>
+
+      <!-- Military Legacy -->
+      <div style="background:var(--color-white);border-radius:var(--border-radius-xl);padding:var(--space-2xl);margin-top:var(--space-2xl);box-shadow:var(--shadow-sm)" class="fade-in">
+        <h3 style="color:var(--color-emerald);margin-bottom:var(--space-md)">Fauji Akhlaqiyaat wa Miraas</h3>
+        <p style="color:var(--color-text);line-height:1.85">Ali ko dusre jangjuon se jo cheez mumtaaz karti thi woh sirf un ki be-misaal ladaai ki salaahiyat nahi balke jang mein un ka ghair-maamooli <strong>akhlaqi zaabita</strong> tha:</p>
+        <ul style="margin:var(--space-md) 0;padding-left:var(--space-xl);color:var(--color-text);line-height:2.2">
+          <li><strong>Kabhi pehle waar nahi kiya</strong> — hamesha hareef ke hamle ka intezaar karte</li>
+          <li><strong>Kabhi bhaagge dushman ko nahi maara</strong> — ise be-izzati samajhte the</li>
+          <li><strong>Kabhi murdon ki be-hurmati nahi ki</strong> — gire huye hareefon ke saath izzat se pesh aate</li>
+          <li><strong>Amr ibn Abd Wudd ko lamha bhar ke liye chhoda</strong> jab Amr ne un par thooka — ghussay mein nahi balke sirf Allah ke liye qatl ka intekhaab kiya</li>
+          <li><strong>Aurton, bachon aur aam shehrion ki hifaazat</strong> har tanaazu mein</li>
+          <li><strong>Kabhi zaati faaide ke liye nahi lade</strong> — un ka maqsad sirf emaan aur adl ka difaa tha</li>
+        </ul>
+        <p style="color:var(--color-text);line-height:1.85;margin-top:var(--space-md)">In usoolon ne unhein na sirf apne daur ka sab se azeem jangju banaaya balke jaaiz jang ka aisa namoona banaaya jise aaj bhi fauji akhlaqiyaat ke maahireen zair-e-muta'ala rakhte hain.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTINUE -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header"><h2>Mazeed Daryaaft Karein</h2><div class="divider-gold"></div></div>
+      <div class="grid-3">
+        <a href="titles.html" class="card fade-in delay-1" style="text-decoration:none"><div class="card-icon">✨</div><h4 class="card-title">Alqaabaat wa Sifaat</h4><p class="card-text">Ilahi alqaabaat jo aap ki shakhsiyat ko izzat dete hain.</p><span class="card-link">Explore Karein →</span></a>
+        <a href="governance.html" class="card fade-in delay-2" style="text-decoration:none"><div class="card-icon">⚖️</div><h4 class="card-title">Hukumat wa Adl</h4><p class="card-text">Jangju se sab se aadil hukumraan tak ka safar.</p><span class="card-link">Daryaaft Karein →</span></a>
+        <a href="biography.html" class="card fade-in delay-3" style="text-decoration:none"><div class="card-icon">📜</div><h4 class="card-title">Sawaneh Hayat</h4><p class="card-text">Timeline ke saath mukammal sawaneh hayat.</p><span class="card-link">Padhein →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="brand-name">Ali Mushkil Kusha</div><p>Hazrat Ali ibn Abi Talib (RA) ki zindagi, hikmat aur abdi miraas ka mustanad zariya.</p></div>
+        <div><h4>Fori Rawabit</h4><div class="footer-links"><a href="../index.html">Home</a><a href="biography.html">Sawaneh Hayat</a><a href="sayings.html">Aqwaal-e-Zareen</a><a href="nahj-al-balagha.html">Nahj al-Balagha</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="titles.html">Alqaabaat</a><a href="battles.html">Jangein</a><a href="governance.html">Hukumat</a><a href="family.html">Khandaan</a></div></div>
+        <div><h4>Mazeed</h4><div class="footer-links"><a href="books.html">Kitaabein</a><a href="poetry.html">Shayari</a><a href="sacred-places.html">Muqaddas Maqamaat</a><a href="gallery.html">Gallery</a></div></div>
+      </div>
+      <div class="divider-islamic" style="opacity:0.3"></div>
+      <div class="footer-bottom"><p>© 2025 Ali Mushkil Kusha. Tamaam huqooq mahfooz hain.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lang-switcher.js"></script>
+</body>
+</html>
