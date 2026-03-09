@@ -63,6 +63,9 @@
     buttons.forEach(function (btn) {
       var lang = btn.getAttribute('data-lang');
 
+      // Plain <a> tag with a hard-coded href — let native navigation work
+      if (!lang) return;
+
       // Mark active
       btn.classList.toggle('active', lang === currentLang);
 
