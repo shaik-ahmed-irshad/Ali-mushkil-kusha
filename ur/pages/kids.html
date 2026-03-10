@@ -23,6 +23,31 @@
     .breadcrumb a{color:rgba(255,255,255,0.6)}.breadcrumb a:hover{color:var(--color-gold)}
 
     .kids-intro { text-align: center; font-size: var(--fs-lg); color: var(--color-text); max-width: 700px; margin: 0 auto var(--space-3xl); line-height: 1.9; }
+
+    /* ── SVG SCENE ANIMATIONS ── */
+    .story-svg { width:80px; height:80px; flex-shrink:0; }
+    @keyframes starPulse { 0%,100%{opacity:.2;r:3} 50%{opacity:1;r:5} }
+    .kaaba-star { animation: starPulse 1.8s ease-in-out infinite; }
+    @keyframes glow { 0%,100%{opacity:0.4} 50%{opacity:1} }
+    .kaaba-glow { animation: glow 2s ease-in-out infinite; }
+    @keyframes rayGrow { 0%,100%{transform:scaleY(0.3);opacity:0.4} 50%{transform:scaleY(1);opacity:1} }
+    .book-ray { transform-origin: bottom center; animation: rayGrow 1.6s ease-in-out infinite; }
+    .book-ray:nth-child(2){animation-delay:.2s}.book-ray:nth-child(3){animation-delay:.4s}.book-ray:nth-child(4){animation-delay:.6s}.book-ray:nth-child(5){animation-delay:.8s}
+    @keyframes maneWave { 0%,100%{transform:rotate(-4deg)} 50%{transform:rotate(4deg)} }
+    .lion-mane { transform-origin: 40px 38px; animation: maneWave 2s ease-in-out infinite; }
+    @keyframes swordGleam { 0%,100%{opacity:0.6} 50%{opacity:1;filter:drop-shadow(0 0 4px #C8A951)} }
+    .lion-sword { animation: swordGleam 1.4s ease-in-out infinite; }
+    @keyframes scaleBalance { 0%,100%{transform:rotate(-6deg)} 50%{transform:rotate(6deg)} }
+    .scale-beam { transform-origin: 40px 28px; animation: scaleBalance 2.2s ease-in-out infinite; }
+    @keyframes handPulse { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+    .peace-hand { animation: handPulse 2s ease-in-out infinite; }
+    @keyframes heartBeat { 0%,100%{transform:scale(1)} 50%{transform:scale(1.2)} }
+    .peace-heart { transform-origin: 40px 20px; animation: heartBeat 1.4s ease-in-out infinite; }
+    @keyframes ringShimmer { 0%,100%{opacity:0.3;transform:translateX(0)} 50%{opacity:1;transform:translateX(4px)} }
+    .ring-sparkle { animation: ringShimmer 1.6s ease-in-out infinite; }
+    .ring-sparkle:nth-child(2){animation-delay:.4s}.ring-sparkle:nth-child(3){animation-delay:.8s}
+    @keyframes ringSlide { 0%{transform:translateX(0)} 60%{transform:translateX(8px)} 100%{transform:translateX(0)} }
+    .ring-icon { animation: ringSlide 2.4s ease-in-out infinite; }
     .story-card {
       background: var(--color-white); border-radius: 20px; overflow: hidden;
       box-shadow: var(--shadow-md); margin-bottom: var(--space-2xl);
@@ -57,26 +82,83 @@
     .fun-fact .fact-emoji { font-size: 2.5rem; margin-bottom: var(--space-sm); }
     .fun-fact h4 { color: var(--color-emerald-dark); margin-bottom: var(--space-xs); font-size: var(--fs-md); }
     .fun-fact p { color: var(--color-text); font-size: var(--fs-sm); line-height: 1.9; }
+    /* ── INTERACTIVE QUIZ ── */
     .quiz-section {
       background: linear-gradient(135deg, var(--color-emerald-dark), var(--color-navy));
-      border-radius: 20px; padding: var(--space-3xl); color: var(--color-white); text-align: center; margin-top: var(--space-3xl);
+      border-radius: 20px;
+      padding: var(--space-3xl);
+      color: var(--color-white);
+      text-align: center;
+      margin-top: var(--space-3xl);
     }
-    .quiz-section h3 { color: var(--color-gold); margin-bottom: var(--space-lg); }
-    .quiz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-lg); text-align: right; }
-    .quiz-item {
-      background: rgba(255,255,255,0.08); border-radius: 12px; padding: var(--space-lg);
-      border: 1px solid rgba(200,169,81,0.2);
+    .quiz-section h3 { color: var(--color-gold); margin-bottom: var(--space-sm); font-size: var(--fs-2xl); }
+    .quiz-subtitle { color: rgba(255,255,255,0.65); margin-bottom: var(--space-2xl); font-size: var(--fs-md); }
+    .quiz-progress-bar { width:100%; height:8px; background:rgba(255,255,255,0.15); border-radius:99px; margin-bottom:var(--space-xl); overflow:hidden; }
+    .quiz-progress-fill { height:100%; background: linear-gradient(90deg, var(--color-gold), #f0c040); border-radius:99px; transition: width 0.5s ease; }
+    .quiz-card { background: rgba(255,255,255,0.07); border:1px solid rgba(200,169,81,0.25); border-radius:16px; padding: var(--space-2xl); text-align:right; max-width:680px; margin:0 auto; }
+    .quiz-q-label { font-size:var(--fs-xs); color: var(--color-gold); letter-spacing:.08em; text-transform:uppercase; margin-bottom:var(--space-sm); direction:rtl; }
+    .quiz-q-text  { font-size: var(--fs-lg); color:var(--color-white); font-weight:600; line-height:1.7; margin-bottom:var(--space-xl); direction:rtl; }
+    .quiz-options { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-md); }
+    .quiz-opt {
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: var(--space-md) var(--space-lg);
+      color: rgba(255,255,255,0.85);
+      font-size: var(--fs-sm);
+      cursor: pointer;
+      text-align: right;
+      direction: rtl;
+      transition: all 0.2s ease;
+      line-height: 1.6;
     }
-    .quiz-item .q { color: var(--color-gold); font-weight: 600; margin-bottom: var(--space-sm); }
-    .quiz-item .a { color: rgba(255,255,255,0.7); font-size: var(--fs-sm); cursor: pointer; padding: var(--space-xs); border-radius: 8px; transition: all 0.2s; }
-    .quiz-item .a:hover { background: rgba(200,169,81,0.15); color: var(--color-gold); }
+    .quiz-opt:hover:not(:disabled) { border-color: var(--color-gold); background: rgba(200,169,81,0.15); color: var(--color-white); transform: translateY(-2px); }
+    .quiz-opt.correct  { border-color: #4ade80; background: rgba(74,222,128,0.18); color:#4ade80; }
+    .quiz-opt.wrong    { border-color: #f87171; background: rgba(248,113,113,0.18); color:#f87171; }
+    .quiz-opt:disabled { cursor: default; transform: none; }
+    .quiz-feedback { margin-top:var(--space-lg); font-size:var(--fs-md); min-height:2rem; font-weight:600; transition: opacity 0.3s; direction:rtl; }
+    .quiz-feedback.correct { color:#4ade80; }
+    .quiz-feedback.wrong   { color:#f87171; }
+    .quiz-next-btn {
+      margin-top:var(--space-xl);
+      background: var(--color-gold);
+      color: var(--color-charcoal);
+      border: none;
+      border-radius: 99px;
+      padding: var(--space-md) var(--space-2xl);
+      font-size: var(--fs-md);
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: none;
+    }
+    .quiz-next-btn:hover { background:#e0b840; transform:translateY(-2px); }
+    .quiz-score-pill {
+      display:inline-flex; align-items:center; gap:6px;
+      background: rgba(200,169,81,0.2); border:1px solid rgba(200,169,81,0.4);
+      border-radius:99px; padding:4px 16px; font-size:var(--fs-sm);
+      color:var(--color-gold); margin-bottom:var(--space-xl); direction:rtl;
+    }
+    .quiz-result { display:none; animation: fadeInUp 0.5s ease; }
+    .quiz-result .result-badge { font-size:5rem; margin-bottom:var(--space-md); }
+    .quiz-result .result-title { font-size:var(--fs-2xl); color:var(--color-gold); font-weight:700; margin-bottom:var(--space-sm); }
+    .quiz-result .result-score { font-size:var(--fs-xl); color:var(--color-white); margin-bottom:var(--space-md); }
+    .quiz-result .result-msg   { color:rgba(255,255,255,0.7); margin-bottom:var(--space-2xl); font-size:var(--fs-md); direction:rtl; }
+    .quiz-restart-btn {
+      background: var(--color-gold); color: var(--color-charcoal);
+      border:none; border-radius:99px; padding:var(--space-md) var(--space-3xl);
+      font-size:var(--fs-md); font-weight:700; cursor:pointer; transition:all 0.2s;
+    }
+    .quiz-restart-btn:hover { background:#e0b840; transform:translateY(-2px); }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    .quiz-active { animation: fadeInUp 0.35s ease; }
     .nav-links, .lang-switcher { direction: ltr; }
     .card-link span { transform: scaleX(-1); display: inline-block; }
 
     @media (max-width: 768px) {
       .fun-facts { grid-template-columns: 1fr 1fr; }
-      .quiz-grid { grid-template-columns: 1fr; }
       .quiz-section { padding: var(--space-xl); border-radius: var(--border-radius-lg); }
+      .quiz-options { grid-template-columns: 1fr; }
       .story-header { padding: var(--space-lg); }
       .story-body { padding: var(--space-lg); }
       .story-emoji { font-size: 2.5rem; }
@@ -88,6 +170,7 @@
       .story-body { padding: var(--space-md); }
       .quiz-section { padding: var(--space-lg); }
       .story-card { border-radius: var(--border-radius-lg); }
+      .quiz-card { padding: var(--space-lg); }
     }
   </style>
 </head>
@@ -141,7 +224,7 @@
       <!-- کہانی 1 -->
       <div class="story-card fade-in">
         <div class="story-header s-green">
-          <span class="story-emoji">🕋</span>
+          <svg class="story-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="40" cy="40" r="36" fill="rgba(200,169,81,0.12)" class="kaaba-glow"/><rect x="18" y="28" width="44" height="32" rx="2" fill="#1B2A4A" stroke="#C8A951" stroke-width="1.5"/><polygon points="14,28 40,14 66,28" fill="#064635" stroke="#C8A951" stroke-width="1.5"/><rect x="31" y="38" width="18" height="22" rx="2" fill="#C8A951" opacity="0.9"/><rect x="34" y="41" width="12" height="16" rx="1" fill="#1B2A4A"/><rect x="18" y="34" width="44" height="5" fill="rgba(200,169,81,0.35)"/><circle cx="40" cy="22" r="4" fill="#C8A951" class="kaaba-star"/><circle cx="40" cy="22" r="2" fill="#fff"/></svg>
           <div>
             <h3>ایک بہت خاص جگہ پیدا ہوئے</h3>
             <div class="story-age">عمر 5+ سال</div>
@@ -160,7 +243,7 @@
       <!-- کہانی 2 -->
       <div class="story-card fade-in">
         <div class="story-header s-blue">
-          <span class="story-emoji">📚</span>
+          <svg class="story-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g><rect x="39" y="8" width="2" height="14" rx="1" fill="#C8A951" class="book-ray"/><rect x="39" y="8" width="2" height="11" rx="1" fill="#C8A951" transform="rotate(-35 40 38)" class="book-ray"/><rect x="39" y="8" width="2" height="11" rx="1" fill="#C8A951" transform="rotate(-70 40 38)" class="book-ray"/><rect x="39" y="8" width="2" height="11" rx="1" fill="#C8A951" transform="rotate(35 40 38)" class="book-ray"/><rect x="39" y="8" width="2" height="11" rx="1" fill="#C8A951" transform="rotate(70 40 38)" class="book-ray"/></g><rect x="10" y="38" width="60" height="28" rx="3" fill="#1B2A4A" stroke="#C8A951" stroke-width="1.5"/><line x1="40" y1="38" x2="40" y2="66" stroke="#C8A951" stroke-width="1.5"/><path d="M40 40 Q28 36 14 40 L14 64 Q28 60 40 64 Z" fill="#FBF7F0" opacity="0.9"/><path d="M40 40 Q52 36 66 40 L66 64 Q52 60 40 64 Z" fill="#FBF7F0" opacity="0.9"/><line x1="18" y1="47" x2="36" y2="47" stroke="#1B2A4A" stroke-width="1.2" stroke-linecap="round"/><line x1="18" y1="52" x2="34" y2="52" stroke="#1B2A4A" stroke-width="1.2" stroke-linecap="round"/><line x1="44" y1="47" x2="62" y2="47" stroke="#1B2A4A" stroke-width="1.2" stroke-linecap="round"/><line x1="44" y1="52" x2="60" y2="52" stroke="#1B2A4A" stroke-width="1.2" stroke-linecap="round"/></svg>
           <div>
             <h3>علم کا دروازہ</h3>
             <div class="story-age">عمر 6+ سال</div>
@@ -179,7 +262,7 @@
       <!-- کہانی 3 -->
       <div class="story-card fade-in">
         <div class="story-header s-purple">
-          <span class="story-emoji">🦁</span>
+          <svg class="story-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g class="lion-mane"><circle cx="40" cy="38" r="18" fill="#C8A951" opacity="0.85"/><circle cx="24" cy="32" r="8" fill="#C8A951" opacity="0.7"/><circle cx="56" cy="32" r="8" fill="#C8A951" opacity="0.7"/><circle cx="32" cy="22" r="7" fill="#C8A951" opacity="0.7"/><circle cx="48" cy="22" r="7" fill="#C8A951" opacity="0.7"/></g><circle cx="40" cy="38" r="13" fill="#e8c878"/><circle cx="35" cy="36" r="2.5" fill="#1B2A4A"/><circle cx="45" cy="36" r="2.5" fill="#1B2A4A"/><circle cx="36" cy="35" r="0.8" fill="white"/><circle cx="46" cy="35" r="0.8" fill="white"/><path d="M38 40 Q40 42 42 40" stroke="#1B2A4A" stroke-width="1.2" fill="none" stroke-linecap="round"/><polygon points="26,24 30,18 34,24" fill="#e8c878" stroke="#C8A951" stroke-width="1"/><polygon points="46,24 50,18 54,24" fill="#e8c878" stroke="#C8A951" stroke-width="1"/><g class="lion-sword"><line x1="54" y1="52" x2="72" y2="70" stroke="#C8A951" stroke-width="2.5" stroke-linecap="round"/><path d="M54 52 L50 48 L60 46 L58 56 Z" fill="#C8A951"/></g></svg>
           <div>
             <h3>اللہ کا شیر</h3>
             <div class="story-age">عمر 7+ سال</div>
@@ -198,7 +281,7 @@
       <!-- کہانی 4 -->
       <div class="story-card fade-in">
         <div class="story-header s-orange">
-          <span class="story-emoji">⚖️</span>
+          <svg class="story-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="38" y="28" width="4" height="40" rx="2" fill="#C8A951"/><ellipse cx="40" cy="68" rx="16" ry="4" fill="#C8A951" opacity="0.6"/><g class="scale-beam"><rect x="10" y="26" width="60" height="4" rx="2" fill="#C8A951"/><line x1="14" y1="30" x2="10" y2="42" stroke="#C8A951" stroke-width="1.2"/><line x1="22" y1="30" x2="26" y2="42" stroke="#C8A951" stroke-width="1.2"/><path d="M8 42 Q18 48 28 42" stroke="#C8A951" stroke-width="2" fill="rgba(200,169,81,0.25)" stroke-linecap="round"/><line x1="58" y1="30" x2="54" y2="42" stroke="#C8A951" stroke-width="1.2"/><line x1="66" y1="30" x2="70" y2="42" stroke="#C8A951" stroke-width="1.2"/><path d="M52 42 Q62 48 72 42" stroke="#C8A951" stroke-width="2" fill="rgba(200,169,81,0.25)" stroke-linecap="round"/></g><circle cx="40" cy="20" r="5" fill="#C8A951"/><circle cx="40" cy="20" r="2.5" fill="white" opacity="0.7"/></svg>
           <div>
             <h3>سب کے ساتھ انصاف</h3>
             <div class="story-age">عمر 6+ سال</div>
@@ -217,7 +300,7 @@
       <!-- کہانی 5 -->
       <div class="story-card fade-in">
         <div class="story-header s-red">
-          <span class="story-emoji">❤️</span>
+          <svg class="story-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g class="peace-heart"><path d="M40 26 C40 26 30 17 24 22 C18 27 22 36 40 46 C58 36 62 27 56 22 C50 17 40 26 40 26 Z" fill="#f87171" opacity="0.9"/></g><g class="peace-hand"><rect x="26" y="46" width="28" height="18" rx="8" fill="#e8c878"/><rect x="28" y="34" width="6" height="16" rx="3" fill="#e8c878"/><rect x="36" y="30" width="6" height="18" rx="3" fill="#e8c878"/><rect x="44" y="32" width="6" height="16" rx="3" fill="#e8c878"/><rect x="52" y="36" width="5" height="14" rx="2.5" fill="#e8c878"/><rect x="20" y="44" width="9" height="6" rx="3" fill="#e8c878" transform="rotate(-20 24 47)"/></g></svg>
           <div>
             <h3>دشمن کے ساتھ مہربانی</h3>
             <div class="story-age">عمر 8+ سال</div>
@@ -236,7 +319,7 @@
       <!-- کہانی 6 -->
       <div class="story-card fade-in">
         <div class="story-header s-teal">
-          <span class="story-emoji">🤲</span>
+          <svg class="story-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="40" cy="18" r="7" fill="#e8c878" stroke="#C8A951" stroke-width="1"/><ellipse cx="40" cy="13" rx="7" ry="4" fill="#1B2A4A"/><path d="M40 25 L40 44 Q30 50 22 56" stroke="#1B2A4A" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M40 44 Q50 50 58 56" stroke="#1B2A4A" stroke-width="5" stroke-linecap="round" fill="none"/><line x1="14" y1="62" x2="66" y2="62" stroke="#C8A951" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/><g><circle cx="60" cy="48" r="3" fill="#C8A951" class="ring-sparkle"/><circle cx="66" cy="42" r="2" fill="#C8A951" class="ring-sparkle"/><circle cx="64" cy="54" r="1.5" fill="#C8A951" class="ring-sparkle"/></g><g class="ring-icon"><circle cx="56" cy="52" r="5" stroke="#C8A951" stroke-width="2.5" fill="none"/><circle cx="56" cy="52" r="2" fill="#C8A951"/></g></svg>
           <div>
             <h3>نماز میں انگوٹھی کا صدقہ</h3>
             <div class="story-age">عمر 6+ سال</div>
@@ -290,34 +373,28 @@
       </div>
 
       <!-- کوئز -->
-      <div class="quiz-section fade-in">
+      <div class="quiz-section fade-in" id="quizSection">
         <h3>🧠 فوری کوئز — اپنا علم جانچو!</h3>
-        <p style="color:rgba(255,255,255,0.7); margin-bottom:var(--space-xl)">جواب دیکھنے کے لیے ماؤس رکھو!</p>
-        <div class="quiz-grid">
-          <div class="quiz-item">
-            <div class="q">1. حضرت علی کہاں پیدا ہوئے؟</div>
-            <div class="a" title="مکہ مکرمہ میں بیت اللہ (کعبہ) کے اندر">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
-          </div>
-          <div class="quiz-item">
-            <div class="q">2. "اسد اللہ" کا کیا مطلب ہے؟</div>
-            <div class="a" title="اللہ کا شیر">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
-          </div>
-          <div class="quiz-item">
-            <div class="q">3. علی کی مشہور تلوار کا کیا نام تھا؟</div>
-            <div class="a" title="ذوالفقار">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
-          </div>
-          <div class="quiz-item">
-            <div class="q">4. علی نے کس سے شادی کی؟</div>
-            <div class="a" title="فاطمہ (رضی اللہ عنہا)، نبی ﷺ کی بیٹی">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
-          </div>
-          <div class="quiz-item">
-            <div class="q">5. نبی ﷺ نے علم کے بارے میں علی کو کیا کہا؟</div>
-            <div class="a" title="شہرِ علم کا دروازہ">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
-          </div>
-          <div class="quiz-item">
-            <div class="q">6. علی نے اس سپاہی سے لڑنا کیوں چھوڑا جس نے ان پر تھوکا؟</div>
-            <div class="a" title="کیونکہ انہیں غصہ آ گیا اور وہ صرف اللہ کے لیے لڑنا چاہتے تھے، ذاتی غصے کے لیے نہیں">🤔 جواب دیکھنے کے لیے ماؤس رکھو</div>
-          </div>
+        <p class="quiz-subtitle">ہر سوال کا صحیح جواب چنو اور دیکھو تم کتنا جانتے ہو!</p>
+
+        <div class="quiz-score-pill" id="scorePill">⭐ اسکور: <span id="scoreDisplay">0</span> / 6</div>
+
+        <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="progressFill" style="width:0%"></div></div>
+
+        <div class="quiz-card quiz-active" id="quizCard">
+          <div class="quiz-q-label" id="qLabel">سوال 1 از 6</div>
+          <div class="quiz-q-text"  id="qText"></div>
+          <div class="quiz-options" id="qOptions"></div>
+          <div class="quiz-feedback" id="qFeedback"></div>
+          <button class="quiz-next-btn" id="nextBtn" onclick="quizNext()">اگلا سوال ←</button>
+        </div>
+
+        <div class="quiz-result" id="quizResult">
+          <div class="result-badge" id="resultBadge"></div>
+          <div class="result-title" id="resultTitle"></div>
+          <div class="result-score" id="resultScore"></div>
+          <div class="result-msg"   id="resultMsg"></div>
+          <button class="quiz-restart-btn" onclick="quizRestart()">🔄 دوبارہ کوشش کرو</button>
         </div>
       </div>
 
@@ -353,5 +430,150 @@
   <button class="back-to-top" id="backToTop" aria-label="اوپر جائیں">↑</button>
   <script src="../../js/main.js"></script>
   <script src="../../js/lang-switcher.js"></script>
+  <script>
+  // ── INTERACTIVE QUIZ (UR) ─────────────────────────────────────────────────
+  const QUIZ = [
+    {
+      q: "حضرت علی (رضی اللہ عنہ) کہاں پیدا ہوئے؟",
+      opts: ["مدینہ منورہ میں", "کوفہ کے ایک محل میں", "مکہ مکرمہ میں بیت اللہ (کعبہ) کے اندر", "شہرِ طائف میں"],
+      correct: 2,
+      feedback: "✅ شاباش! وہ خانہ کعبہ کے اندر پیدا ہوئے — دنیا کی سب سے مقدس جگہ۔ تاریخ میں اور کوئی وہاں پیدا نہیں ہوا! 🕋"
+    },
+    {
+      q: "\"اسد اللہ\" کا کیا مطلب ہے؟",
+      opts: ["اللہ کی تلوار", "اللہ کا بندہ", "علم کا دروازہ", "اللہ کا شیر"],
+      correct: 3,
+      feedback: "✅ بالکل صحیح! اسد اللہ = اللہ کا شیر۔ حضرت علی (رضی اللہ عنہ) پورے عرب کے بہادر ترین جنگجو تھے! 🦁"
+    },
+    {
+      q: "حضرت علی کی مشہور تلوار کا کیا نام تھا؟",
+      opts: ["خالد", "حیدر", "ذوالفقار", "سیف الاسلام"],
+      correct: 2,
+      feedback: "✅ درست! ذوالفقار ان کی افسانوی دو نوکوں والی تلوار تھی جو نبی کریم ﷺ نے عطا فرمائی تھی۔ ⚔️"
+    },
+    {
+      q: "حضرت علی (رضی اللہ عنہ) نے کس سے نکاح کیا؟",
+      opts: ["حضرت خدیجہ (رضی اللہ عنہا) سے", "حضرت عائشہ (رضی اللہ عنہا) سے", "حضرت زینب (رضی اللہ عنہا) سے", "حضرت فاطمہ (رضی اللہ عنہا) — نبیؐ کی بیٹی"],
+      correct: 3,
+      feedback: "✅ بِالکُل! انہوں نے بی بی فاطمہ (رضی اللہ عنہا) سے نکاح کیا — پیارے نبی ﷺ کی محبوب بیٹی۔ 💝"
+    },
+    {
+      q: "نبی ﷺ نے فرمایا: \"میں علم کا شہر ہوں اور علی اس کا…\"",
+      opts: ["چھت ہے", "بنیاد ہے", "دروازہ ہے", "کتب خانہ ہے"],
+      correct: 2,
+      feedback: "✅ زبردست! حضرت علی (رضی اللہ عنہ) کو شہرِ علم کا دروازہ کہا گیا — لوگ دور دور سے ان سے سیکھنے آتے تھے! 📚"
+    },
+    {
+      q: "علی نے اس سپاہی سے لڑنا کیوں چھوڑ دیا جس نے ان پر تھوکا؟",
+      opts: [
+        "وہ بہت تھکے ہوئے تھے",
+        "انہیں اس سپاہی پر رحم آ گیا",
+        "وہ صرف اللہ کے لیے لڑنا چاہتے تھے، ذاتی غصے کے لیے نہیں",
+        "نبی ﷺ نے انہیں روکا"
+      ],
+      correct: 2,
+      feedback: "✅ کیا بات ہے! انہوں نے اپنے غصے کو مکمل قابو میں رکھا۔ یہی اصل عظمت ہے — ہمیشہ اللہ کے لیے کام کرو، نفس کے لیے نہیں۔ 🌟"
+    }
+  ];
+
+  let qIndex = 0, score = 0, answered = false;
+
+  function quizRender() {
+    const q = QUIZ[qIndex];
+    document.getElementById('qLabel').textContent = `سوال ${qIndex + 1} از ${QUIZ.length}`;
+    document.getElementById('qText').textContent  = q.q;
+    document.getElementById('qFeedback').textContent = '';
+    document.getElementById('qFeedback').className  = 'quiz-feedback';
+    document.getElementById('nextBtn').style.display = 'none';
+    document.getElementById('progressFill').style.width = (qIndex / QUIZ.length * 100) + '%';
+    answered = false;
+
+    const container = document.getElementById('qOptions');
+    container.innerHTML = '';
+    q.opts.forEach((opt, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-opt';
+      btn.textContent = opt;
+      btn.onclick = () => quizAnswer(i);
+      container.appendChild(btn);
+    });
+
+    const card = document.getElementById('quizCard');
+    card.classList.remove('quiz-active');
+    void card.offsetWidth;
+    card.classList.add('quiz-active');
+  }
+
+  function quizAnswer(chosen) {
+    if (answered) return;
+    answered = true;
+    const q = QUIZ[qIndex];
+    const buttons = document.querySelectorAll('.quiz-opt');
+    buttons.forEach((btn, i) => {
+      btn.disabled = true;
+      if (i === q.correct) btn.classList.add('correct');
+      else if (i === chosen) btn.classList.add('wrong');
+    });
+    const fb = document.getElementById('qFeedback');
+    if (chosen === q.correct) {
+      score++;
+      document.getElementById('scoreDisplay').textContent = score;
+      fb.textContent = q.feedback;
+      fb.className = 'quiz-feedback correct';
+    } else {
+      fb.textContent = '❌ صحیح جواب ہے: ' + q.opts[q.correct];
+      fb.className = 'quiz-feedback wrong';
+    }
+    document.getElementById('nextBtn').style.display = 'inline-block';
+    document.getElementById('nextBtn').textContent =
+      qIndex < QUIZ.length - 1 ? '← اگلا سوال' : '🏆 نتیجہ دیکھو';
+  }
+
+  function quizNext() {
+    qIndex++;
+    if (qIndex < QUIZ.length) {
+      quizRender();
+    } else {
+      quizShowResult();
+    }
+  }
+
+  function quizShowResult() {
+    document.getElementById('progressFill').style.width = '100%';
+    document.getElementById('quizCard').style.display = 'none';
+    const result = document.getElementById('quizResult');
+    result.style.display = 'block';
+
+    let badge, title, msg;
+    if (score === 6) {
+      badge = '🏆'; title = 'کوفے کے عالم!';
+      msg = 'بہترین! حضرت علی (رضی اللہ عنہ) تمہارے علم پر فخر کریں گے۔ تم واقعی کوفے کے عالم ہو!';
+    } else if (score >= 4) {
+      badge = '⭐'; title = 'علم کے دروازے پر!';
+      msg = 'بہت اچھا! تم حضرت علی کے بارے میں بہت کچھ جانتے ہو۔ مزید اونچے اسکور کے لیے کہانیاں دوبارہ پڑھو!';
+    } else if (score >= 2) {
+      badge = '📖'; title = 'کم عمر طالب علم!';
+      msg = 'اچھی کوشش! اوپر کی کہانیاں دوبارہ پڑھو اور پھر کوشش کرو — تم اور بہتر کرو گے!';
+    } else {
+      badge = '🌱'; title = 'ابھی شروعات ہے!';
+      msg = 'کوئی بات نہیں! تمام کہانیاں غور سے پڑھو اور پھر کوشش کرو۔ ہر عالم کا آغاز شروع سے ہوتا ہے!';
+    }
+
+    document.getElementById('resultBadge').textContent = badge;
+    document.getElementById('resultTitle').textContent = title;
+    document.getElementById('resultScore').textContent = `تم نے ${score} میں سے ${QUIZ.length} صحیح کیے`;
+    document.getElementById('resultMsg').textContent   = msg;
+  }
+
+  function quizRestart() {
+    qIndex = 0; score = 0; answered = false;
+    document.getElementById('scoreDisplay').textContent = '0';
+    document.getElementById('quizResult').style.display = 'none';
+    document.getElementById('quizCard').style.display   = 'block';
+    quizRender();
+  }
+
+  quizRender();
+  </script>
 </body>
 </html>
